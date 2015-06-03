@@ -1,4 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+    <entity name="Candidate" syncable="YES">
+        <attribute name="birthDay" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="cadre" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="candidate_degree" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Degree" syncable="YES"/>
+        <relationship name="candidate_Recruitment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recruitment" syncable="YES"/>
+    </entity>
+    <entity name="Contract" syncable="YES">
+        <attribute name="dateEnd" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateStart" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="salary" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="signatureCandidate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="signatureEmployee" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="workLibelle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contract_candidate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Candidate" syncable="YES"/>
+        <relationship name="contract_employee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" syncable="YES"/>
+        <relationship name="contract_typeContract" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeContract" syncable="YES"/>
+    </entity>
+    <entity name="Degree" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Employee" syncable="YES">
+        <relationship name="employee_staff" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Candidate" syncable="YES"/>
+    </entity>
+    <entity name="EtatCandidature" representedClassName="MacleanRH.EtatCandidature" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Recruitment" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="titre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workLibelle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="recrutment_etatCandidature" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EtatCandidature" syncable="YES"/>
+    </entity>
+    <entity name="TypeContract" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="libelle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="EtatCandidature" positionX="-137" positionY="-135" width="128" height="73"/>
+        <element name="Recruitment" positionX="72" positionY="-108" width="128" height="30"/>
+        <element name="Candidate" positionX="-101" positionY="75" width="128" height="195"/>
+        <element name="Degree" positionX="-263" positionY="198" width="128" height="90"/>
+        <element name="Contract" positionX="241" positionY="159" width="128" height="30"/>
+        <element name="Employee" positionX="234" positionY="27" width="128" height="60"/>
+        <element name="TypeContract" positionX="459" positionY="153" width="128" height="73"/>
+    </elements>
 </model>

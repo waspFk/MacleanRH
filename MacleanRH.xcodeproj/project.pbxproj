@@ -10,6 +10,9 @@
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
 		B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA191B1EF3BA0092D63A /* MacleanRH.xcdatamodeld */; };
+		B83DBA1D1B1F23970092D63A /* InitDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA1C1B1F23970092D63A /* InitDataViewController.swift */; };
+		B83DBA1F1B1F25AF0092D63A /* EtatCandidature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA1E1B1F25AF0092D63A /* EtatCandidature.swift */; };
+		B83DBA211B1F263F0092D63A /* EtatCandidatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA201B1F263F0092D63A /* EtatCandidatureManager.swift */; };
 		B870E7FB1B1DD52D00CA2C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */; };
 		B870E7FD1B1DD52D00CA2C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */; };
 		B870E8001B1DD52D00CA2C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B870E7FE1B1DD52D00CA2C84 /* Main.storyboard */; };
@@ -32,6 +35,9 @@
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B83DBA1A1B1EF3BA0092D63A /* MacleanRH.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacleanRH.xcdatamodel; sourceTree = "<group>"; };
+		B83DBA1C1B1F23970092D63A /* InitDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitDataViewController.swift; sourceTree = "<group>"; };
+		B83DBA1E1B1F25AF0092D63A /* EtatCandidature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EtatCandidature.swift; path = ../EtatCandidature.swift; sourceTree = "<group>"; };
+		B83DBA201B1F263F0092D63A /* EtatCandidatureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtatCandidatureManager.swift; sourceTree = "<group>"; };
 		B870E7F51B1DD52D00CA2C84 /* MacleanRH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacleanRH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B870E7F91B1DD52D00CA2C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,15 +89,18 @@
 		B870E7F71B1DD52D00CA2C84 /* MacleanRH */ = {
 			isa = PBXGroup;
 			children = (
+				B83DBA1E1B1F25AF0092D63A /* EtatCandidature.swift */,
 				B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */,
 				B83DBA191B1EF3BA0092D63A /* MacleanRH.xcdatamodeld */,
 				B834290E1B1EF0E8008557AF /* Constants.swift */,
+				B83DBA1C1B1F23970092D63A /* InitDataViewController.swift */,
 				B83429101B1EF1CD008557AF /* CoreDataManager.swift */,
 				B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */,
 				B870E7FE1B1DD52D00CA2C84 /* Main.storyboard */,
 				B870E8011B1DD52D00CA2C84 /* Images.xcassets */,
 				B870E8031B1DD52D00CA2C84 /* LaunchScreen.xib */,
 				B870E7F81B1DD52D00CA2C84 /* Supporting Files */,
+				B83DBA201B1F263F0092D63A /* EtatCandidatureManager.swift */,
 			);
 			path = MacleanRH;
 			sourceTree = "<group>";
@@ -221,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B83DBA1D1B1F23970092D63A /* InitDataViewController.swift in Sources */,
 				B870E7FD1B1DD52D00CA2C84 /* ViewController.swift in Sources */,
 				B870E7FB1B1DD52D00CA2C84 /* AppDelegate.swift in Sources */,
+				B83DBA1F1B1F25AF0092D63A /* EtatCandidature.swift in Sources */,
+				B83DBA211B1F263F0092D63A /* EtatCandidatureManager.swift in Sources */,
 				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,
 				B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */,
 				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
