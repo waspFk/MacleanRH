@@ -1,5 +1,5 @@
 //
-//  EtatCandidature.swift
+//  StateCandidature.swift
 //  MacleanRH
 //
 //  Created by iem on 03/06/2015.
@@ -9,9 +9,9 @@
 import Foundation
 import CoreData
 
-class EtatCandidature: NSManagedObject {
+class StateCandidature: NSManagedObject {
 
-    @NSManaged var libelle: String
     @NSManaged var color: String
+    @NSManaged var libelle: String
 
 }

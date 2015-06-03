@@ -10,8 +10,8 @@ import UIKit
 
 class initDataViewController: UIViewController {
     
-    let stateCandidature: EtatCandidatureManager = EtatCandidatureManager()
-    var stateCadidatures: NSArray = [EtatCandidature]()
+    @IBOutlet var txtnameState: UITextField!
+    var stateCandidatures: [StateCandidature] = [StateCandidature]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,19 @@ class initDataViewController: UIViewController {
     
     @IBAction func initEtat(sender: AnyObject) {
         
-        stateCandidature.createStateWithName("")
+        var libelle = txtnameState.text
+        EtatCandidatureManager.SharedManager.createStateWithName(libelle)
         
+    }
+    
+    @IBAction func listState(sender: AnyObject) {
+        stateCandidatures = EtatCandidatureManager.SharedManager.getState()
+        
+        println(stateCandidatures.count)
+        
+        for state in stateCandidatures
+        {
+            println(state.libelle)
+        }
     }
 }

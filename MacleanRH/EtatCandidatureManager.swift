@@ -34,11 +34,11 @@ class EtatCandidatureManager
     }
     
     
-    func createStateWithName(name : String?) -> EtatCandidature? {
+    func createStateWithName(name : String?) -> StateCandidature? {
         if let nameValue = name {
-            let entity = NSEntityDescription.entityForName("EtatCandidature", inManagedObjectContext: contextObject!)
+            let entity = NSEntityDescription.entityForName("StateCandidature", inManagedObjectContext: contextObject!)
             
-            let stateCandidature = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: contextObject)as! EtatCandidature
+            let stateCandidature = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: contextObject)as! StateCandidature
             
             stateCandidature.libelle = nameValue
             
@@ -55,15 +55,15 @@ class EtatCandidatureManager
         return nil
     }
     
-    func fetchLocations(predicate : NSPredicate?, sortDescriptors: [NSSortDescriptor]?) -> [EtatCandidature]? {
-        let fetchRequest = NSFetchRequest(entityName: "EtatCandidature")
+    func fetchLocations(predicate : NSPredicate?, sortDescriptors: [NSSortDescriptor]?) -> [StateCandidature]? {
+        let fetchRequest = NSFetchRequest(entityName: "StateCandidature")
         
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = sortDescriptors
         
         var error: NSError? = nil
         
-        let results = contextObject!.executeFetchRequest(fetchRequest, error: &error) as! [EtatCandidature]
+        let results = contextObject!.executeFetchRequest(fetchRequest, error: &error) as! [StateCandidature]
         
         if results.count > 0 {
             return results
@@ -76,8 +76,8 @@ class EtatCandidatureManager
         return nil
     }
     
-    func getState () -> [EtatCandidature] {
-        var locations = [EtatCandidature]()
+    func getState () -> [StateCandidature] {
+        var locations = [StateCandidature]()
         
         let sortDescriptors = [NSSortDescriptor(key: "libelle", ascending: true)]
         
