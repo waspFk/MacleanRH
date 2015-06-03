@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
+		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
+		B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA191B1EF3BA0092D63A /* MacleanRH.xcdatamodeld */; };
 		B870E7FB1B1DD52D00CA2C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */; };
 		B870E7FD1B1DD52D00CA2C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */; };
 		B870E8001B1DD52D00CA2C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B870E7FE1B1DD52D00CA2C84 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B83DBA1A1B1EF3BA0092D63A /* MacleanRH.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacleanRH.xcdatamodel; sourceTree = "<group>"; };
 		B870E7F51B1DD52D00CA2C84 /* MacleanRH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacleanRH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B870E7F91B1DD52D00CA2C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */,
+				B83DBA191B1EF3BA0092D63A /* MacleanRH.xcdatamodeld */,
+				B834290E1B1EF0E8008557AF /* Constants.swift */,
+				B83429101B1EF1CD008557AF /* CoreDataManager.swift */,
 				B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */,
 				B870E7FE1B1DD52D00CA2C84 /* Main.storyboard */,
 				B870E8011B1DD52D00CA2C84 /* Images.xcassets */,
@@ -214,6 +223,9 @@
 			files = (
 				B870E7FD1B1DD52D00CA2C84 /* ViewController.swift in Sources */,
 				B870E7FB1B1DD52D00CA2C84 /* AppDelegate.swift in Sources */,
+				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,
+				B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */,
+				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +421,7 @@
 				B870E8161B1DD52D00CA2C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B870E8171B1DD52D00CA2C84 /* Build configuration list for PBXNativeTarget "MacleanRHTests" */ = {
 			isa = XCConfigurationList;
@@ -417,8 +430,22 @@
 				B870E8191B1DD52D00CA2C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B83DBA191B1EF3BA0092D63A /* MacleanRH.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B83DBA1A1B1EF3BA0092D63A /* MacleanRH.xcdatamodel */,
+			);
+			currentVersion = B83DBA1A1B1EF3BA0092D63A /* MacleanRH.xcdatamodel */;
+			path = MacleanRH.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B870E7ED1B1DD52D00CA2C84 /* Project object */;
 }
