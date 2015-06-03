@@ -10,6 +10,8 @@ import UIKit
 
 class initDataViewController: UIViewController {
     
+    let stateCandidature: EtatCandidatureManager = EtatCandidatureManager()
+    var stateCadidatures: NSArray = [EtatCandidature]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,8 @@ class initDataViewController: UIViewController {
     
     
     @IBAction func initEtat(sender: AnyObject) {
+        
+        stateCandidature.createStateWithName("")
         
     }
 }

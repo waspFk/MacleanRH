@@ -54,6 +54,39 @@ class EtatCandidatureManager
         
         return nil
     }
+    
+    func fetchLocations(predicate : NSPredicate?, sortDescriptors: [NSSortDescriptor]?) -> [EtatCandidature]? {
+        let fetchRequest = NSFetchRequest(entityName: "EtatCandidature")
+        
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = sortDescriptors
+        
+        var error: NSError? = nil
+        
+        let results = contextObject!.executeFetchRequest(fetchRequest, error: &error) as! [EtatCandidature]
+        
+        if results.count > 0 {
+            return results
+        }
+        
+        if error != nil {
+            println(" Could not fetch data : \(error), \(error?.description) ")
+        }
+        
+        return nil
+    }
+    
+    func getState () -> [EtatCandidature] {
+        var locations = [EtatCandidature]()
+        
+        let sortDescriptors = [NSSortDescriptor(key: "libelle", ascending: true)]
+        
+        if let results = fetchLocations(nil, sortDescriptors: sortDescriptors) {
+            locations = results
+        }
+        
+        return locations
+    }
 
     
     

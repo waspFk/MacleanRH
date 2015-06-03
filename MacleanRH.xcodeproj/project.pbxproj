@@ -90,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				B83DBA1E1B1F25AF0092D63A /* EtatCandidature.swift */,
+				B83DBA201B1F263F0092D63A /* EtatCandidatureManager.swift */,
 				B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */,
 				B83DBA191B1EF3BA0092D63A /* MacleanRH.xcdatamodeld */,
 				B834290E1B1EF0E8008557AF /* Constants.swift */,
@@ -100,7 +101,6 @@
 				B870E8011B1DD52D00CA2C84 /* Images.xcassets */,
 				B870E8031B1DD52D00CA2C84 /* LaunchScreen.xib */,
 				B870E7F81B1DD52D00CA2C84 /* Supporting Files */,
-				B83DBA201B1F263F0092D63A /* EtatCandidatureManager.swift */,
 			);
 			path = MacleanRH;
 			sourceTree = "<group>";
