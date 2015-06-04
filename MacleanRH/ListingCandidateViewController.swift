@@ -53,4 +53,13 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "candidateDetail" {
+            if let destination = segue.destinationViewController as? FolderCandidateController {
+                if let index = tableView.indexPathForSelectedRow()?.row {
+                    destination.candidate = candidates[index]
+                }
+            }
+        }
+    }
 }

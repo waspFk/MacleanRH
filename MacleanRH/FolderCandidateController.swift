@@ -10,6 +10,7 @@ import UIKit
 
 class FolderCandidateController: UIViewController
 {
+    var candidate: Candidate!
     
     @IBOutlet weak var libLastName: UITextField!
     @IBOutlet weak var libFirstName: UITextField!
@@ -22,13 +23,13 @@ class FolderCandidateController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let candidates = CandidateManager.SharedManager.getAllCandidates("lastName")
+        //let candidates = CandidateManager.SharedManager.getAllCandidates("lastName")
         
         /*let recruitment = RecruitmentManager.SharedManager.createRecruitment("Nouveau poste", workLibelle: "Informatique", workDescription: "Administrateur réseau", date: NSDate())*/
 
         //CandidateManager.SharedManager.createCandidate("Meunier", firstname: "Cyril", mail: "cyril.meunier71@gmail.com",address: "19 impasse du tilleul \n 71960\n Milly-Lamartine",tel: "0610203645",mobile: "0385331460")
 
-        let candidate = CandidateManager.SharedManager.searchCandidateWithMail("cyril.meunier71@gmail.com")
+        //let candidate = CandidateManager.SharedManager.searchCandidateWithMail("cyril.meunier71@gmail.com")
         
         /*candidate?.candidate_recruitment.setByAddingObject(recruitment)
         candidate?.managedObjectContext?.save(nil)*/

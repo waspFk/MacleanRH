@@ -156,7 +156,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="candidateCell" rowHeight="92" id="CNL-AO-j5e" customClass="CandidateViewCell" customModule="MacleanRH" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="86" width="682" height="92"/>
+                                        <rect key="frame" x="0.0" y="22" width="682" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="candidateCell" tableViewCell="CNL-AO-j5e" id="0wD-f9-k0m">
                                             <rect key="frame" x="0.0" y="0.0" width="649" height="91"/>
@@ -186,7 +186,7 @@
                                             <outlet property="avatar" destination="hCQ-Y5-Bmz" id="I5u-KU-Gv8"/>
                                             <outlet property="firstName" destination="OI8-EE-tNc" id="ing-fz-mxD"/>
                                             <outlet property="lastName" destination="sUX-5r-Zp3" id="bJB-3z-cpH"/>
-                                            <segue destination="UXo-T0-npt" kind="push" id="qZu-Wb-HBE"/>
+                                            <segue destination="UXo-T0-npt" kind="push" identifier="candidateDetail" id="qZu-Wb-HBE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -507,7 +507,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="846-Dn-gBz"/>
+        <segue reference="qZu-Wb-HBE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

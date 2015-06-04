@@ -12,6 +12,9 @@
 		B80B4C061B2077C40064B52D /* EmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C031B2077C40064B52D /* EmployeeManager.swift */; };
 		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
 		B811ACE41B207A2E00FEB7A8 /* FolderCandidateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACE31B207A2E00FEB7A8 /* FolderCandidateController.swift */; };
+		B811ACE61B208D9200FEB7A8 /* CandidateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACE51B208D9200FEB7A8 /* CandidateViewCell.swift */; };
+		B811ACE81B209A2900FEB7A8 /* Dating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACE71B209A2900FEB7A8 /* Dating.swift */; };
+		B811ACEA1B209A2A00FEB7A8 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACE91B209A2A00FEB7A8 /* Sector.swift */; };
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
 		B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */; };
@@ -51,6 +54,9 @@
 		B80B4C031B2077C40064B52D /* EmployeeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeManager.swift; sourceTree = "<group>"; };
 		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
 		B811ACE31B207A2E00FEB7A8 /* FolderCandidateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderCandidateController.swift; sourceTree = "<group>"; };
+		B811ACE51B208D9200FEB7A8 /* CandidateViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateViewCell.swift; sourceTree = "<group>"; };
+		B811ACE71B209A2900FEB7A8 /* Dating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dating.swift; path = ../Dating.swift; sourceTree = "<group>"; };
+		B811ACE91B209A2A00FEB7A8 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sector.swift; path = ../Sector.swift; sourceTree = "<group>"; };
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitmentManager.swift; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 		B83C91E51B1F327D00879EE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B811ACE91B209A2A00FEB7A8 /* Sector.swift */,
+				B811ACE71B209A2900FEB7A8 /* Dating.swift */,
 				B83DBA4A1B1F50CB0092D63A /* Degree.swift */,
 				B83DBA481B1F50CB0092D63A /* Employee.swift */,
 				B83DBA461B1F50CB0092D63A /* Candidate.swift */,
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */,
+				B811ACE51B208D9200FEB7A8 /* CandidateViewCell.swift */,
 				B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */,
 				B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */,
 				B811ACE31B207A2E00FEB7A8 /* FolderCandidateController.swift */,
@@ -320,11 +329,14 @@
 				B811ACE41B207A2E00FEB7A8 /* FolderCandidateController.swift in Sources */,
 				B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */,
 				B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */,
+				B811ACEA1B209A2A00FEB7A8 /* Sector.swift in Sources */,
 				B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */,
 				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
 				B83DBA411B1F50CB0092D63A /* StateCandidature.swift in Sources */,
 				B83DBA3F1B1F50CA0092D63A /* Contract.swift in Sources */,
 				B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */,
+				B811ACE61B208D9200FEB7A8 /* CandidateViewCell.swift in Sources */,
+				B811ACE81B209A2900FEB7A8 /* Dating.swift in Sources */,
 				B83DBA4F1B2036890092D63A /* TypeContractManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
