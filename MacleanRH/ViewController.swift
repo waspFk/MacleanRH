@@ -65,5 +65,26 @@ class ViewController: UIViewController {
             println(" -- \(typeContract.libelle)")
         }
     }
+    
+    func testRecruitment()
+    {
+        var newRecruitment: Recruitment!
+        var recruitments: [Recruitment]!
+        
+        newRecruitment.titre="Test recruitment 1"
+        newRecruitment.workDescription = "Work test libellé"
+        newRecruitment.workDescription = "Work test description"
+        newRecruitment.date = NSDate()
+        
+        RecruitmentManager.SharedManager.createRecruitment(newRecruitment)
+        
+        recruitments = RecruitmentManager.SharedManager.getAllRecruitments()
+        
+        for recruitment in recruitments
+        {
+            println(recruitment.titre)
+        }
+        
+    }
 }
 
