@@ -59,6 +59,19 @@ class DegreeManager {
         return nil
     }
     
+    func searchDegreesForCandidate(candidate: Candidate) -> [Degree] {
+        var degrees = [Degree]()
+        
+        let predicate = NSPredicate(format: "degree_candidate = %@", candidate)
+        let sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        
+        if let results = fetchDegrees(predicate, sortDescriptors: sortDescriptors) {
+            return results
+        }
+        
+        return degrees
+    }
+    
     func createDegree(titre: String, date: NSDate, candidate: Candidate) -> Degree? {
         let entity = NSEntityDescription.entityForName("Degree", inManagedObjectContext: contextObject!)
         
@@ -80,7 +93,7 @@ class DegreeManager {
     
     func deleteDegree(degree: Degree?) {
         if let degreeValid = degree {
-            contextObject?.delete(degree)
+            contextObject?.delete(degreeValid)
             contextObject?.save(nil)        }
     }
 }
