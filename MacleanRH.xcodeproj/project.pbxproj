@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
+		B811ACE01B206FDF00FEB7A8 /* QRCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDF1B206FDF00FEB7A8 /* QRCodeManager.swift */; };
+		B811ACE21B20737C00FEB7A8 /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACE11B20737C00FEB7A8 /* QRCodeController.swift */; };
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
 		B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
+		B811ACDF1B206FDF00FEB7A8 /* QRCodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeManager.swift; sourceTree = "<group>"; };
+		B811ACE11B20737C00FEB7A8 /* QRCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeController.swift; sourceTree = "<group>"; };
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitmentManager.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 		B83C91E41B1F327000879EE5 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B811ACDF1B206FDF00FEB7A8 /* QRCodeManager.swift */,
 				B83DBA201B1F263F0092D63A /* StateCandidatureManager.swift */,
 				B83429101B1EF1CD008557AF /* CoreDataManager.swift */,
 				B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */,
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */,
+				B811ACE11B20737C00FEB7A8 /* QRCodeController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -299,9 +305,11 @@
 				B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */,
 				B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */,
 				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
+				B811ACE01B206FDF00FEB7A8 /* QRCodeManager.swift in Sources */,
 				B83DBA411B1F50CB0092D63A /* StateCandidature.swift in Sources */,
 				B83DBA3F1B1F50CA0092D63A /* Contract.swift in Sources */,
 				B83DBA4F1B2036890092D63A /* TypeContractManager.swift in Sources */,
+				B811ACE21B20737C00FEB7A8 /* QRCodeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

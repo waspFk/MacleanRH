@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mFR-dz-Ujl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,47 @@
                     <view key="view" contentMode="scaleToFill" id="g9V-Cr-jsd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdX-TB-t4q">
+                                <rect key="frame" x="277" y="6" width="63" height="30"/>
+                                <state key="normal" title="Generate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnGenerate:" destination="mFR-dz-Ujl" eventType="touchUpInside" id="n53-lA-Vrl"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UT1-bj-7c4">
+                                <rect key="frame" x="22" y="6" width="168" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Iq-km-fsB">
+                                <rect key="frame" x="22" y="201" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WYy-iD-rma">
+                                <rect key="frame" x="16" y="65" width="179" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="TH0-Z2-zde"/>
+                                    <constraint firstAttribute="height" constant="128" id="cDQ-85-Fuq"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="179" id="wg2-gj-vMe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="xsK-Ky-J1a"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WYy-iD-rma" firstAttribute="leading" secondItem="g9V-Cr-jsd" secondAttribute="leadingMargin" id="R89-6b-AbN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgQrCode" destination="WYy-iD-rma" id="CVz-Gj-fY0"/>
+                        <outlet property="libQrCode" destination="3Iq-km-fsB" id="9gG-Ap-xk7"/>
+                        <outlet property="txtData" destination="UT1-bj-7c4" id="9Sh-0W-ycW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ufi-Dk-KWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

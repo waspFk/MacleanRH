@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
 
+    @IBOutlet weak var txtData: UITextField!
+    @IBOutlet weak var imgQrCode: UIImageView!
+    @IBOutlet weak var libQrCode: UILabel!
+    
+    var objCaptureSession:AVCaptureSession?
+    var objCaptureVideoPreviewLayer:AVCaptureVideoPreviewLayer?
+    var vwQRCode:UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -140,5 +149,23 @@ class ViewController: UIViewController {
             println(contractVal.libelle+" -- "+contractVal.contract_typeContract.libelle)
         }
     }
+    
+    @IBAction func btnGenerate(sender: AnyObject) {
+        var qrCode: CIImage
+        
+        let data = txtData.text.dataUsingEncoding(NSISOLatin1StringEncoding,allowLossyConversion: false)
+        
+        let filter = CIFilter(name: "CIQRCodeGenerator")
+        
+        filter.setValue(data, forKey: "inputMessage")
+        
+        qrCode = filter.outputImage
+        
+        imgQrCode.image = UIImage(CIImage: qrCode)
+        
+    }
+    
+    
+    
 }
 
