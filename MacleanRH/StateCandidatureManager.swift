@@ -127,15 +127,15 @@ class StateCandidatureManager
     }
     
     func getAllStates () -> [StateCandidature] {
-        var locations = [StateCandidature]()
+        var states = [StateCandidature]()
         
         let sortDescriptors = [NSSortDescriptor(key: "libelle", ascending: true)]
         
         if let results = fetchStatesCandidatures(nil, sortDescriptors: sortDescriptors) {
-            locations = results
+            states = results
         }
         
-        return locations
+        return states
     }
     
     func getState(stateEnum : StateCanidatureEnum) -> StateCandidature {
