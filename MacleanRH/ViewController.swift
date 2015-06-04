@@ -13,6 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        testStateCandidature()
+        
+        testTypeContract()
+        
+    }
+    
+    func testStateCandidature () {
+        println(" -- TEST STATE CANDIDATURE -- ")
+        
         let managerStateCandidature = StateCandidatureManager.SharedManager
         
         var state = managerStateCandidature.getState(.ValidateCandidature)
@@ -38,7 +47,23 @@ class ViewController: UIViewController {
             println(" -- \(stateCandidate.libelle)")
             println(" -- \(stateCandidate.color)")
         }
+    }
+    
+    func testTypeContract () {
+        println(" -- TEST TYPE CONTRACT -- ")
         
+        let managerTypeContract = TypeContractManager.SharedManager
+        
+        var type = managerTypeContract.getTypeContract(.CDI)
+        println("J'ai trouve le contrat : \(type.libelle)")
+        
+        type = managerTypeContract.getTypeContract(.CDD)
+        println("J'ai trouve le contrat : \(type.libelle)")
+        
+        var types = managerTypeContract.getAllTypes()
+        for typeContract in types {
+            println(" -- \(typeContract.libelle)")
+        }
     }
 }
 

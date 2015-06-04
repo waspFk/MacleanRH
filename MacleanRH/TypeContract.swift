@@ -11,7 +11,6 @@ import CoreData
 
 class TypeContract: NSManagedObject {
 
-    @NSManaged var id: NSNumber
     @NSManaged var libelle: String
 
 }
