@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         
         testRecruitment()
         
+        testContract()
+        
     }
     
     func testStateCandidature () {
@@ -70,7 +72,7 @@ class ViewController: UIViewController {
     
     func testRecruitment() {
         println(" -- TEST RECRUITEMENT -- ")
-        println(" ---- Check ---- ")
+        
         var recruitments: [Recruitment]
         var recruitment: Recruitment
         
@@ -99,6 +101,44 @@ class ViewController: UIViewController {
             println(recruitment.titre)
         }
         
+    }
+    
+    func testContract()
+    {
+        println(" -- TEST CONTRACT -- ")
+        
+        var contracts: [Contract]
+        var contract: Contract
+        var typeContract = TypeContractManager.SharedManager.getTypeContract(TypeContractEnum.CDI)
+        
+        
+        /*println(" ---- Add Test ---- ")
+        ContractManager.SharedManager.createContract("Contract 1",salary: "2000",workLibelle: "Test libelle",typeContract: typeContract)
+        ContractManager.SharedManager.createContract("Contract 2",salary: "1500",workLibelle: "Test libelle",typeContract: typeContract)*/
+        
+        
+        println(" ---- Display Test ---- ")
+        
+        contracts = ContractManager.SharedManager.getAllContracts(nil)
+        for contractVal in contracts
+        {
+            println(contractVal.libelle+" -- "+contractVal.contract_typeContract.libelle)
+        }
+        
+        println(" ---- Search Test ---- ")
+        contract = ContractManager.SharedManager.searchContract("libelle",data: "Contract 2")!
+        println(contract.libelle+" -- "+contract.contract_typeContract.libelle)
+        
+        
+        println(" ---- Delete Test ---- ")
+        ContractManager.SharedManager.deleteContract(contract)
+        
+        contracts = ContractManager.SharedManager.getAllContracts(nil)
+        
+        for contractVal in contracts
+        {
+            println(contractVal.libelle+" -- "+contractVal.contract_typeContract.libelle)
+        }
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
 		B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitmentManager.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				B83DBA201B1F263F0092D63A /* StateCandidatureManager.swift */,
 				B83429101B1EF1CD008557AF /* CoreDataManager.swift */,
+				B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */,
 				B83DBA4E1B2036890092D63A /* TypeContractManager.swift */,
 				B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */,
 			);
@@ -292,6 +295,7 @@
 				B83DBA451B1F50CB0092D63A /* Recruitment.swift in Sources */,
 				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,
 				B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */,
+				B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */,
 				B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */,
 				B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */,
 				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
