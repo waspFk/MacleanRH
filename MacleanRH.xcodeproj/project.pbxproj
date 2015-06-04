@@ -343,6 +343,7 @@
 				INFOPLIST_FILE = MacleanRH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -353,6 +354,7 @@
 				INFOPLIST_FILE = MacleanRH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -409,6 +411,7 @@
 				B870E8161B1DD52D00CA2C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B870E8171B1DD52D00CA2C84 /* Build configuration list for PBXNativeTarget "MacleanRHTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +420,7 @@
 				B870E8191B1DD52D00CA2C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
