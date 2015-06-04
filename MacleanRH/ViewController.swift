@@ -12,15 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        testStateCandidature()
-        
-        testTypeContract()
-        
-        testRecruitment()
-        
-        testContract()
-        
     }
     
     func testStateCandidature () {
