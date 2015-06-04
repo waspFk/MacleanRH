@@ -17,5 +17,7 @@ class Recruitment: NSManagedObject {
     @NSManaged var workLibelle: String
     @NSManaged var recruitment_etatCandidature: StateCandidature
     @NSManaged var reruitment_candidate: NSSet
+    
+   
 
 }

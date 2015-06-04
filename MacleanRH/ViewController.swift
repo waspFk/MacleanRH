@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         
         testTypeContract()
         
+        testRecruitment()
+        
     }
     
     func testStateCandidature () {
@@ -66,19 +68,31 @@ class ViewController: UIViewController {
         }
     }
     
-    func testRecruitment()
-    {
-        var newRecruitment: Recruitment!
-        var recruitments: [Recruitment]!
+    func testRecruitment() {
+        println(" -- TEST RECRUITEMENT -- ")
+        println(" ---- Check ---- ")
+        var recruitments: [Recruitment]
+        var recruitment: Recruitment
         
-        newRecruitment.titre="Test recruitment 1"
-        newRecruitment.workDescription = "Work test libellé"
-        newRecruitment.workDescription = "Work test description"
-        newRecruitment.date = NSDate()
+        println(" ---- Add Test ---- ")
+        RecruitmentManager.SharedManager.createRecruitment("Test recruitment 1",workLibelle: "Work test libellé",workDescription: "Work test description",date: NSDate())
+        RecruitmentManager.SharedManager.createRecruitment("Test recruitment 2",workLibelle: "Work test libellé",workDescription: "Work test description",date: NSDate())
+        recruitments = RecruitmentManager.SharedManager.getAllRecruitments(nil)
         
-        RecruitmentManager.SharedManager.createRecruitment(newRecruitment)
+        println(" ---- Display Test ---- ")
+        for recruitment in recruitments
+        {
+            println(recruitment.titre)
+        }
         
-        recruitments = RecruitmentManager.SharedManager.getAllRecruitments()
+        println(" ---- Search Test ---- ")
+        recruitment = RecruitmentManager.SharedManager.searchRecruitment("Test recruitment 1")!
+        println(recruitment.titre)
+        
+        println(" ---- Delete Test ---- ")
+        RecruitmentManager.SharedManager.deleteRecruitment(recruitment)
+        
+        recruitments = RecruitmentManager.SharedManager.getAllRecruitments(nil)
         
         for recruitment in recruitments
         {
