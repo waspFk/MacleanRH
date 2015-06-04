@@ -27,6 +27,7 @@
 		B870E8051B1DD52D00CA2C84 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B870E8031B1DD52D00CA2C84 /* LaunchScreen.xib */; };
 		B870E8111B1DD52D00CA2C84 /* MacleanRHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870E8101B1DD52D00CA2C84 /* MacleanRHTests.swift */; };
 		B8D43CFA1B20402200ED6DC9 /* DegreeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CF91B20402200ED6DC9 /* DegreeManager.swift */; };
+		B8D43CFC1B2045B200ED6DC9 /* CandidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFB1B2045B200ED6DC9 /* CandidateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		B870E80F1B1DD52D00CA2C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B870E8101B1DD52D00CA2C84 /* MacleanRHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacleanRHTests.swift; sourceTree = "<group>"; };
 		B8D43CF91B20402200ED6DC9 /* DegreeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeManager.swift; sourceTree = "<group>"; };
+		B8D43CFB1B2045B200ED6DC9 /* CandidateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				B83DBA4E1B2036890092D63A /* TypeContractManager.swift */,
 				B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */,
 				B8D43CF91B20402200ED6DC9 /* DegreeManager.swift */,
+				B8D43CFB1B2045B200ED6DC9 /* CandidateManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				B83DBA451B1F50CB0092D63A /* Recruitment.swift in Sources */,
 				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,
 				B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */,
+				B8D43CFC1B2045B200ED6DC9 /* CandidateManager.swift in Sources */,
 				B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */,
 				B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */,
 				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
