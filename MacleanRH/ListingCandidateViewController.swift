@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListingCandidateViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ListingCandidateViewController: UIViewController{
     var candidates:[Candidate]!
 
     override func viewDidLoad() {
@@ -18,19 +18,10 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     override func viewDidAppear(animated: Bool) {
-        loadData()
-    }
-    
-    // MARK: - Helper UI
-    func loadData() {
-        candidates = 
     }
     
     
-    // MARK: - UITableViewDataSource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return
-    }
+
     
 
     /*
