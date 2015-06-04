@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 class StateCandidature: NSManagedObject {
-    @NSManaged var color: String
-    @NSManaged var libelle: String
+    @NSManaged var color: String?
+    @NSManaged var libelle: String?
 }

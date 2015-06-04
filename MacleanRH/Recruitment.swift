@@ -11,12 +11,12 @@ import CoreData
 
 class Recruitment: NSManagedObject {
 
-    @NSManaged var date: NSDate
-    @NSManaged var titre: String
-    @NSManaged var workDescription: String
-    @NSManaged var workLibelle: String
-    @NSManaged var recruitment_etatCandidature: StateCandidature
-    @NSManaged var reruitment_candidate: NSSet
+    @NSManaged var date: NSDate?
+    @NSManaged var titre: String?
+    @NSManaged var workDescription: String?
+    @NSManaged var workLibelle: String?
+    @NSManaged var recruitment_etatCandidature: StateCandidature?
+    @NSManaged var reruitment_candidate: NSSet?
     
    
 
