@@ -136,7 +136,7 @@ class CandidateManager {
     
     func deleteCandidate(candidate: Candidate?) {
         if let candidateValid = candidate {
-            contextObject?.delete(candidate)
+            contextObject?.delete(candidateValid)
             contextObject?.save(nil)
         }
     }

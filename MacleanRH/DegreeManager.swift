@@ -93,7 +93,7 @@ class DegreeManager {
     
     func deleteDegree(degree: Degree?) {
         if let degreeValid = degree {
-            contextObject?.delete(degree)
+            contextObject?.delete(degreeValid)
             contextObject?.save(nil)        }
     }
 }
