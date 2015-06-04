@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
 		B811ACEC1B20A3E300FEB7A8 /* SectorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACEB1B20A3E300FEB7A8 /* SectorManager.swift */; };
+		B811ACEE1B20A5E400FEB7A8 /* Dating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACED1B20A5E400FEB7A8 /* Dating.swift */; };
+		B811ACF01B20A5E500FEB7A8 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACEF1B20A5E500FEB7A8 /* Sector.swift */; };
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
 		B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
 		B811ACEB1B20A3E300FEB7A8 /* SectorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorManager.swift; sourceTree = "<group>"; };
+		B811ACED1B20A5E400FEB7A8 /* Dating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dating.swift; path = ../Dating.swift; sourceTree = "<group>"; };
+		B811ACEF1B20A5E500FEB7A8 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sector.swift; path = ../Sector.swift; sourceTree = "<group>"; };
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitmentManager.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		B83C91E51B1F327D00879EE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B811ACEF1B20A5E500FEB7A8 /* Sector.swift */,
+				B811ACED1B20A5E400FEB7A8 /* Dating.swift */,
 				B83DBA4A1B1F50CB0092D63A /* Degree.swift */,
 				B83DBA481B1F50CB0092D63A /* Employee.swift */,
 				B83DBA461B1F50CB0092D63A /* Candidate.swift */,
@@ -293,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B811ACF01B20A5E500FEB7A8 /* Sector.swift in Sources */,
 				B870E7FD1B1DD52D00CA2C84 /* ViewController.swift in Sources */,
 				B870E7FB1B1DD52D00CA2C84 /* AppDelegate.swift in Sources */,
 				B83DBA4B1B1F50CB0092D63A /* Degree.swift in Sources */,
@@ -309,6 +316,7 @@
 				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
 				B83DBA411B1F50CB0092D63A /* StateCandidature.swift in Sources */,
 				B83DBA3F1B1F50CA0092D63A /* Contract.swift in Sources */,
+				B811ACEE1B20A5E400FEB7A8 /* Dating.swift in Sources */,
 				B83DBA4F1B2036890092D63A /* TypeContractManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
