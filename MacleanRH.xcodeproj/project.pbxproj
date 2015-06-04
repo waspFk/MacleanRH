@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
+		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
+		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
+		B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */; };
+		B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA191B1EF3BA0092D63A /* MacleanRH.xcdatamodeld */; };
+		B83DBA211B1F263F0092D63A /* StateCandidatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA201B1F263F0092D63A /* StateCandidatureManager.swift */; };
+		B83DBA3F1B1F50CA0092D63A /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA3E1B1F50CA0092D63A /* Contract.swift */; };
+		B83DBA411B1F50CB0092D63A /* StateCandidature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA401B1F50CB0092D63A /* StateCandidature.swift */; };
+		B83DBA431B1F50CB0092D63A /* TypeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA421B1F50CB0092D63A /* TypeContract.swift */; };
+		B83DBA451B1F50CB0092D63A /* Recruitment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA441B1F50CB0092D63A /* Recruitment.swift */; };
+		B83DBA471B1F50CB0092D63A /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA461B1F50CB0092D63A /* Candidate.swift */; };
+		B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA481B1F50CB0092D63A /* Employee.swift */; };
+		B83DBA4B1B1F50CB0092D63A /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA4A1B1F50CB0092D63A /* Degree.swift */; };
+		B83DBA4F1B2036890092D63A /* TypeContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA4E1B2036890092D63A /* TypeContractManager.swift */; };
 		B870E7FB1B1DD52D00CA2C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */; };
 		B870E7FD1B1DD52D00CA2C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */; };
 		B870E8001B1DD52D00CA2C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B870E7FE1B1DD52D00CA2C84 /* Main.storyboard */; };
@@ -26,6 +40,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
+		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitmentManager.swift; sourceTree = "<group>"; };
+		B83DBA1A1B1EF3BA0092D63A /* MacleanRH.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacleanRH.xcdatamodel; sourceTree = "<group>"; };
+		B83DBA201B1F263F0092D63A /* StateCandidatureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateCandidatureManager.swift; sourceTree = "<group>"; };
+		B83DBA3E1B1F50CA0092D63A /* Contract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
+		B83DBA401B1F50CB0092D63A /* StateCandidature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateCandidature.swift; sourceTree = "<group>"; };
+		B83DBA421B1F50CB0092D63A /* TypeContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeContract.swift; sourceTree = "<group>"; };
+		B83DBA441B1F50CB0092D63A /* Recruitment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recruitment.swift; sourceTree = "<group>"; };
+		B83DBA461B1F50CB0092D63A /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
+		B83DBA481B1F50CB0092D63A /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		B83DBA4A1B1F50CB0092D63A /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
+		B83DBA4E1B2036890092D63A /* TypeContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeContractManager.swift; sourceTree = "<group>"; };
 		B870E7F51B1DD52D00CA2C84 /* MacleanRH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacleanRH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B870E7F91B1DD52D00CA2C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +84,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B83C91E41B1F327000879EE5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B83DBA201B1F263F0092D63A /* StateCandidatureManager.swift */,
+				B83429101B1EF1CD008557AF /* CoreDataManager.swift */,
+				B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */,
+				B83DBA4E1B2036890092D63A /* TypeContractManager.swift */,
+				B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		B83C91E51B1F327D00879EE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B83DBA4A1B1F50CB0092D63A /* Degree.swift */,
+				B83DBA481B1F50CB0092D63A /* Employee.swift */,
+				B83DBA461B1F50CB0092D63A /* Candidate.swift */,
+				B83DBA441B1F50CB0092D63A /* Recruitment.swift */,
+				B83DBA421B1F50CB0092D63A /* TypeContract.swift */,
+				B83DBA401B1F50CB0092D63A /* StateCandidature.swift */,
+				B83DBA3E1B1F50CA0092D63A /* Contract.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B83C91E61B1F328700879EE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B83C91E71B1F329600879EE5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B834290E1B1EF0E8008557AF /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		B870E7EC1B1DD52D00CA2C84 = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +147,12 @@
 		B870E7F71B1DD52D00CA2C84 /* MacleanRH */ = {
 			isa = PBXGroup;
 			children = (
+				B83C91E71B1F329600879EE5 /* Utils */,
+				B83C91E61B1F328700879EE5 /* View */,
+				B83C91E51B1F327D00879EE5 /* Model */,
+				B83C91E41B1F327000879EE5 /* Manager */,
 				B870E7FA1B1DD52D00CA2C84 /* AppDelegate.swift */,
-				B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */,
+				B83DBA191B1EF3BA0092D63A /* MacleanRH.xcdatamodeld */,
 				B870E7FE1B1DD52D00CA2C84 /* Main.storyboard */,
 				B870E8011B1DD52D00CA2C84 /* Images.xcassets */,
 				B870E8031B1DD52D00CA2C84 /* LaunchScreen.xib */,
@@ -214,6 +288,20 @@
 			files = (
 				B870E7FD1B1DD52D00CA2C84 /* ViewController.swift in Sources */,
 				B870E7FB1B1DD52D00CA2C84 /* AppDelegate.swift in Sources */,
+				B83DBA4B1B1F50CB0092D63A /* Degree.swift in Sources */,
+				B83DBA471B1F50CB0092D63A /* Candidate.swift in Sources */,
+				B83DBA431B1F50CB0092D63A /* TypeContract.swift in Sources */,
+				B83DBA211B1F263F0092D63A /* StateCandidatureManager.swift in Sources */,
+				B83DBA451B1F50CB0092D63A /* Recruitment.swift in Sources */,
+				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,
+				B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */,
+				B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */,
+				B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */,
+				B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */,
+				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
+				B83DBA411B1F50CB0092D63A /* StateCandidature.swift in Sources */,
+				B83DBA3F1B1F50CA0092D63A /* Contract.swift in Sources */,
+				B83DBA4F1B2036890092D63A /* TypeContractManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +511,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B83DBA191B1EF3BA0092D63A /* MacleanRH.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B83DBA1A1B1EF3BA0092D63A /* MacleanRH.xcdatamodel */,
+			);
+			currentVersion = B83DBA1A1B1EF3BA0092D63A /* MacleanRH.xcdatamodel */;
+			path = MacleanRH.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B870E7ED1B1DD52D00CA2C84 /* Project object */;
 }
