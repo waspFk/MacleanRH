@@ -10,6 +10,7 @@
 		B80B4C041B2077C40064B52D /* CandidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C011B2077C40064B52D /* CandidateManager.swift */; };
 		B80B4C051B2077C40064B52D /* DegreeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C021B2077C40064B52D /* DegreeManager.swift */; };
 		B80B4C061B2077C40064B52D /* EmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C031B2077C40064B52D /* EmployeeManager.swift */; };
+		B80B4C081B207E470064B52D /* CandidateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C071B207E470064B52D /* CandidateViewCell.swift */; };
 		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
@@ -48,6 +49,7 @@
 		B80B4C011B2077C40064B52D /* CandidateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateManager.swift; sourceTree = "<group>"; };
 		B80B4C021B2077C40064B52D /* DegreeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeManager.swift; sourceTree = "<group>"; };
 		B80B4C031B2077C40064B52D /* EmployeeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeManager.swift; sourceTree = "<group>"; };
+		B80B4C071B207E470064B52D /* CandidateViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateViewCell.swift; sourceTree = "<group>"; };
 		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */,
 				B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */,
 				B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */,
+				B80B4C071B207E470064B52D /* CandidateViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */,
 				B83DBA471B1F50CB0092D63A /* Candidate.swift in Sources */,
 				B83DBA431B1F50CB0092D63A /* TypeContract.swift in Sources */,
+				B80B4C081B207E470064B52D /* CandidateViewCell.swift in Sources */,
 				B83DBA211B1F263F0092D63A /* StateCandidatureManager.swift in Sources */,
 				B83DBA451B1F50CB0092D63A /* Recruitment.swift in Sources */,
 				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,

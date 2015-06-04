@@ -11,27 +11,38 @@ import UIKit
 class ListingCandidateViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var candidates:[Candidate]!
 
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(animated: Bool) {
+        
         loadData()
     }
     
     // MARK: - Helper UI
     func loadData() {
-        candidates = 
+        println(" --loadData")
+        candidates = CandidateManager.SharedManager.getAllCandidates(nil)
     }
     
     
     // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return
+        println(" --numberOfRowsInSection : \(candidates.count) ")
+        return candidates.count
     }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("candidateCell") as! CandidateViewCell
+        let candidate = candidates[indexPath.row]
+        
+        cell.firstName.text  = candidate.firstName
+        cell.lastName.text   = candidate.lastName
+        //cell.avatar.image = UIImage(data: candidate.photo)
+        
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
+        return cell
+    }
 
     /*
     // MARK: - Navigation
@@ -42,5 +53,4 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         // Pass the selected object to the new view controller.
     }
     */
-
 }
