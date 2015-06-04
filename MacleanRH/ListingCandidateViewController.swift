@@ -37,20 +37,13 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         
         cell.firstName.text  = candidate.firstName
         cell.lastName.text   = candidate.lastName
-        //cell.avatar.image = UIImage(data: candidate.photo)
+        
+        if let picture = candidate.photo {
+            cell.avatar.image = UIImage(data: picture)
+        }
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
