@@ -10,6 +10,7 @@ import UIKit
 
 class ListingCandidateViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var candidates:[Candidate]!
+    var recruitment:Recruitment!
 
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     // MARK: - Helper UI
     func loadData() {
         println(" --loadData")
-        candidates = CandidateManager.SharedManager.getAllCandidates(nil)
+        candidates = CandidateManager.SharedManager.searchCandidateForRecruitment(recruitment)
     }
     
     

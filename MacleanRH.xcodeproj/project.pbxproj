@@ -15,6 +15,8 @@
 		B80B4C0E1B20A05F0064B52D /* Dossier1.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0A1B20A05F0064B52D /* Dossier1.png */; };
 		B80B4C0F1B20A05F0064B52D /* Macleanrh.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0B1B20A05F0064B52D /* Macleanrh.png */; };
 		B80B4C101B20A05F0064B52D /* Recru.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0C1B20A05F0064B52D /* Recru.png */; };
+		B80B4C121B20A6C90064B52D /* RecruitmentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C111B20A6C90064B52D /* RecruitmentViewCell.swift */; };
+		B80B4C141B20A8740064B52D /* ListingRecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */; };
 		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
@@ -58,6 +60,8 @@
 		B80B4C0A1B20A05F0064B52D /* Dossier1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dossier1.png; sourceTree = "<group>"; };
 		B80B4C0B1B20A05F0064B52D /* Macleanrh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Macleanrh.png; sourceTree = "<group>"; };
 		B80B4C0C1B20A05F0064B52D /* Recru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Recru.png; sourceTree = "<group>"; };
+		B80B4C111B20A6C90064B52D /* RecruitmentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitmentViewCell.swift; sourceTree = "<group>"; };
+		B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingRecruitmentViewController.swift; sourceTree = "<group>"; };
 		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */,
 				B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */,
 				B80B4C071B207E470064B52D /* CandidateViewCell.swift */,
+				B80B4C111B20A6C90064B52D /* RecruitmentViewCell.swift */,
+				B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 				B870E7FD1B1DD52D00CA2C84 /* ViewController.swift in Sources */,
 				B80B4C051B2077C40064B52D /* DegreeManager.swift in Sources */,
 				B870E7FB1B1DD52D00CA2C84 /* AppDelegate.swift in Sources */,
+				B80B4C141B20A8740064B52D /* ListingRecruitmentViewController.swift in Sources */,
 				B83DBA4B1B1F50CB0092D63A /* Degree.swift in Sources */,
 				B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */,
 				B83DBA471B1F50CB0092D63A /* Candidate.swift in Sources */,
@@ -336,6 +343,7 @@
 				B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */,
 				B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */,
 				B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */,
+				B80B4C121B20A6C90064B52D /* RecruitmentViewCell.swift in Sources */,
 				B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */,
 				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
 				B83DBA411B1F50CB0092D63A /* StateCandidature.swift in Sources */,

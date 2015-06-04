@@ -31,7 +31,7 @@ class RecruitmentManager
         return Singleton.instance
     }
     
-    func createRecruitment(titre: String,workLibelle: String,workDescription: String,date: NSDate) -> Recruitment {
+    func createRecruitment(titre: String, workLibelle: String, workDescription: String,date: NSDate) -> Recruitment? {
         
         let entity = NSEntityDescription.entityForName("Recruitment", inManagedObjectContext: contextObject!)
         

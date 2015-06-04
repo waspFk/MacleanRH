@@ -85,6 +85,13 @@ class CandidateManager {
         return candidates
     }
     
+    func searchCandidateForRecruitment(recruitment: Recruitment) -> [Candidate] {
+        var candidates = [Candidate]()
+        
+        
+        return candidates
+    }
+    
     func searchCandidateWithMail(mail: String) -> Candidate? {
         let predicate = NSPredicate(format: "mail = %@", mail)
         if let candidate = fetchCandidate(predicate) {
