@@ -32,13 +32,7 @@ class RecruitmentManager
     }
     
     
-    func createRecruitment(recruitment : Recruitment) -> Recruitment {
-        
-        let titre = recruitment.titre
-        let workLibelle = recruitment.workLibelle
-        let workDescription = recruitment.workDescription
-        let date = recruitment.date
-        
+    func createRecruitment(titre: String,workLibelle: String,workDescription: String,date: NSDate) -> Recruitment {
         
         let entity = NSEntityDescription.entityForName("Recruitment", inManagedObjectContext: contextObject!)
         
@@ -57,6 +51,21 @@ class RecruitmentManager
         }
         
         return recruitmentReturn
+    }
+    
+    func fetchRecruitment(predicate : NSPredicate) -> Recruitment? {
+        
+        if let recruitment = fetchRecruitments(predicate, sortDescriptors: nil) {
+            return recruitment[0]
+        }
+        
+        return nil
+    }
+    
+    func searchRecruitment(titre: String) -> Recruitment?
+    {
+       let predicate = NSPredicate(format: "titre = %@", titre)
+        return fetchRecruitment(predicate)
     }
     
     private func fetchRecruitments(predicate : NSPredicate?, sortDescriptors: [NSSortDescriptor]?) -> [Recruitment]? {
@@ -80,15 +89,31 @@ class RecruitmentManager
         return nil
     }
     
-    func getAllRecruitments () -> [Recruitment] {
+    func getAllRecruitments (sortField: String?) -> [Recruitment] {
         var recruitment = [Recruitment]()
         
-        let sortDescriptors = [NSSortDescriptor(key: "titre", ascending: true)]
+        var sortDescriptors = [NSSortDescriptor]() //= [NSSortDescriptor(key: "titre", ascending: true)]
+        
+        if let field = sortField {
+            sortDescriptors = [NSSortDescriptor(key: field, ascending: true)]
+        }
+        else
+        {
+            sortDescriptors = [NSSortDescriptor(key: "titre", ascending: true)]
+        }
+        
         
         if let results = fetchRecruitments(nil, sortDescriptors: sortDescriptors) {
             recruitment = results
         }
         
         return recruitment
+    }
+    
+    func deleteRecruitment(recruitment: Recruitment?) {
+        if let recruitmentObject = recruitment {
+            contextObject!.deleteObject(recruitmentObject)
+            contextObject!.save(nil)
+        }
     }
 }
