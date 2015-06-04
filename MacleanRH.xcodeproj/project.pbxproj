@@ -11,6 +11,10 @@
 		B80B4C051B2077C40064B52D /* DegreeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C021B2077C40064B52D /* DegreeManager.swift */; };
 		B80B4C061B2077C40064B52D /* EmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C031B2077C40064B52D /* EmployeeManager.swift */; };
 		B80B4C081B207E470064B52D /* CandidateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C071B207E470064B52D /* CandidateViewCell.swift */; };
+		B80B4C0D1B20A05F0064B52D /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C091B20A05F0064B52D /* Calendar.png */; };
+		B80B4C0E1B20A05F0064B52D /* Dossier1.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0A1B20A05F0064B52D /* Dossier1.png */; };
+		B80B4C0F1B20A05F0064B52D /* Macleanrh.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0B1B20A05F0064B52D /* Macleanrh.png */; };
+		B80B4C101B20A05F0064B52D /* Recru.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0C1B20A05F0064B52D /* Recru.png */; };
 		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
@@ -50,6 +54,10 @@
 		B80B4C021B2077C40064B52D /* DegreeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeManager.swift; sourceTree = "<group>"; };
 		B80B4C031B2077C40064B52D /* EmployeeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeManager.swift; sourceTree = "<group>"; };
 		B80B4C071B207E470064B52D /* CandidateViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateViewCell.swift; sourceTree = "<group>"; };
+		B80B4C091B20A05F0064B52D /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
+		B80B4C0A1B20A05F0064B52D /* Dossier1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dossier1.png; sourceTree = "<group>"; };
+		B80B4C0B1B20A05F0064B52D /* Macleanrh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Macleanrh.png; sourceTree = "<group>"; };
+		B80B4C0C1B20A05F0064B52D /* Recru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Recru.png; sourceTree = "<group>"; };
 		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -182,6 +190,10 @@
 		B870E7F81B1DD52D00CA2C84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B80B4C091B20A05F0064B52D /* Calendar.png */,
+				B80B4C0A1B20A05F0064B52D /* Dossier1.png */,
+				B80B4C0B1B20A05F0064B52D /* Macleanrh.png */,
+				B80B4C0C1B20A05F0064B52D /* Recru.png */,
 				B870E7F91B1DD52D00CA2C84 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -285,6 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B870E8001B1DD52D00CA2C84 /* Main.storyboard in Resources */,
+				B80B4C0E1B20A05F0064B52D /* Dossier1.png in Resources */,
+				B80B4C0D1B20A05F0064B52D /* Calendar.png in Resources */,
+				B80B4C101B20A05F0064B52D /* Recru.png in Resources */,
+				B80B4C0F1B20A05F0064B52D /* Macleanrh.png in Resources */,
 				B870E8051B1DD52D00CA2C84 /* LaunchScreen.xib in Resources */,
 				B870E8021B1DD52D00CA2C84 /* Images.xcassets in Resources */,
 			);
