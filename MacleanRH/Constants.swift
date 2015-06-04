@@ -13,14 +13,3 @@ class Constants
     static let DATABASE_NAME = "MacleanRH"
     static let DATABASE_FILE = "MacleanRH.sqlite"
 }
-
-
-enum StateCanidature
-{
-    case ValidateCandidature
-    case RefuseCantidature
-    case IcompleteCandidature
-    case WaittingValideCandidature
-    case WaitingSignatureCandidature
-    case FinishCandidature
-}
