@@ -11,9 +11,13 @@ import UIKit
 class HomePageController: UIViewController {
     
     override func viewDidLoad() {
+        println("--viewDidLoad")
         super.viewDidLoad()
         
-        println("--viewDidLoad")
+        //loadDataForApplication()
+    }
+    
+    func loadDataForApplication() {
         var recru1:Recruitment!
         var recru2:Recruitment!
         
