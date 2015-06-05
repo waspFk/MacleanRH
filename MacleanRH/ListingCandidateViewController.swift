@@ -22,7 +22,12 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     // MARK: - Helper UI
     func loadData() {
         println(" --loadData")
-        candidates = CandidateManager.SharedManager.searchCandidateForRecruitment(recruitment)
+        if let candidateSet = recruitment.reruitment_candidate {
+            println("-- count : \(candidateSet.count)")
+            for candidate in candidateSet {
+                println(candidate.description)
+            }
+        }
     }
     
     
