@@ -14,8 +14,8 @@ class HomePageController: UIViewController {
         super.viewDidLoad()
         
         println("--viewDidLoad")
-        /*var recru1:Recruitment?
-        var recru2:Recruitment?
+        var recru1:Recruitment!
+        var recru2:Recruitment!
         
         if let r1 = RecruitmentManager.SharedManager.createRecruitment("Recherche d'un chef de chantier", workLibelle: "Chef de chantier", workDescription: "On veux un chef de chantier un carrefour", date: NSDate()) {
             println("Recruitment 1 : \(r1.workLibelle)")
@@ -30,26 +30,38 @@ class HomePageController: UIViewController {
         if let c1 = CandidateManager.SharedManager.createCandidate("RB", firstname: "Baptiste", mail: "baptiste.thug_viennois@gmail.com") {
             println("Candidate 1 : \(c1.lastName) - \(c1.firstName)")
             c1.candidate_recruitment?.setByAddingObject(recru1!)
+            recru1.reruitment_candidate?.setByAddingObject(c1)
+            
             c1.managedObjectContext?.save(nil)
+            recru1.managedObjectContext?.save(nil)
         }
         
         if let c2 = CandidateManager.SharedManager.createCandidate("M", firstname: "Cyril", mail: "cyril.meunier") {
             println("Candidate 2 : \(c2.lastName) - \(c2.firstName)")
             c2.candidate_recruitment?.setByAddingObject(recru1!)
+            recru1.reruitment_candidate?.setByAddingObject(c2)
+            
             c2.managedObjectContext?.save(nil)
+            recru1.managedObjectContext?.save(nil)
         }
         
         if let c3 = CandidateManager.SharedManager.createCandidate("C", firstname: "Seb", mail: "c.seb@gmail.com") {
             println("Candidate 3 : \(c3.lastName) - \(c3.firstName)")
             c3.candidate_recruitment?.setByAddingObject(recru2!)
+            recru2.reruitment_candidate?.setByAddingObject(c3)
+            
             c3.managedObjectContext?.save(nil)
+            recru2.managedObjectContext?.save(nil)
         }
         
         if let c4 = CandidateManager.SharedManager.createCandidate("M", firstname: "Aurelien", mail: "m.aurel@gmail.com") {
             println("Candidate 4 : \(c4.lastName) - \(c4.firstName)")
             c4.candidate_recruitment?.setByAddingObject(recru2!)
+            recru2.reruitment_candidate?.setByAddingObject(c4)
+            
             c4.managedObjectContext?.save(nil)
-        }*/
+            recru2.managedObjectContext?.save(nil)
+        }
     }
     
 }
