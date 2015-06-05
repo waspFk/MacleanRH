@@ -11,6 +11,12 @@ import UIKit
 class CandidateViewController: UIViewController
 {
     var candidate:Candidate!
+    @IBOutlet weak var libLastName: UITextField!
+    @IBOutlet weak var libFirstName: UITextField!
+    @IBOutlet weak var libMail: UITextField!
+    @IBOutlet weak var libAdresse: UITextField!
+    @IBOutlet weak var libTel: UITextField!
+    @IBOutlet weak var libMobile: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +34,11 @@ class CandidateViewController: UIViewController
         /*candidate?.candidate_recruitment.setByAddingObject(recruitment)
         candidate?.managedObjectContext?.save(nil)*/
         
-        /*libLastName.text = candidate!.lastName
+        libLastName.text = candidate!.lastName
         libFirstName.text = candidate!.firstName
         libMail.text = candidate?.mail
         libAdresse.text = candidate?.address
         libTel.text = candidate?.tel
-        libMobile.text = candidate?.mobile*/
+        libMobile.text = candidate?.mobile
     }
 }
