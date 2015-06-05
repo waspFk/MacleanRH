@@ -46,4 +46,7 @@ class HomePageController: UIViewController {
         }
     }
     
+    @IBAction func displayCalendar(sender: UIButton) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "calshow://")!)
+    }
 }
