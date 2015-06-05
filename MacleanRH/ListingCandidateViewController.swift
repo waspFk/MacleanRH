@@ -52,4 +52,23 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         
         return cell
     }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "candidateDetail" {
+            if let destination = segue.destinationViewController as? FolderCandidateController {
+                if let index = tableView.indexPathForSelectedRow()?.row {
+                    destination.candidate = candidates[index]
+                }
+            }
+        }
+    }
 }
