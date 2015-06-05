@@ -17,6 +17,8 @@
 		B80B4C101B20A05F0064B52D /* Recru.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0C1B20A05F0064B52D /* Recru.png */; };
 		B80B4C121B20A6C90064B52D /* RecruitmentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C111B20A6C90064B52D /* RecruitmentViewCell.swift */; };
 		B80B4C141B20A8740064B52D /* ListingRecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */; };
+		B80B4C181B2197990064B52D /* FolderCandidateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C151B2197990064B52D /* FolderCandidateController.swift */; };
+		B80B4C191B2197990064B52D /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C161B2197990064B52D /* QRCodeController.swift */; };
 		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
@@ -62,6 +64,8 @@
 		B80B4C0C1B20A05F0064B52D /* Recru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Recru.png; sourceTree = "<group>"; };
 		B80B4C111B20A6C90064B52D /* RecruitmentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitmentViewCell.swift; sourceTree = "<group>"; };
 		B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingRecruitmentViewController.swift; sourceTree = "<group>"; };
+		B80B4C151B2197990064B52D /* FolderCandidateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderCandidateController.swift; sourceTree = "<group>"; };
+		B80B4C161B2197990064B52D /* QRCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeController.swift; sourceTree = "<group>"; };
 		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 		B83C91E61B1F328700879EE5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B80B4C151B2197990064B52D /* FolderCandidateController.swift */,
+				B80B4C161B2197990064B52D /* QRCodeController.swift */,
 				B870E7FC1B1DD52D00CA2C84 /* ViewController.swift */,
 				B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */,
 				B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */,
@@ -338,6 +344,7 @@
 				B80B4C081B207E470064B52D /* CandidateViewCell.swift in Sources */,
 				B83DBA211B1F263F0092D63A /* StateCandidatureManager.swift in Sources */,
 				B83DBA451B1F50CB0092D63A /* Recruitment.swift in Sources */,
+				B80B4C181B2197990064B52D /* FolderCandidateController.swift in Sources */,
 				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,
 				B80B4C041B2077C40064B52D /* CandidateManager.swift in Sources */,
 				B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */,
@@ -348,6 +355,7 @@
 				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
 				B83DBA411B1F50CB0092D63A /* StateCandidature.swift in Sources */,
 				B83DBA3F1B1F50CA0092D63A /* Contract.swift in Sources */,
+				B80B4C191B2197990064B52D /* QRCodeController.swift in Sources */,
 				B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */,
 				B83DBA4F1B2036890092D63A /* TypeContractManager.swift in Sources */,
 			);

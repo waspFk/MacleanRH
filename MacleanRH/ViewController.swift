@@ -131,12 +131,12 @@ class ViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
         contracts = ContractManager.SharedManager.getAllContracts(nil)
         for contractVal in contracts
         {
-            println(contractVal.libelle+" -- "+contractVal.contract_typeContract.libelle)
+            println(contractVal.libelle!+" -- "+contractVal.contract_typeContract!.libelle!)
         }
         
         println(" ---- Search Test ---- ")
         contract = ContractManager.SharedManager.searchContract("libelle",data: "Contract 2")!
-        println(contract.libelle+" -- "+contract.contract_typeContract.libelle)
+        println(contract.libelle!+" -- "+contract.contract_typeContract!.libelle!)
         
         
         println(" ---- Delete Test ---- ")
@@ -146,7 +146,7 @@ class ViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
         
         for contractVal in contracts
         {
-            println(contractVal.libelle+" -- "+contractVal.contract_typeContract.libelle)
+            println(contractVal.libelle!+" -- "+contractVal.contract_typeContract!.libelle!)
         }
     }
     
