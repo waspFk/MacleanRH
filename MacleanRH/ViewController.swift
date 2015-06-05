@@ -7,116 +7,30 @@
 //
 
 import UIKit
-import EventKit
-import MessageUI
+import AVFoundation
 
-class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class ViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
 
+    @IBOutlet weak var txtData: UITextField!
+    @IBOutlet weak var imgQrCode: UIImageView!
+    @IBOutlet weak var libQrCode: UILabel!
+    
+    var objCaptureSession:AVCaptureSession?
+    var objCaptureVideoPreviewLayer:AVCaptureVideoPreviewLayer?
+    var vwQRCode:UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    // MARK: Calendar
-    
-    func testCalendar(){
-        println(" -- TEST CALENDAR -- ")
         
-        let eventStore = EKEventStore()
+        testStateCandidature()
         
-        switch EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent) {
-        case .Authorized:
-            insertEvent(eventStore)
-        case .Denied:
-            println("Access denied")
-        case .NotDetermined:
-            eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion:
-                {[weak self] (granted: Bool, error: NSError!) -> Void in
-                    if granted {
-                        self!.insertEvent(eventStore)
-                    } else {
-                        println("Access denied")
-                    }
-                })
-        default:
-            println("Case Default")
-        }
-    }
-    
-    func insertEvent(store: EKEventStore) {
-        let calendars = store.calendarsForEntityType(EKEntityTypeEvent)
-            as! [EKCalendar]
+        testTypeContract()
         
-        for calendar in calendars {
-            if calendar.title == "Calendar" {
-                let startDate = NSDate()
-                let endDate = startDate.dateByAddingTimeInterval(2 * 60 * 60)
-                // Create Event
-                var event = EKEvent(eventStore: store)
-                event.calendar = calendar
-                
-                event.title = "Test"
-                event.startDate = startDate
-                event.endDate = endDate
-                // Save Event in Calendar
-                var error: NSError?
-                let result = store.saveEvent(event, span: EKSpanThisEvent, error: &error)
-                
-                if result == false {
-                    if let theError = error {
-                        println("An error occured \(theError)")
-                    }
-                }
-                let events  = fetchEvents(store)
-                for e in events{
-                    println(e.title)
-                    println(e.startDate)
-                }
-            }
-        }
-    }
-    
-    // MARK: Mail
-    
-    func testSendMail(){
-        println(" -- TEST SEND MAIL -- ")
+        testRecruitment()
         
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self
-        // Email du destinataire
-        mailComposerVC.setToRecipients(["baptiste.briot@gmail.com"])
-        // Sujet du mail
-        mailComposerVC.setSubject("Mail de test ...")
-        // Corp du mail
-        mailComposerVC.setMessageBody("Bonjour, ceci est un test !", isHTML: false)
+        testContract()
         
-        if let filePath = NSBundle.mainBundle().pathForResource("ERDDiagram_MacleanRH_v2", ofType: "png") {
-            println("File path loaded.")
-            if let fileData = NSData(contentsOfFile: filePath) {
-                println("File data loaded.")
-                mailComposerVC.addAttachmentData(fileData, mimeType: "image/png", fileName: "ERDDiagram_MacleanRH_v2")
-            }
-        }
-        
-        if MFMailComposeViewController.canSendMail() {
-            self.presentViewController(mailComposerVC, animated: true, completion: nil)
-        } else {
-            let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-            sendMailErrorAlert.show()
-        }
     }
-    
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func fetchEvents(store: EKEventStore) -> NSMutableArray{
-        let endDate = NSDate(timeIntervalSinceNow: 604800*10);
-        let predicate = store.predicateForEventsWithStartDate(NSDate(), endDate: NSDate(), calendars: nil)
-        let events = NSMutableArray(array: store.eventsMatchingPredicate(predicate))
-        return events
-    }
-    
-    // MARK: StateCandidature
     
     func testStateCandidature () {
         println(" -- TEST STATE CANDIDATURE -- ")
@@ -148,8 +62,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         }
     }
     
-    // MARK: TypeContract
-    
     func testTypeContract () {
         println(" -- TEST TYPE CONTRACT -- ")
         
@@ -166,8 +78,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             println(" -- \(typeContract.libelle)")
         }
     }
-    
-    // MARK: Recruitment
     
     func testRecruitment() {
         println(" -- TEST RECRUITEMENT -- ")
@@ -202,8 +112,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         
     }
     
-    // MARK: Contract
-    
     func testContract()
     {
         println(" -- TEST CONTRACT -- ")
@@ -223,12 +131,12 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         contracts = ContractManager.SharedManager.getAllContracts(nil)
         for contractVal in contracts
         {
-            println(contractVal.libelle!+" -- "+contractVal.contract_typeContract!.libelle!)
+            println(contractVal.libelle+" -- "+contractVal.contract_typeContract.libelle)
         }
         
         println(" ---- Search Test ---- ")
         contract = ContractManager.SharedManager.searchContract("libelle",data: "Contract 2")!
-        println(contract.libelle!+" -- "+contract.contract_typeContract!.libelle!)
+        println(contract.libelle+" -- "+contract.contract_typeContract.libelle)
         
         
         println(" ---- Delete Test ---- ")
@@ -238,8 +146,26 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         
         for contractVal in contracts
         {
-            println(contractVal.libelle! + " -- " + contractVal.contract_typeContract!.libelle!)
+            println(contractVal.libelle+" -- "+contractVal.contract_typeContract.libelle)
         }
     }
+    
+    @IBAction func btnGenerate(sender: AnyObject) {
+        var qrCode: CIImage
+        
+        let data = txtData.text.dataUsingEncoding(NSISOLatin1StringEncoding,allowLossyConversion: false)
+        
+        let filter = CIFilter(name: "CIQRCodeGenerator")
+        
+        filter.setValue(data, forKey: "inputMessage")
+        
+        qrCode = filter.outputImage
+        
+        imgQrCode.image = UIImage(CIImage: qrCode)
+        
+    }
+    
+    
+    
 }
 
