@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TestViewController.swift
 //  MacleanRH
 //
 //  Created by iem on 02/06/2015.
@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
+class TestViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var txtData: UITextField!
     @IBOutlet weak var imgQrCode: UIImageView!
@@ -21,15 +21,6 @@ class ViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        testStateCandidature()
-        
-        testTypeContract()
-        
-        testRecruitment()
-        
-        testContract()
-        
     }
     
     func testStateCandidature () {

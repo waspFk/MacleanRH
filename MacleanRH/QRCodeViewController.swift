@@ -1,5 +1,5 @@
 //
-//  QRCodeController.swift
+//  QRCodeViewController.swift
 //  MacleanRH
 //
 //  Created by iem on 04/06/2015.
@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class QRCodeController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
+class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     
     var objCaptureSession:AVCaptureSession?
     var objCaptureVideoPreviewLayer:AVCaptureVideoPreviewLayer?

@@ -10,7 +10,6 @@ import UIKit
 
 class CandidateViewCell: UITableViewCell {
 
-    
     @IBOutlet var avatar: UIImageView!
     @IBOutlet var lastName: UILabel!
     @IBOutlet var firstName: UILabel!

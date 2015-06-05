@@ -12,6 +12,7 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     var candidates:[Candidate]!
     var recruitment:Recruitment!
 
+    
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +22,15 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     
     // MARK: - Helper UI
     func loadData() {
-        println(" --loadData")
-        if let candidateSet = recruitment.reruitment_candidate {
+        candidates = CandidateManager.SharedManager.getAllCandidates(nil)
+        println("Count candidates = \(candidates.count)")
+        
+        /*if let candidateSet = recruitment.reruitment_candidate {
             println("-- count : \(candidateSet.count)")
             for candidate in candidateSet {
                 println(candidate.description)
             }
-        }
+        }*/
     }
     
     
@@ -38,7 +41,7 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("candidateCell") as! CandidateViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("CandidateCell") as! CandidateViewCell
         let candidate = candidates[indexPath.row]
         
         cell.firstName.text  = candidate.firstName
@@ -52,19 +55,10 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "candidateDetail" {
-            if let destination = segue.destinationViewController as? FolderCandidateController {
+        if segue.identifier == "CandidateViewSegue" {
+            if let destination = segue.destinationViewController as? CandidateViewController {
                 if let index = tableView.indexPathForSelectedRow()?.row {
                     destination.candidate = candidates[index]
                 }
