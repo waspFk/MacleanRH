@@ -46,7 +46,6 @@
 		B887BFA91B219BB8002D0D8B /* BtnRecru.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF9D1B219BB8002D0D8B /* BtnRecru.png */; };
 		B887BFAA1B219BB8002D0D8B /* BtnRecru1.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF9E1B219BB8002D0D8B /* BtnRecru1.png */; };
 		B887BFAB1B219BB8002D0D8B /* BtnRecru2.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF9F1B219BB8002D0D8B /* BtnRecru2.png */; };
-		B887BFAC1B219BB8002D0D8B /* Capture d’écran 2015-06-04 à 17.33.44.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BFA01B219BB8002D0D8B /* Capture d’écran 2015-06-04 à 17.33.44.png */; };
 		B887BFAD1B219BB8002D0D8B /* Recrutementmini.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BFA11B219BB8002D0D8B /* Recrutementmini.png */; };
 		B887BFAE1B219BB8002D0D8B /* Recrutmini.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BFA21B219BB8002D0D8B /* Recrutmini.png */; };
 		B887BFAF1B219BB8002D0D8B /* Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BFA31B219BB8002D0D8B /* Stars.png */; };
@@ -57,7 +56,6 @@
 		B887BFD31B25BC7A002D0D8B /* Recruitment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFD21B25BC7A002D0D8B /* Recruitment.swift */; };
 		B887BFD51B25BC7B002D0D8B /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFD41B25BC7B002D0D8B /* Candidate.swift */; };
 		B889B2E51B258DD300CD5C57 /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = B889B2E41B258DD300CD5C57 /* noimage.png */; };
-		B889B2EB1B25D33C00CD5C57 /* Capture d’écran 2015-06-04 à 17.33.44.png in Resources */ = {isa = PBXBuildFile; fileRef = B889B2EA1B25D33C00CD5C57 /* Capture d’écran 2015-06-04 à 17.33.44.png */; };
 		B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */; };
 		B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -116,7 +114,6 @@
 		B887BF9D1B219BB8002D0D8B /* BtnRecru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnRecru.png; sourceTree = "<group>"; };
 		B887BF9E1B219BB8002D0D8B /* BtnRecru1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnRecru1.png; sourceTree = "<group>"; };
 		B887BF9F1B219BB8002D0D8B /* BtnRecru2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnRecru2.png; sourceTree = "<group>"; };
-		B887BFA01B219BB8002D0D8B /* Capture d’écran 2015-06-04 à 17.33.44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Capture d’écran 2015-06-04 à 17.33.44.png"; sourceTree = "<group>"; };
 		B887BFA11B219BB8002D0D8B /* Recrutementmini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Recrutementmini.png; sourceTree = "<group>"; };
 		B887BFA21B219BB8002D0D8B /* Recrutmini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Recrutmini.png; sourceTree = "<group>"; };
 		B887BFA31B219BB8002D0D8B /* Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stars.png; sourceTree = "<group>"; };
@@ -127,7 +124,6 @@
 		B887BFD21B25BC7A002D0D8B /* Recruitment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recruitment.swift; sourceTree = "<group>"; };
 		B887BFD41B25BC7B002D0D8B /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		B889B2E41B258DD300CD5C57 /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
-		B889B2EA1B25D33C00CD5C57 /* Capture d’écran 2015-06-04 à 17.33.44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Capture d’écran 2015-06-04 à 17.33.44.png"; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -245,7 +241,6 @@
 		B870E7F81B1DD52D00CA2C84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B889B2EA1B25D33C00CD5C57 /* Capture d’écran 2015-06-04 à 17.33.44.png */,
 				B889B2E41B258DD300CD5C57 /* noimage.png */,
 				B887BF981B219BB8002D0D8B /* btnCal.png */,
 				B887BF991B219BB8002D0D8B /* btndoss.png */,
@@ -255,7 +250,6 @@
 				B887BF9D1B219BB8002D0D8B /* BtnRecru.png */,
 				B887BF9E1B219BB8002D0D8B /* BtnRecru1.png */,
 				B887BF9F1B219BB8002D0D8B /* BtnRecru2.png */,
-				B887BFA01B219BB8002D0D8B /* Capture d’écran 2015-06-04 à 17.33.44.png */,
 				B887BFA11B219BB8002D0D8B /* Recrutementmini.png */,
 				B887BFA21B219BB8002D0D8B /* Recrutmini.png */,
 				B887BFA31B219BB8002D0D8B /* Stars.png */,
@@ -375,7 +369,6 @@
 				B887BFA91B219BB8002D0D8B /* BtnRecru.png in Resources */,
 				B80B4C0E1B20A05F0064B52D /* Dossier1.png in Resources */,
 				B80B4C0D1B20A05F0064B52D /* Calendar.png in Resources */,
-				B887BFAC1B219BB8002D0D8B /* Capture d’écran 2015-06-04 à 17.33.44.png in Resources */,
 				B889B2E51B258DD300CD5C57 /* noimage.png in Resources */,
 				B887BFA71B219BB8002D0D8B /* btndoss3.png in Resources */,
 				B80B4C101B20A05F0064B52D /* Recru.png in Resources */,
@@ -384,7 +377,6 @@
 				B887BFAF1B219BB8002D0D8B /* Stars.png in Resources */,
 				B870E8051B1DD52D00CA2C84 /* LaunchScreen.xib in Resources */,
 				B887BFAE1B219BB8002D0D8B /* Recrutmini.png in Resources */,
-				B889B2EB1B25D33C00CD5C57 /* Capture d’écran 2015-06-04 à 17.33.44.png in Resources */,
 				B870E8021B1DD52D00CA2C84 /* Images.xcassets in Resources */,
 				B887BFAB1B219BB8002D0D8B /* BtnRecru2.png in Resources */,
 			);
