@@ -79,7 +79,7 @@ class DegreeManager {
         
         degree.libelle = titre
         degree.date = date
-        degree.degree_candidate = candidate
+        degree.candidate = candidate
         
         var error: NSError? = nil
         contextObject!.save(&error)

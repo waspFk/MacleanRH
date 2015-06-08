@@ -11,6 +11,6 @@ import CoreData
 
 class TypeContract: NSManagedObject {
 
-    @NSManaged var libelle: String?
+    @NSManaged var libelle: String
 
 }

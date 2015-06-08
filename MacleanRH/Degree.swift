@@ -12,7 +12,7 @@ import CoreData
 class Degree: NSManagedObject {
 
     @NSManaged var date: NSDate?
-    @NSManaged var libelle: String?
-    @NSManaged var degree_candidate: Candidate?
+    @NSManaged var libelle: String
+    @NSManaged var candidate: Candidate
 
 }

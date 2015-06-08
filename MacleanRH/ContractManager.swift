@@ -40,7 +40,7 @@ class ContractManager
         contract.libelle = libelle
         contract.salary = salary
         contract.workLibelle = workLibelle
-        contract.contract_typeContract = typeContract
+        contract.typeContract = typeContract
         
         var error: NSError? = nil
         contextObject!.save(&error)

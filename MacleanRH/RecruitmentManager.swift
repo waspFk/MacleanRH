@@ -46,7 +46,7 @@ class RecruitmentManager
         contextObject!.save(&error)
         
         if error != nil {
-            println(" Could not save context : \(error), \(error?.description) ")
+            println("RecruitmentManager -- Could not save context : \(error)")
         }
         
         return recruitmentReturn
@@ -82,7 +82,7 @@ class RecruitmentManager
         }
         
         if error != nil {
-            println(" Could not fetch data : \(error), \(error?.description) ")
+            println("RecruitmentManager -- Could not fetch data : \(error)")
         }
         
         return nil

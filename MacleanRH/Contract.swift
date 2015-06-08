@@ -19,9 +19,8 @@ class Contract: NSManagedObject {
     @NSManaged var signatureEmployee: NSData?
     @NSManaged var workLibelle: String?
     @NSManaged var specialCondition: String?
-    @NSManaged var contract_Recruitment: Recruitment?
-    @NSManaged var contract_employee: Employee?
-    @NSManaged var contract_typeContract: TypeContract?
-    @NSManaged var contract_candidate: Candidate?
+    @NSManaged var employee: Employee?
+    @NSManaged var typeContract: TypeContract?
+    @NSManaged var candidate: Candidate?
 
 }
