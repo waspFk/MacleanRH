@@ -14,7 +14,7 @@ class HomePageController: UIViewController {
         println("--viewDidLoad")
         super.viewDidLoad()
         
-        loadDataForApplication()
+        //loadDataForApplication()
     }
     
     func loadDataForApplication() {
