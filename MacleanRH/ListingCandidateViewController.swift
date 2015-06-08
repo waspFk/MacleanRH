@@ -22,15 +22,8 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     
     // MARK: - Helper UI
     func loadData() {
-        candidates = CandidateManager.SharedManager.getAllCandidates(nil)
+        candidates = recruitment.getCandidatesArray()
         println("Count candidates = \(candidates.count)")
-        
-        /*if let candidateSet = recruitment.reruitment_candidate {
-            println("-- count : \(candidateSet.count)")
-            for candidate in candidateSet {
-                println(candidate.description)
-            }
-        }*/
     }
     
     
@@ -61,6 +54,7 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
             if let destination = segue.destinationViewController as? CandidateViewController {
                 if let index = tableView.indexPathForSelectedRow()?.row {
                     destination.candidate = candidates[index]
+                    destination.recruitment = recruitment
                 }
             }
         }
