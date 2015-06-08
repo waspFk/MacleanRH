@@ -47,25 +47,21 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         libFirstName.text = candidate.firstName
         libMail.text = candidate.mail
         
-        if let data = candidate?.address {
+        if let data = candidate.address {
             libAdresse.text = data
         }
         
-        if let data = candidate?.tel {
+        if let data = candidate.tel {
             libTel.text = data
         }
         
-        if let data = candidate?.mobile {
+        if let data = candidate.mobile {
             libMobile.text = data
         }
         
-        if let data = recruitment?.workLibelle {
-            libPoste.text = data
-        }
-        
-        if let data = recruitment?.sector?.libelle {
-            libSector.text = data
-        }
+
+        libPoste.text = recruitment.workLibelle
+        libSector.text = recruitment.sector.libelle
     }
     
     
