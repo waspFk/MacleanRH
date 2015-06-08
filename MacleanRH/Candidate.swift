@@ -29,13 +29,13 @@ class Candidate: NSManagedObject {
 extension Candidate {
     
     func addRecruitment(recruitment: Recruitment) {
-        var recruitments = self.mutableSetValueForKey("recruitments")
-        recruitments.addObject(recruitment)
+        var tmpRecruitments = self.valueForKey("recruitments") as! NSMutableSet
+        tmpRecruitments.addObject(recruitment)
     }
     
     func removeRecruitment(recruitment: Recruitment) {
-        var recruitments = self.mutableSetValueForKey("recruitments")
-        recruitments.removeObject(recruitment)
+        var tmpRecruitments = self.valueForKey("recruitments") as! NSMutableSet
+        tmpRecruitments.removeObject(recruitment)
     }
     
     func countRecruitments() -> Int {
@@ -51,13 +51,13 @@ extension Candidate {
     }
     
     func addDegree(degree: Degree) {
-        var degrees = self.mutableSetValueForKey("degrees")
-        degrees.addObject(degree)
+        var tmpDegrees = self.valueForKey("degrees") as! NSMutableSet
+        tmpDegrees.addObject(degree)
     }
     
     func removeDegree(degree: Degree) {
-        var degrees = self.mutableSetValueForKey("degrees")
-        degrees.removeObject(degree)
+        var tmpDegrees = self.valueForKey("degrees") as! NSMutableSet
+        tmpDegrees.removeObject(degree)
     }
     
     func countDegrees() -> Int {

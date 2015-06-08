@@ -23,7 +23,7 @@ class Dating: NSManagedObject {
 
 extension Dating {
     func addCandidate(candidate: Candidate) {
-        var candidates = self.mutableSetValueForKey("candidates")
+        var candidates = self.valueForKey("candidates") as! NSMutableSet
         candidates.addObject(candidate)
     }
     
@@ -43,7 +43,7 @@ extension Dating {
     
     
     func removeCandidate(candidate: Candidate){
-        var candidates = self.mutableSetValueForKey("candidates")
+        var candidates = self.valueForKey("candidates") as! NSMutableSet
         candidates.removeObject(candidate)
     }
 }
