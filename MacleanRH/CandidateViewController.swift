@@ -8,11 +8,10 @@
 
 import UIKit
 
-class CandidateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIPopoverPresentationControllerDelegate
-{
+class CandidateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverPresentationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     var candidate:Candidate!
     var recruitment: Recruitment!
-    
+    var candidates:[Candidate]!
 
     
     @IBOutlet weak var libLastName: UITextField!
@@ -24,6 +23,7 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var libPoste: UITextField!
     @IBOutlet weak var imgImageCandidate: UIImageView!
     @IBOutlet weak var libSector: UITextField!
+    @IBOutlet weak var tableViewCandidate: UITableView!
     
     var photoData: NSData!
     
@@ -32,6 +32,8 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         super.viewDidLoad()
         
         println("My candidate : \(candidate.lastName) \(candidate.firstName)")
+        
+        candidates = recruitment.getCandidatesArray()
         
         candidate.address = "Test address, 01000, Bourg"
         candidate.tel = "0385323136"
@@ -92,4 +94,31 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         viewController.url = "https://www.linkedin.com/nhome/"
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    // MARK: - UITableViewDataSource
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println(" --numberOfRowsInSection : \(candidates.count) ")
+        return candidates.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        println("CandidateViewCell")
+        
+        let cell = tableViewCandidate.dequeueReusableCellWithIdentifier("CandidateCell") as! CandidateViewCell
+        let candidate = candidates[indexPath.row]
+        
+        println("Candidate : \(candidate.lastName)")
+        
+        cell.firstName.text  = candidate.firstName
+        cell.lastName.text   = candidate.lastName
+        
+        if let picture = candidate.photo {
+            cell.avatar.image = UIImage(data: picture)
+        }
+        
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
+        return cell
+    }
+
 }
