@@ -56,7 +56,6 @@
 		B887BFD31B25BC7A002D0D8B /* Recruitment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFD21B25BC7A002D0D8B /* Recruitment.swift */; };
 		B887BFD51B25BC7B002D0D8B /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFD41B25BC7B002D0D8B /* Candidate.swift */; };
 		B889B2E51B258DD300CD5C57 /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = B889B2E41B258DD300CD5C57 /* noimage.png */; };
-		B889B2E71B25CC9300CD5C57 /* SectorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889B2E61B25CC9300CD5C57 /* SectorManager.swift */; };
 		B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */; };
 		B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -125,7 +124,6 @@
 		B887BFD21B25BC7A002D0D8B /* Recruitment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recruitment.swift; sourceTree = "<group>"; };
 		B887BFD41B25BC7B002D0D8B /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		B889B2E41B258DD300CD5C57 /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
-		B889B2E61B25CC9300CD5C57 /* SectorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorManager.swift; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,7 +157,6 @@
 				B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */,
 				B83DBA4E1B2036890092D63A /* TypeContractManager.swift */,
 				B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */,
-				B889B2E61B25CC9300CD5C57 /* SectorManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -419,7 +416,6 @@
 				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,
 				B80B4C041B2077C40064B52D /* CandidateManager.swift in Sources */,
 				B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */,
-				B889B2E71B25CC9300CD5C57 /* SectorManager.swift in Sources */,
 				B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */,
 				B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */,
 				B80B4C121B20A6C90064B52D /* RecruitmentViewCell.swift in Sources */,
