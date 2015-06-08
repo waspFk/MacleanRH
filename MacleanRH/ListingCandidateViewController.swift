@@ -22,8 +22,15 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     
     // MARK: - Helper UI
     func loadData() {
-        candidates = recruitment.getCandidatesArray()
+        candidates = CandidateManager.SharedManager.getAllCandidates(nil)
         println("Count candidates = \(candidates.count)")
+        
+        /*if let candidateSet = recruitment.reruitment_candidate {
+            println("-- count : \(candidateSet.count)")
+            for candidate in candidateSet {
+                println(candidate.description)
+            }
+        }*/
     }
     
     
