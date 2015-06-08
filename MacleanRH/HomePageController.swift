@@ -34,7 +34,13 @@ class HomePageController: UIViewController {
                 c2.managedObjectContext?.save(nil)
             }
             
-            println("Recruitment 1 : \(r1.workLibelle) : Nombre de candidats : \(r1.candidates.count)")
+            if SectorManager.SharedManager.searchRecruitment("Commercial") == nil {
+                let s1 = SectorManager.SharedManager.createSector("Commercial")
+                r1.sector = s1
+            }
+            
+            println("Recruitment 1 : \(r1.workLibelle) : Nombre de candidats : \(r1.candidates.count) Secteur : \(r1.sector?.libelle)")
+            r1.managedObjectContext?.save(nil)
         }
         
         if let r2 = RecruitmentManager.SharedManager.createRecruitment("Recherche d'une femme ménagère", workLibelle: "Femme de ménage", workDescription: "On veux une femme de menage carrefour", date: NSDate()) {
@@ -53,8 +59,16 @@ class HomePageController: UIViewController {
                 c4.managedObjectContext?.save(nil)
             }
             
-            println("Recruitment 2 : \(r2.workLibelle) : Nombre de candidats : \(r2.candidates.count)")
+            if SectorManager.SharedManager.searchRecruitment("Informatique") == nil {
+                let s1 = SectorManager.SharedManager.createSector("Informatique")
+                r2.sector = s1
+            }
+            
+            println("Recruitment 2 : \(r2.workLibelle) : Nombre de candidats : \(r2.candidates.count) Secteur : \(r2.sector?.libelle)")
+            r2.managedObjectContext?.save(nil)
         }
+        
+      
         
     }
     
