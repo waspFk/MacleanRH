@@ -57,6 +57,7 @@
 		B887BFB71B219DA5002D0D8B /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */; };
 		B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */; };
 		B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */; };
+		B8E63A871B25BC810075FC27 /* EmployeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E63A861B25BC810075FC27 /* EmployeeViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
+		B8E63A861B25BC810075FC27 /* EmployeeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */,
 				B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */,
 				B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */,
+				B8E63A861B25BC810075FC27 /* EmployeeViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				B80B4C141B20A8740064B52D /* ListingRecruitmentViewController.swift in Sources */,
 				B83DBA4B1B1F50CB0092D63A /* Degree.swift in Sources */,
 				B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */,
+				B8E63A871B25BC810075FC27 /* EmployeeViewCell.swift in Sources */,
 				B887BFB51B219D46002D0D8B /* ListingEmployeeViewController.swift in Sources */,
 				B887BFB21B219C6A002D0D8B /* Dating.swift in Sources */,
 				B83DBA471B1F50CB0092D63A /* Candidate.swift in Sources */,
