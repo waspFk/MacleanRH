@@ -11,17 +11,17 @@ import CoreData
 
 class Candidate: NSManagedObject {
 
-    @NSManaged var address: String
-    @NSManaged var birthday: NSDate
-    @NSManaged var cadre: NSNumber
+    @NSManaged var address: String?
+    @NSManaged var birthday: NSDate?
+    @NSManaged var cadre: NSNumber?
     @NSManaged var firstName: String
     @NSManaged var lastName: String
     @NSManaged var mail: String
-    @NSManaged var mobile: String
+    @NSManaged var mobile: String?
     @NSManaged var photo: NSData?
-    @NSManaged var seniority: NSNumber
-    @NSManaged var tel: String
-    @NSManaged var degrees: NSSet
+    @NSManaged var seniority: NSNumber?
+    @NSManaged var tel: String?
+    @NSManaged var degrees: NSSet?
     @NSManaged var recruitments: NSSet
     @NSManaged var state_candidature: StateCandidature
 

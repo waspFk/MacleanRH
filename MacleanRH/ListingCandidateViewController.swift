@@ -26,6 +26,19 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         println("Count candidates = \(candidates.count)")
     }
     
+    func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor {
+        var scanner = NSScanner(string:colorCode)
+        var color:UInt32 = 0;
+        scanner.scanHexInt(&color)
+        
+        let mask = 0x000000FF
+        let r = CGFloat(Float(Int(color >> 16) & mask)/255.0)
+        let g = CGFloat(Float(Int(color >> 8) & mask)/255.0)
+        let b = CGFloat(Float(Int(color) & mask)/255.0)
+        
+        return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
+    }
+    
     
     // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,6 +52,8 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         
         cell.firstName.text  = candidate.firstName
         cell.lastName.text   = candidate.lastName
+        
+        cell.backgroundColor = UIColorFromRGB(candidate.state_candidature.color, alpha: 0.5)
         
         if let picture = candidate.photo {
             cell.avatar.image = UIImage(data: picture)
