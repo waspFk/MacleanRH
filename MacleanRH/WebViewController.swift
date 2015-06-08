@@ -16,7 +16,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let request = NSURLRequest(URL: NSURL(string: url!)!)
+        //let request = NSURLRequest(URL: NSURL(string: url!)!)
+        let request = NSURLRequest(URL: NSURL(fileURLWithPath: url!)!)
         webView.loadRequest(request)
     }
     
