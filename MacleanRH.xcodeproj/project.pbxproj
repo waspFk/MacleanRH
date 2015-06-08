@@ -55,6 +55,7 @@
 		B887BFB31B219C6A002D0D8B /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB11B219C6A002D0D8B /* Sector.swift */; };
 		B887BFB51B219D46002D0D8B /* ListingEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */; };
 		B887BFB71B219DA5002D0D8B /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */; };
+		B889B2E51B258DD300CD5C57 /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = B889B2E41B258DD300CD5C57 /* noimage.png */; };
 		B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */; };
 		B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,7 @@
 		B887BFB11B219C6A002D0D8B /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 		B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingEmployeeViewController.swift; sourceTree = "<group>"; };
 		B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		B889B2E41B258DD300CD5C57 /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +240,7 @@
 		B870E7F81B1DD52D00CA2C84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B889B2E41B258DD300CD5C57 /* noimage.png */,
 				B887BF981B219BB8002D0D8B /* btnCal.png */,
 				B887BF991B219BB8002D0D8B /* btndoss.png */,
 				B887BF9A1B219BB8002D0D8B /* btndoss2.png */,
@@ -367,6 +370,7 @@
 				B80B4C0E1B20A05F0064B52D /* Dossier1.png in Resources */,
 				B80B4C0D1B20A05F0064B52D /* Calendar.png in Resources */,
 				B887BFAC1B219BB8002D0D8B /* Capture d’écran 2015-06-04 à 17.33.44.png in Resources */,
+				B889B2E51B258DD300CD5C57 /* noimage.png in Resources */,
 				B887BFA71B219BB8002D0D8B /* btndoss3.png in Resources */,
 				B80B4C101B20A05F0064B52D /* Recru.png in Resources */,
 				B887BFA81B219BB8002D0D8B /* btndoss4.png in Resources */,
