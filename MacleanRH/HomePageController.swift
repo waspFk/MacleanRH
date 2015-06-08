@@ -55,6 +55,7 @@ class HomePageController: UIViewController {
             
             println("Recruitment 2 : \(r2.workLibelle) : Nombre de candidats : \(r2.candidates.count)")
         }
+        
     }
     
     @IBAction func displayCalendar(sender: UIButton) {

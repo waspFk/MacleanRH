@@ -553,7 +553,7 @@
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="aez-Xq-bGC">
-                                        <rect key="frame" x="0.0" y="130" width="296" height="82"/>
+                                        <rect key="frame" x="0.0" y="66" width="296" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aez-Xq-bGC" id="EGQ-ma-1rp">
                                             <rect key="frame" x="0.0" y="0.0" width="296" height="81"/>
@@ -1048,14 +1048,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" id="tgZ-Rs-7Pf">
-                                        <rect key="frame" x="99" y="380" width="204" height="129"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                            <bool key="isElement" value="NO"/>
-                                        </accessibility>
-                                    </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poste :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KZb-ml-OFS">
                                         <rect key="frame" x="407" y="434" width="75" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1117,6 +1109,15 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="YWB-r1-Psr">
+                                        <rect key="frame" x="136" y="425" width="168" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1134,6 +1135,7 @@
                         <outlet property="libMail" destination="mx3-Yz-f76" id="HBU-Ki-0xg"/>
                         <outlet property="libMobile" destination="6wd-fI-UMb" id="rBQ-Xh-bMa"/>
                         <outlet property="libPoste" destination="yJA-6x-M3X" id="iTP-VU-knk"/>
+                        <outlet property="libSector" destination="YWB-r1-Psr" id="1RP-WK-znm"/>
                         <outlet property="libTel" destination="Jp7-bf-FQ1" id="1iG-Vj-0Af"/>
                     </connections>
                 </viewController>

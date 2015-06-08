@@ -23,6 +23,7 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var libMobile: UITextField!
     @IBOutlet weak var libPoste: UITextField!
     @IBOutlet weak var imgImageCandidate: UIImageView!
+    @IBOutlet weak var libSector: UITextField!
     
     var photoData: NSData!
     
@@ -60,6 +61,10 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         
         if let data = recruitment?.workLibelle {
             libPoste.text = data
+        }
+        
+        if let data = recruitment?.sector?.libelle {
+            libSector.text = data
         }
     }
     
