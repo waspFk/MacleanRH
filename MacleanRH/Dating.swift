@@ -21,7 +21,7 @@ class Dating: NSManagedObject {
 
 }
 
-extension Recruitment {
+extension Dating {
     func getCandidatesArray() -> [Candidate] {
         return self.candidates.allObjects as! [Candidate]
     }
@@ -37,4 +37,4 @@ extension Recruitment {
     func removeCandidate(candidate:Candidate){
         self.mutableSetValueForKey("candidates").removeObject(candidate)
     }
-}break
+}
