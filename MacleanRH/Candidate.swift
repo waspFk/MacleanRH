@@ -28,9 +28,47 @@ class Candidate: NSManagedObject {
 
 extension Candidate {
     
-    func addRecruitment(recruitment:Recruitment) {
+    func addRecruitment(recruitment: Recruitment) {
         var recruitments = self.mutableSetValueForKey("recruitments")
         recruitments.addObject(recruitment)
     }
     
+    func removeRecruitment(recruitment: Recruitment) {
+        var recruitments = self.mutableSetValueForKey("recruitments")
+        recruitments.removeObject(recruitment)
+    }
+    
+    func countRecruitments() -> Int {
+        return self.recruitments.count
+    }
+    
+    func getRecruitmens() -> [Recruitment] {
+        var tmpRecruitments = [Recruitment]()
+        
+        tmpRecruitments = self.recruitments.allObjects as! [Recruitment]
+        
+        return tmpRecruitments
+    }
+    
+    func addDegree(degree: Degree) {
+        var degrees = self.mutableSetValueForKey("degrees")
+        degrees.addObject(degree)
+    }
+    
+    func removeDegree(degree: Degree) {
+        var degrees = self.mutableSetValueForKey("degrees")
+        degrees.removeObject(degree)
+    }
+    
+    func countDegrees() -> Int {
+        return self.degrees.count
+    }
+    
+    func getDegrees() -> [Degree] {
+        var tmpDegrees = [Degree]()
+        
+        tmpDegrees = self.degrees.allObjects as! [Degree]
+        
+        return tmpDegrees
+    }
 }

@@ -17,7 +17,29 @@ class Recruitment: NSManagedObject {
     @NSManaged var workLibelle: String
     @NSManaged var candidates: NSSet
     @NSManaged var sector:Sector
-    
-   
+}
 
+extension Recruitment {
+    
+    func addCandidate(candidate: Candidate) {
+        var tmpCandidates = self.mutableSetValueForKey("candidates")
+        tmpCandidates.addObject(candidate)
+    }
+    
+    func removeRecruitment(candidate: Candidate) {
+        var tmpCandidates = self.mutableSetValueForKey("candidates")
+        tmpCandidates.removeObject(candidate)
+    }
+    
+    func countCandidates() -> Int {
+        return self.candidates.count
+    }
+    
+    func getCandidates() -> [Candidate] {
+        var tmpCandidates = [Candidate]()
+        
+        tmpCandidates = self.candidates.allObjects as! [Candidate]
+        
+        return tmpCandidates
+    }
 }

@@ -16,5 +16,34 @@ class Dating: NSManagedObject {
     @NSManaged var dateEnd: NSDate
     @NSManaged var recruitment: Recruitment
     @NSManaged var candidates: NSSet
+    
+  
 
+}
+
+extension Dating {
+    func addCandidate(candidate: Candidate) {
+        var candidates = self.mutableSetValueForKey("candidates")
+        candidates.addObject(candidate)
+    }
+    
+    
+    func countCandidate() -> Int {
+        return self.candidates.count
+    }
+    
+    
+    func getCandiate() -> [Candidate] {
+        var tmpCandidates = [Candidate]()
+        
+        tmpCandidates = self.candidates.allObjects as! [Candidate]
+        
+        return tmpCandidates
+    }
+    
+    
+    func removeCandidate(candidate: Candidate){
+        var candidates = self.mutableSetValueForKey("candidates")
+        candidates.removeObject(candidate)
+    }
 }
