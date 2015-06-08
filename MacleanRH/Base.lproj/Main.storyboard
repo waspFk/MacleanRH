@@ -553,7 +553,7 @@
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="aez-Xq-bGC">
-                                        <rect key="frame" x="0.0" y="66" width="296" height="82"/>
+                                        <rect key="frame" x="0.0" y="130" width="296" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aez-Xq-bGC" id="EGQ-ma-1rp">
                                             <rect key="frame" x="0.0" y="0.0" width="296" height="81"/>
@@ -679,6 +679,9 @@
                                         <state key="normal" title="LinkedIn">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getWebViewWithLinkedIn:" destination="6C9-Z3-uYl" eventType="touchUpInside" id="AER-PR-JXd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oKg-dT-zdm">
                                         <rect key="frame" x="622" y="112" width="47" height="30"/>
@@ -686,6 +689,9 @@
                                         <state key="normal" title="Viadeo">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getWebViewWithViadeo:" destination="6C9-Z3-uYl" eventType="touchUpInside" id="iNw-w1-kqG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ezl-mT-385">
                                         <rect key="frame" x="622" y="159" width="31" height="30"/>
@@ -693,6 +699,9 @@
                                         <state key="normal" title="Xing">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getWebViewWithXing:" destination="6C9-Z3-uYl" eventType="touchUpInside" id="ozh-zw-s3O"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rQw-D6-sC3">
                                         <rect key="frame" x="135" y="337" width="168" height="30"/>
@@ -828,6 +837,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ClZ-Rc-ICX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3864" y="714"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="0uy-Yl-23q">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="ukm-k9-yeo" customClass="WebViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9UD-tY-kVS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="SBP-f9-heb">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="704"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="waS-AT-Ffl">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="gfS-9K-5BM">
+                                        <connections>
+                                            <action selector="stop:" destination="ukm-k9-yeo" id="YT3-7A-aBO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="33" systemItem="fixedSpace" id="Vru-3m-z0d"/>
+                                    <barButtonItem systemItem="refresh" id="Mik-4c-Ejr">
+                                        <connections>
+                                            <action selector="doRefresh:" destination="ukm-k9-yeo" id="3gP-me-5Ax"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="nYT-Fl-a6o"/>
+                                    <barButtonItem systemItem="rewind" id="m8d-QS-mra">
+                                        <connections>
+                                            <action selector="goBack:" destination="ukm-k9-yeo" id="vBO-Di-KkQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="32" systemItem="fixedSpace" id="ge1-eg-m8Z"/>
+                                    <barButtonItem systemItem="fastForward" id="dZi-mb-rn2">
+                                        <connections>
+                                            <action selector="goForward:" destination="ukm-k9-yeo" id="5ry-V4-m3I"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="webView" destination="SBP-f9-heb" id="W62-AM-Gl3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cK-YX-vAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5009" y="1320"/>
         </scene>
         <!--Détails candidat-->
         <scene sceneID="Xk9-XY-fgU">
@@ -985,19 +1048,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LgU-uu-ESr">
-                                        <rect key="frame" x="622" y="62" width="59" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="LinkedIn">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WCr-NL-Dqb">
                                         <rect key="frame" x="622" y="100" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Viadeo">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getWebViewWithViadeo:" destination="UXo-T0-npt" eventType="touchUpInside" id="FjA-vq-pQ3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MUj-bX-4Ub">
                                         <rect key="frame" x="622" y="147" width="31" height="30"/>
@@ -1005,6 +1064,9 @@
                                         <state key="normal" title="Xing">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getWebViewWithXing:" destination="UXo-T0-npt" eventType="touchUpInside" id="gpC-Yj-CxM"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Jp7-bf-FQ1">
                                         <rect key="frame" x="136" y="355" width="168" height="30"/>
@@ -1116,6 +1178,16 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LgU-uu-ESr">
+                                        <rect key="frame" x="622" y="62" width="59" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="LinkedIn">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getWebViewWithLinkedIn:" destination="UXo-T0-npt" eventType="touchUpInside" id="N3j-ga-Jw3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>

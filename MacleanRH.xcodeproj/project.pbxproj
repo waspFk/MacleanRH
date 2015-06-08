@@ -20,6 +20,7 @@
 		B80B4C181B2197990064B52D /* CandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C151B2197990064B52D /* CandidateViewController.swift */; };
 		B80B4C191B2197990064B52D /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C161B2197990064B52D /* QRCodeViewController.swift */; };
 		B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */; };
+		B82CC5B51B259EF900641299 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82CC5B41B259EF900641299 /* WebViewController.swift */; };
 		B834290F1B1EF0E8008557AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B834290E1B1EF0E8008557AF /* Constants.swift */; };
 		B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83429101B1EF1CD008557AF /* CoreDataManager.swift */; };
 		B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */; };
@@ -83,6 +84,7 @@
 		B80B4C151B2197990064B52D /* CandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateViewController.swift; sourceTree = "<group>"; };
 		B80B4C161B2197990064B52D /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		B811ACDD1B2050B800FEB7A8 /* ContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractManager.swift; sourceTree = "<group>"; };
+		B82CC5B41B259EF900641299 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B834290E1B1EF0E8008557AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83429101B1EF1CD008557AF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B83C91E81B2036E900879EE5 /* RecruitmentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitmentManager.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */,
 				B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */,
 				B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */,
+				B82CC5B41B259EF900641299 /* WebViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				B887BFB31B219C6A002D0D8B /* Sector.swift in Sources */,
 				B83DBA3F1B1F50CA0092D63A /* Contract.swift in Sources */,
 				B80B4C191B2197990064B52D /* QRCodeViewController.swift in Sources */,
+				B82CC5B51B259EF900641299 /* WebViewController.swift in Sources */,
 				B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */,
 				B83DBA4F1B2036890092D63A /* TypeContractManager.swift in Sources */,
 			);
