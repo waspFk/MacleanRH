@@ -17,6 +17,7 @@ class CandidateViewController: UIViewController
     @IBOutlet weak var libAdresse: UITextField!
     @IBOutlet weak var libTel: UITextField!
     @IBOutlet weak var libMobile: UITextField!
+    @IBOutlet weak var imgNoImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,8 @@ class CandidateViewController: UIViewController
         /*candidate?.candidate_recruitment.setByAddingObject(recruitment)
         candidate?.managedObjectContext?.save(nil)*/
         
+        imgNoImage.frame = CGRectMake(0, 0, 100, 200)
+        imgNoImage.image = UIImage(named: "noimage.png")
         libLastName.text = candidate!.lastName
         libFirstName.text = candidate!.firstName
         libMail.text = candidate?.mail
