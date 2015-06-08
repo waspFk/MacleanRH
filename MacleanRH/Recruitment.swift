@@ -22,12 +22,12 @@ class Recruitment: NSManagedObject {
 extension Recruitment {
     
     func addCandidate(candidate: Candidate) {
-        var tmpCandidates = self.mutableSetValueForKey("candidates")
+        var tmpCandidates = self.valueForKey("candidates") as! NSMutableSet
         tmpCandidates.addObject(candidate)
     }
     
     func removeRecruitment(candidate: Candidate) {
-        var tmpCandidates = self.mutableSetValueForKey("candidates")
+        var tmpCandidates = self.valueForKey("candidates") as! NSMutableSet
         tmpCandidates.removeObject(candidate)
     }
     
