@@ -8,40 +8,69 @@
 
 import UIKit
 
-class CandidateViewController: UIViewController
+class CandidateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIPopoverPresentationControllerDelegate
 {
     var candidate:Candidate!
+    var recruitment: Recruitment!
+    
+
+    
     @IBOutlet weak var libLastName: UITextField!
     @IBOutlet weak var libFirstName: UITextField!
     @IBOutlet weak var libMail: UITextField!
     @IBOutlet weak var libAdresse: UITextField!
     @IBOutlet weak var libTel: UITextField!
     @IBOutlet weak var libMobile: UITextField!
-    @IBOutlet weak var imgNoImage: UIImageView!
+    @IBOutlet weak var libPoste: UITextField!
+    @IBOutlet weak var imgImageCandidate: UIImageView!
+    
+    var photoData: NSData!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         println("My candidate : \(candidate.lastName) \(candidate.firstName)")
         
-        //let candidates = CandidateManager.SharedManager.getAllCandidates("lastName")
+        candidate.address = "Test address, 01000, Bourg"
+        candidate.tel = "0385323136"
+        candidate.mobile = "0615203698"
+        candidate.photo = UIImageJPEGRepresentation(UIImage(named: "noimage.png"), 160.0)
+        candidate.managedObjectContext?.save(nil)
         
-        /*let recruitment = RecruitmentManager.SharedManager.createRecruitment("Nouveau poste", workLibelle: "Informatique", workDescription: "Administrateur réseau", date: NSDate())*/
-
-        //CandidateManager.SharedManager.createCandidate("Meunier", firstname: "Cyril", mail: "cyril.meunier71@gmail.com",address: "19 impasse du tilleul \n 71960\n Milly-Lamartine",tel: "0610203645",mobile: "0385331460")
-
-        //let candidate = CandidateManager.SharedManager.searchCandidateWithMail("cyril.meunier71@gmail.com")
+        imgImageCandidate.frame = CGRectMake(0, 0, 200, 200)
+        let thumbnail = UIImage(data: (candidate.photo as NSData?)!)
+        imgImageCandidate.image = thumbnail
+    
+        libLastName.text = candidate.lastName
+        libFirstName.text = candidate.firstName
+        libMail.text = candidate.mail
         
-        /*candidate?.candidate_recruitment.setByAddingObject(recruitment)
-        candidate?.managedObjectContext?.save(nil)*/
+        if let data = candidate?.address {
+            libAdresse.text = data
+        }
         
-        imgNoImage.frame = CGRectMake(0, 0, 100, 200)
-        imgNoImage.image = UIImage(named: "noimage.png")
-        libLastName.text = candidate!.lastName
-        libFirstName.text = candidate!.firstName
-        libMail.text = candidate?.mail
-        libAdresse.text = candidate?.address
-        libTel.text = candidate?.tel
-        libMobile.text = candidate?.mobile
+        if let data = candidate?.tel {
+            libTel.text = data
+        }
+        
+        if let data = candidate?.mobile {
+            libMobile.text = data
+        }
+        
+        if let data = recruitment?.workLibelle {
+            libPoste.text = data
+        }
+    }
+    
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage
+        image: UIImage!,
+        editingInfo: [NSObject : AnyObject]!) {
+            
+            self.imgImageCandidate.image = image
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+            photoData = UIImageJPEGRepresentation(image, 100)
     }
 }

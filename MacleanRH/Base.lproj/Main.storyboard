@@ -553,7 +553,7 @@
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="aez-Xq-bGC">
-                                        <rect key="frame" x="0.0" y="66" width="296" height="82"/>
+                                        <rect key="frame" x="0.0" y="130" width="296" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aez-Xq-bGC" id="EGQ-ma-1rp">
                                             <rect key="frame" x="0.0" y="0.0" width="296" height="81"/>
@@ -948,6 +948,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="oWn-NL-hlc">
                                         <rect key="frame" x="26" y="8" width="192" height="159"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nom :" borderStyle="roundedRect" minimumFontSize="17" id="ILg-KS-Zx4">
                                         <rect key="frame" x="261" y="63" width="97" height="30"/>
@@ -968,7 +969,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Adresse postale :" borderStyle="roundedRect" minimumFontSize="17" id="e40-f5-lqZ">
-                                        <rect key="frame" x="26" y="209" width="133" height="30"/>
+                                        <rect key="frame" x="26" y="209" width="332" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -977,7 +978,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Adresse mail :" borderStyle="roundedRect" minimumFontSize="17" id="mx3-Yz-f76">
-                                        <rect key="frame" x="26" y="278" width="133" height="30"/>
+                                        <rect key="frame" x="26" y="278" width="332" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
@@ -1126,12 +1127,13 @@
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="imgNoImage" destination="oWn-NL-hlc" id="fgW-di-Hys"/>
+                        <outlet property="imgImageCandidate" destination="oWn-NL-hlc" id="1OP-x5-ixu"/>
                         <outlet property="libAdresse" destination="e40-f5-lqZ" id="Kkc-VO-fpa"/>
                         <outlet property="libFirstName" destination="6sk-ff-twL" id="YCJ-Yt-OMu"/>
                         <outlet property="libLastName" destination="ILg-KS-Zx4" id="vz2-qN-F1x"/>
                         <outlet property="libMail" destination="mx3-Yz-f76" id="HBU-Ki-0xg"/>
                         <outlet property="libMobile" destination="6wd-fI-UMb" id="rBQ-Xh-bMa"/>
+                        <outlet property="libPoste" destination="yJA-6x-M3X" id="iTP-VU-knk"/>
                         <outlet property="libTel" destination="Jp7-bf-FQ1" id="1iG-Vj-0Af"/>
                     </connections>
                 </viewController>
