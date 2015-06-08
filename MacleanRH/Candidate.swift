@@ -33,6 +33,11 @@ extension Candidate {
         recruitments.addObject(recruitment)
     }
     
+    func removeRecruitment(recruitment: Recruitment) {
+        var recruitments = self.mutableSetValueForKey("recruitments")
+        recruitments.removeObject(recruitment)
+    }
+    
     func countRecruitments() -> Int {
         return self.recruitments.count
     }
@@ -48,6 +53,11 @@ extension Candidate {
     func addDegree(degree: Degree) {
         var degrees = self.mutableSetValueForKey("degrees")
         degrees.addObject(degree)
+    }
+    
+    func removeDegree(degree: Degree) {
+        var degrees = self.mutableSetValueForKey("degrees")
+        degrees.removeObject(degree)
     }
     
     func countDegrees() -> Int {
