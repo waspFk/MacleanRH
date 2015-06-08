@@ -78,4 +78,22 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
             
             photoData = UIImageJPEGRepresentation(image, 100)
     }
+    
+    @IBAction func getWebViewWithXing(sender: AnyObject) {
+        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
+        viewController.url = "https://www.xing.com/fr"
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @IBAction func getWebViewWithViadeo(sender: AnyObject) {
+        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
+        viewController.url = "http://fr.viadeo.com/fr/"
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @IBAction func getWebViewWithLinkedIn(sender: AnyObject) {
+        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
+        viewController.url = "https://www.linkedin.com/nhome/"
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

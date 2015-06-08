@@ -56,6 +56,7 @@
 		B887BFD31B25BC7A002D0D8B /* Recruitment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFD21B25BC7A002D0D8B /* Recruitment.swift */; };
 		B887BFD51B25BC7B002D0D8B /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFD41B25BC7B002D0D8B /* Candidate.swift */; };
 		B889B2E51B258DD300CD5C57 /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = B889B2E41B258DD300CD5C57 /* noimage.png */; };
+		B889B2ED1B25D9C200CD5C57 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889B2EC1B25D9C200CD5C57 /* WebViewController.swift */; };
 		B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */; };
 		B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,7 @@
 		B887BFD21B25BC7A002D0D8B /* Recruitment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recruitment.swift; sourceTree = "<group>"; };
 		B887BFD41B25BC7B002D0D8B /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		B889B2E41B258DD300CD5C57 /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
+		B889B2EC1B25D9C200CD5C57 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +193,7 @@
 				B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */,
 				B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */,
 				B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */,
+				B889B2EC1B25D9C200CD5C57 /* WebViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				B83DBA431B1F50CB0092D63A /* TypeContract.swift in Sources */,
 				B80B4C081B207E470064B52D /* CandidateViewCell.swift in Sources */,
 				B83DBA211B1F263F0092D63A /* StateCandidatureManager.swift in Sources */,
+				B889B2ED1B25D9C200CD5C57 /* WebViewController.swift in Sources */,
 				B80B4C181B2197990064B52D /* CandidateViewController.swift in Sources */,
 				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,
 				B80B4C041B2077C40064B52D /* CandidateManager.swift in Sources */,
