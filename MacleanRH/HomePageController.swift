@@ -17,6 +17,16 @@ class HomePageController: UIViewController {
         loadDataForApplication()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+    
     func loadDataForApplication() {
         if SectorManager.SharedManager.searchRecruitment("Commercial") == nil {
             let s1 = SectorManager.SharedManager.createSector("Commercial")
