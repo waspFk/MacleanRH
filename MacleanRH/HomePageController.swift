@@ -43,11 +43,14 @@ class HomePageController: UIViewController {
                 
                 
                 
+                        
+                        
                 println("Recruitment 1 : \(r1.workLibelle) : Nombre de candidats : \(r1.candidates.count) Secteur : \(r1.sector.libelle)")
                 r1.managedObjectContext?.save(nil)
             }
             
         }
+        
         
         if SectorManager.SharedManager.searchRecruitment("Informatique") == nil {
             let s1 = SectorManager.SharedManager.createSector("Informatique")
@@ -76,8 +79,33 @@ class HomePageController: UIViewController {
                 
                 println("Recruitment 2 : \(r2.workLibelle) : Nombre de candidats : \(r2.candidates.count) Secteur : \(r2.sector.libelle)")
                 r2.managedObjectContext?.save(nil)
+                        
+                let typeContract = TypeContractManager.SharedManager.getTypeContract(TypeContractEnum.CDI)
+                println(typeContract.libelle)
+                        
+                let candidate = CandidateManager.SharedManager.searchCandidateWithMail("m.aurel@gmail.com")
+                let contract1 = ContractManager.SharedManager.createContract("test Contract", salary: "5000", workLibelle: "Test Lib", typeContract: typeContract)
+                        
+                contract1.candidate = candidate
+                contract1.managedObjectContext?.save(nil)
+                println(contract1.libelle)
+                        
+                let employee = EmployeeManager.SharedManager.createEmployee("1523875635593347",lastname: candidate!.lastName, firstname: candidate!.firstName, mail: candidate!.mail,contract: contract1)
+                println(employee?.firstName)
+                        
+                /*println("Contract : \(contract1.libelle)")
+                println("Employee : \(contract1.employee?.lastName)")*/
+            
+        
             }
         }
+        
+        let employees = EmployeeManager.SharedManager.getAllEmployees(nil)
+        println("Number Employee : \(employees.count)")
+        
+        
+        
+  
     }
     
     @IBAction func displayCalendar(sender: UIButton) {
