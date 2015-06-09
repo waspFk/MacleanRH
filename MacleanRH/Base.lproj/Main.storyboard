@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="LZ4-z1-G44">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="LZ4-z1-G44">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -55,6 +55,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="BDa-9j-5JV" kind="push" id="z9J-ub-ke6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f3t-l9-XQT">
+                                <rect key="frame" x="873" y="462" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Sb0-JP-PR6" kind="push" id="Qm9-NG-eXz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -810,6 +820,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ClZ-Rc-ICX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3864" y="714"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="LKV-Ma-KZq">
+            <objects>
+                <viewController id="Sb0-JP-PR6" customClass="QRCodeViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vh2-Dz-Z6r">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3N7-em-IFJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjd-pH-DFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5052" y="524"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="0uy-Yl-23q">
