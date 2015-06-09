@@ -45,11 +45,11 @@ extension Candidate {
     }
     
     func getDegrees() -> [Degree] {
-        return self.degrees.allObjects as! [Degree]
+        return self.degrees!.allObjects as! [Degree]
     }
     
     func countDegrees() -> Int {
-        return self.degrees.count
+        return self.degrees!.count
     }
     
     func addDegree(degree:Degree){

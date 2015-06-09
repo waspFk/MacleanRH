@@ -58,6 +58,10 @@
 		B889B2E51B258DD300CD5C57 /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = B889B2E41B258DD300CD5C57 /* noimage.png */; };
 		B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */; };
 		B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */; };
+		B8F436DA1B26CB0E001F809F /* Capture d’écran 2015-06-09 à 09.19.05.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436D91B26CB0E001F809F /* Capture d’écran 2015-06-09 à 09.19.05.png */; };
+		B8F436DC1B26DA51001F809F /* xing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8F436DB1B26DA51001F809F /* xing.jpg */; };
+		B8F436DE1B26DA56001F809F /* picto_viadeo.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436DD1B26DA56001F809F /* picto_viadeo.png */; };
+		B8F436E01B26DA5B001F809F /* linkedin-in-button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8F436DF1B26DA5B001F809F /* linkedin-in-button.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +130,10 @@
 		B889B2E41B258DD300CD5C57 /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
+		B8F436D91B26CB0E001F809F /* Capture d’écran 2015-06-09 à 09.19.05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Capture d’écran 2015-06-09 à 09.19.05.png"; sourceTree = "<group>"; };
+		B8F436DB1B26DA51001F809F /* xing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xing.jpg; sourceTree = "<group>"; };
+		B8F436DD1B26DA56001F809F /* picto_viadeo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picto_viadeo.png; sourceTree = "<group>"; };
+		B8F436DF1B26DA5B001F809F /* linkedin-in-button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "linkedin-in-button.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,10 +249,14 @@
 		B870E7F81B1DD52D00CA2C84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8F436D91B26CB0E001F809F /* Capture d’écran 2015-06-09 à 09.19.05.png */,
 				B889B2E41B258DD300CD5C57 /* noimage.png */,
+				B8F436DB1B26DA51001F809F /* xing.jpg */,
 				B887BF981B219BB8002D0D8B /* btnCal.png */,
 				B887BF991B219BB8002D0D8B /* btndoss.png */,
 				B887BF9A1B219BB8002D0D8B /* btndoss2.png */,
+				B8F436DD1B26DA56001F809F /* picto_viadeo.png */,
+				B8F436DF1B26DA5B001F809F /* linkedin-in-button.jpg */,
 				B887BF9B1B219BB8002D0D8B /* btndoss3.png */,
 				B887BF9C1B219BB8002D0D8B /* btndoss4.png */,
 				B887BF9D1B219BB8002D0D8B /* BtnRecru.png */,
@@ -361,14 +373,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B887BFAA1B219BB8002D0D8B /* BtnRecru1.png in Resources */,
+				B8F436DE1B26DA56001F809F /* picto_viadeo.png in Resources */,
 				B887BFA61B219BB8002D0D8B /* btndoss2.png in Resources */,
 				B870E8001B1DD52D00CA2C84 /* Main.storyboard in Resources */,
 				B887BFAD1B219BB8002D0D8B /* Recrutementmini.png in Resources */,
 				B887BFA41B219BB8002D0D8B /* btnCal.png in Resources */,
 				B887BFA51B219BB8002D0D8B /* btndoss.png in Resources */,
+				B8F436E01B26DA5B001F809F /* linkedin-in-button.jpg in Resources */,
 				B887BFA91B219BB8002D0D8B /* BtnRecru.png in Resources */,
+				B8F436DA1B26CB0E001F809F /* Capture d’écran 2015-06-09 à 09.19.05.png in Resources */,
 				B80B4C0E1B20A05F0064B52D /* Dossier1.png in Resources */,
 				B80B4C0D1B20A05F0064B52D /* Calendar.png in Resources */,
+				B8F436DC1B26DA51001F809F /* xing.jpg in Resources */,
 				B889B2E51B258DD300CD5C57 /* noimage.png in Resources */,
 				B887BFA71B219BB8002D0D8B /* btndoss3.png in Resources */,
 				B80B4C101B20A05F0064B52D /* Recru.png in Resources */,
