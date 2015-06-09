@@ -13,7 +13,7 @@ class Recruitment: NSManagedObject {
 
     @NSManaged var date: NSDate
     @NSManaged var titre: String
-    @NSManaged var workDescription: String
+    @NSManaged var workDescription: String?
     @NSManaged var workLibelle: String
     @NSManaged var candidates: NSSet
     @NSManaged var sector: Sector
