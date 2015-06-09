@@ -15,22 +15,22 @@ class ListingEmployeeViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var searchEmployee: UISearchBar!
     
     var employeeManager = EmployeeManager.SharedManager
-    var listeEmployee = [Employee]()
+    var employees = [Employee]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        listeEmployee = employeeManager.getAllEmployees(nil)
+        employees = employeeManager.getAllEmployees(nil)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listeEmployee.count
+        return employees.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = self.tableEmployees.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! EmployeeViewCell
         
-        let employee = listeEmployee[indexPath.row]
+        let employee = employees[indexPath.row]
         
         cell.lastName.text = employee.lastName
         cell.firstName.text = employee.firstName

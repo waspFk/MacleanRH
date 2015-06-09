@@ -111,14 +111,16 @@ class EmployeeManager {
         return employees
     }
     
-    func createEmployee(lastname: String, firstname: String, mail: String) -> Employee? {
+    func createEmployee(sap: String, lastname: String, firstname: String, mail: String, contract: Contract) -> Employee? {
         if searchEmployeeWithMail(mail) == nil {
             let entity = NSEntityDescription.entityForName("Employee", inManagedObjectContext: contextObject!)
             
             let employee = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: contextObject) as! Employee
+            employee.numeroSAP = sap
             employee.firstName = firstname
             employee.lastName = lastname
             employee.mail = mail
+            employee.contract = contract
             
             var error: NSError? = nil
             contextObject!.save(&error)
