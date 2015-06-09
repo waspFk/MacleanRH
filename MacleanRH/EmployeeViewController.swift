@@ -8,10 +8,13 @@
 
 import UIKit
 
-class EmployeeViewController: UIViewController {
+class EmployeeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var employee : Employee!
+    var employees : [Employee]!
     
+    @IBOutlet weak var tableEmployees: UITableView!
+    @IBOutlet weak var numSapEmployee: UITextField!
     @IBOutlet weak var photoEmployee: UIImageView!
     @IBOutlet weak var lastNameEmployee: UITextField!
     @IBOutlet weak var firstNameEmployee: UITextField!
@@ -30,7 +33,35 @@ class EmployeeViewController: UIViewController {
         
         println(employee.description)
         
-        firstNameEmployee.text = 
+        numSapEmployee.text = employee.numeroSAP
+        firstNameEmployee.text = employee.firstName
+        lastNameEmployee.text = employee.lastName
+        mailEmployee.text = employee.mail
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return employees.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = self.tableEmployees.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! EmployeeViewCell
+        
+        let employee = employees[indexPath.row]
+        
+        cell.lastName.text = employee.lastName
+        cell.firstName.text = employee.firstName
+        
+        if let picture = employee.photo {
+            cell.avatar.image = UIImage(data: picture)
+        }
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        employee = employees[indexPath.item]
     }
     
     @IBAction func getWebViewWithViadeo(sender: AnyObject) {
