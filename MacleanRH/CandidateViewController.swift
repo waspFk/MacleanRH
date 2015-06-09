@@ -55,53 +55,8 @@ class CandidateViewController: UIViewController
     }
     
     @IBAction func getWebViewWithLinkedIn(sender: AnyObject) {
-        /*let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
-        viewController.url = "https://www.linkedin.com/nhome/"
-        self.navigationController?.pushViewController(viewController, animated: true)*/
-        
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
-        let documentsDirectory = paths.objectAtIndex(0) as! NSString
-        let path = documentsDirectory.stringByAppendingPathComponent("test_test.pdf")
-        
-        var html = "<h1>Hello world !</h1></br>"
-        html += "<h2>! dlrow olleH</h2></br>"
-        html += "<p>testtesttesttesttesttesttesttesttesttesttesttesttest</p>"
-        html += "<p>testtesttesttesttesttesttesttesttesttesttesttesttest</p>"
-        html += "<p>testtesttesttesttesttesttesttesttesttesttesttesttest</p>"
-        html += "<p>testtesttesttesttesttesttesttesttesttesttesttesttest</p>"
-        html += "<p>testtesttesttesttesttesttesttesttesttesttesttesttest</p>"
-        html += "<p>testtesttesttesttesttesttesttesttesttesttesttesttest</p>"
-        html += "<p>testtesttesttesttesttesttesttesttesttesttesttesttest</p>"
-        let fmt = UIMarkupTextPrintFormatter(markupText: html)
-        
-        let render = UIPrintPageRenderer()
-        render.addPrintFormatter(fmt, startingAtPageAtIndex: 0)
-        
-        let page = CGRect(x: 0, y: 0, width: 595.2, height: 841.8)
-        let printable = CGRectInset(page, 0, 0)
-        
-        render.setValue(NSValue(CGRect: page), forKey: "paperRect")
-        render.setValue(NSValue(CGRect: printable), forKey: "printableRect")
-        
-        let pdfData = NSMutableData()
-        UIGraphicsBeginPDFContextToData(pdfData, CGRectZero, nil)
-        
-        for i in 1...render.numberOfPages() {
-            
-            UIGraphicsBeginPDFPage();
-            let bounds = UIGraphicsGetPDFContextBounds()
-            render.drawPageAtIndex(i - 1, inRect: bounds)
-        }
-        
-        UIGraphicsEndPDFContext();
-        
-        println("pdfData.length : ")
-        println(pdfData.length)
-        
-        pdfData.writeToFile(path, atomically: true)
-        
         let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
-        viewController.url = path
+        viewController.url = "https://www.linkedin.com/nhome/"
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
