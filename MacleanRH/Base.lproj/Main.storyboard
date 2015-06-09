@@ -446,7 +446,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="119" id="EK6-k2-VPr">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="119" id="EK6-k2-VPr" customClass="EmployeeViewCell" customModule="MacleanRH" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="22" width="695" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EK6-k2-VPr" id="suu-ib-U0I">
@@ -474,10 +474,17 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="avatar" destination="EeY-kZ-nxq" id="Y6a-l2-sS2"/>
+                                            <outlet property="firstName" destination="wnb-uO-oHU" id="X5w-Ng-ibV"/>
+                                            <outlet property="lastName" destination="9JW-S6-0Rr" id="7t0-yG-OZc"/>
                                             <segue destination="6C9-Z3-uYl" kind="push" id="2jE-E8-wud"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ssc-zJ-67u" id="IyT-Su-PRe"/>
+                                    <outlet property="delegate" destination="ssc-zJ-67u" id="tMP-mv-gID"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liste des employés" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bBD-Fm-9b7">
                                 <rect key="frame" x="611" y="87" width="148" height="21"/>
@@ -491,6 +498,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nki-WW-2Mh"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="searchEmployee" destination="NEq-RL-YMu" id="sxL-nI-IRC"/>
+                        <outlet property="tableEmployees" destination="Mcs-en-2x9" id="RTI-5K-GEK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVu-WV-vBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
