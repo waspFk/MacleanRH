@@ -25,6 +25,8 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
         self.addVideoPreviewLayer()
         self.initializeQRView()
         
+        println("test")
+        
     }
     
     func configureVideoCapture()

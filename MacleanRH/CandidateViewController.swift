@@ -201,4 +201,9 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func clickQrCode(sender: AnyObject) {
+        QRCodeViewController().configureVideoCapture()
+        QRCodeViewController().addVideoPreviewLayer()
+        QRCodeViewController().initializeQRView()
+    }
 }
