@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
+import EventKit
+import MessageUI
 
-class CandidateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverPresentationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+class CandidateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverPresentationControllerDelegate, UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate {
     var candidateSeleted:Candidate!
     var recruitment: Recruitment!
     var candidates:[Candidate]!
@@ -120,6 +123,10 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         candidateSeleted.state_candidature = StateCandidatureManager.SharedManager.getState(.ValidateCandidature)
         println("New state : \(candidateSeleted.state_candidature.libelle) \(candidateSeleted.state_candidature.color) ")
         candidateSeleted.managedObjectContext?.save(nil)
+        
+        sendMailConfirm()
+        
+        
     }
     
     // MARK: - UITableViewDataSource
@@ -136,8 +143,15 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         
         println("Candidate : \(candidate.lastName)")
         
+        cell.avatar.frame = CGRectMake(0, 0, 100, 82)
+        
         cell.firstName.text  = candidate.firstName
         cell.lastName.text   = candidate.lastName
+        
+        let color = UIColor(rgba: candidate.state_candidature.color)
+        
+        cell.backgroundColor = color
+
         
         if let picture = candidate.photo {
             cell.avatar.image = UIImage(data: picture)
@@ -154,4 +168,37 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         
         changeCandidateView(candidate)
     }
+    
+    func sendMailConfirm(){
+        println(" -- TEST SEND MAIL -- ")
+        
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        // Email du destinataire
+        mailComposerVC.setToRecipients(["baptiste.briot@gmail.com"])
+        // Sujet du mail
+        mailComposerVC.setSubject("Mail de test ...")
+        // Corp du mail
+        mailComposerVC.setMessageBody("Bonjour, ceci est un test !", isHTML: false)
+        
+        if let filePath = NSBundle.mainBundle().pathForResource("ERDDiagram_MacleanRH_v2", ofType: "png") {
+            println("File path loaded.")
+            if let fileData = NSData(contentsOfFile: filePath) {
+                println("File data loaded.")
+                mailComposerVC.addAttachmentData(fileData, mimeType: "image/png", fileName: "ERDDiagram_MacleanRH_v2")
+            }
+        }
+        
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposerVC, animated: true, completion: nil)
+        } else {
+            let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+            sendMailErrorAlert.show()
+        }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+
 }
