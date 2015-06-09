@@ -130,10 +130,10 @@
 		B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
-		B8F6C7B31B26F4A3000AB3CE /* EmployeeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeViewCell.swift; path = MacleanRH/EmployeeViewCell.swift; sourceTree = "<group>"; };
-		B8F6C7B41B26F4A3000AB3CE /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noimage.png; path = MacleanRH/noimage.png; sourceTree = "<group>"; };
-		B8F6C7B51B26F4A3000AB3CE /* SectorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectorManager.swift; path = MacleanRH/SectorManager.swift; sourceTree = "<group>"; };
-		B8F6C7B61B26F4A3000AB3CE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = MacleanRH/UIColorExtension.swift; sourceTree = "<group>"; };
+		B8F6C7B31B26F4A3000AB3CE /* EmployeeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewCell.swift; sourceTree = "<group>"; };
+		B8F6C7B41B26F4A3000AB3CE /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
+		B8F6C7B51B26F4A3000AB3CE /* SectorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorManager.swift; sourceTree = "<group>"; };
+		B8F6C7B61B26F4A3000AB3CE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +188,9 @@
 		B83C91E61B1F328700879EE5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8F6C7B51B26F4A3000AB3CE /* SectorManager.swift */,
+				B8F6C7B61B26F4A3000AB3CE /* UIColorExtension.swift */,
+				B8F6C7B31B26F4A3000AB3CE /* EmployeeViewCell.swift */,
 				B80B4C151B2197990064B52D /* CandidateViewController.swift */,
 				B80B4C161B2197990064B52D /* QRCodeViewController.swift */,
 				B870E7FC1B1DD52D00CA2C84 /* TestViewController.swift */,
@@ -214,10 +217,6 @@
 		B870E7EC1B1DD52D00CA2C84 = {
 			isa = PBXGroup;
 			children = (
-				B8F6C7B31B26F4A3000AB3CE /* EmployeeViewCell.swift */,
-				B8F6C7B41B26F4A3000AB3CE /* noimage.png */,
-				B8F6C7B51B26F4A3000AB3CE /* SectorManager.swift */,
-				B8F6C7B61B26F4A3000AB3CE /* UIColorExtension.swift */,
 				B870E7F71B1DD52D00CA2C84 /* MacleanRH */,
 				B870E80D1B1DD52D00CA2C84 /* MacleanRHTests */,
 				B870E7F61B1DD52D00CA2C84 /* Products */,
@@ -253,6 +252,7 @@
 		B870E7F81B1DD52D00CA2C84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8F6C7B41B26F4A3000AB3CE /* noimage.png */,
 				B887BF981B219BB8002D0D8B /* btnCal.png */,
 				B887BF991B219BB8002D0D8B /* btndoss.png */,
 				B887BF9A1B219BB8002D0D8B /* btndoss2.png */,
