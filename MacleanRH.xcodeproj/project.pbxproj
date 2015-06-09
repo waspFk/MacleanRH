@@ -58,6 +58,10 @@
 		B887BFB71B219DA5002D0D8B /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */; };
 		B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */; };
 		B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */; };
+		B8F6C7B71B26F4A3000AB3CE /* EmployeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F6C7B31B26F4A3000AB3CE /* EmployeeViewCell.swift */; };
+		B8F6C7B81B26F4A3000AB3CE /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F6C7B41B26F4A3000AB3CE /* noimage.png */; };
+		B8F6C7B91B26F4A3000AB3CE /* SectorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F6C7B51B26F4A3000AB3CE /* SectorManager.swift */; };
+		B8F6C7BA1B26F4A3000AB3CE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F6C7B61B26F4A3000AB3CE /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +130,10 @@
 		B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
+		B8F6C7B31B26F4A3000AB3CE /* EmployeeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeViewCell.swift; path = MacleanRH/EmployeeViewCell.swift; sourceTree = "<group>"; };
+		B8F6C7B41B26F4A3000AB3CE /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noimage.png; path = MacleanRH/noimage.png; sourceTree = "<group>"; };
+		B8F6C7B51B26F4A3000AB3CE /* SectorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectorManager.swift; path = MacleanRH/SectorManager.swift; sourceTree = "<group>"; };
+		B8F6C7B61B26F4A3000AB3CE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = MacleanRH/UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +214,10 @@
 		B870E7EC1B1DD52D00CA2C84 = {
 			isa = PBXGroup;
 			children = (
+				B8F6C7B31B26F4A3000AB3CE /* EmployeeViewCell.swift */,
+				B8F6C7B41B26F4A3000AB3CE /* noimage.png */,
+				B8F6C7B51B26F4A3000AB3CE /* SectorManager.swift */,
+				B8F6C7B61B26F4A3000AB3CE /* UIColorExtension.swift */,
 				B870E7F71B1DD52D00CA2C84 /* MacleanRH */,
 				B870E80D1B1DD52D00CA2C84 /* MacleanRHTests */,
 				B870E7F61B1DD52D00CA2C84 /* Products */,
@@ -328,6 +340,7 @@
 				TargetAttributes = {
 					B870E7F41B1DD52D00CA2C84 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = JS4L8WR34S;
 					};
 					B870E8091B1DD52D00CA2C84 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -369,6 +382,7 @@
 				B80B4C0E1B20A05F0064B52D /* Dossier1.png in Resources */,
 				B80B4C0D1B20A05F0064B52D /* Calendar.png in Resources */,
 				B887BFAC1B219BB8002D0D8B /* Capture d’écran 2015-06-04 à 17.33.44.png in Resources */,
+				B8F6C7B81B26F4A3000AB3CE /* noimage.png in Resources */,
 				B887BFA71B219BB8002D0D8B /* btndoss3.png in Resources */,
 				B80B4C101B20A05F0064B52D /* Recru.png in Resources */,
 				B887BFA81B219BB8002D0D8B /* btndoss4.png in Resources */,
@@ -407,16 +421,19 @@
 				B83DBA471B1F50CB0092D63A /* Candidate.swift in Sources */,
 				B887BFB71B219DA5002D0D8B /* EmployeeViewController.swift in Sources */,
 				B83DBA431B1F50CB0092D63A /* TypeContract.swift in Sources */,
+				B8F6C7B71B26F4A3000AB3CE /* EmployeeViewCell.swift in Sources */,
 				B80B4C081B207E470064B52D /* CandidateViewCell.swift in Sources */,
 				B83DBA211B1F263F0092D63A /* StateCandidatureManager.swift in Sources */,
 				B83DBA451B1F50CB0092D63A /* Recruitment.swift in Sources */,
 				B80B4C181B2197990064B52D /* CandidateViewController.swift in Sources */,
+				B8F6C7BA1B26F4A3000AB3CE /* UIColorExtension.swift in Sources */,
 				B83DBA1B1B1EF3BA0092D63A /* MacleanRH.xcdatamodeld in Sources */,
 				B80B4C041B2077C40064B52D /* CandidateManager.swift in Sources */,
 				B83429111B1EF1CD008557AF /* CoreDataManager.swift in Sources */,
 				B811ACDE1B2050B800FEB7A8 /* ContractManager.swift in Sources */,
 				B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */,
 				B80B4C121B20A6C90064B52D /* RecruitmentViewCell.swift in Sources */,
+				B8F6C7B91B26F4A3000AB3CE /* SectorManager.swift in Sources */,
 				B83C91E91B2036E900879EE5 /* RecruitmentManager.swift in Sources */,
 				B834290F1B1EF0E8008557AF /* Constants.swift in Sources */,
 				B83DBA411B1F50CB0092D63A /* StateCandidature.swift in Sources */,
@@ -484,7 +501,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: lp iem (AU6HJ9TQWT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: lp iem (AU6HJ9TQWT)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -528,6 +546,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: lp iem (AU6HJ9TQWT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -552,11 +571,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: lp iem (AU6HJ9TQWT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MacleanRH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b9956a7d-2519-4a10-b515-4422752b1602";
+				PROVISIONING_PROFILE = "7d2d17aa-b8a7-4218-aa7a-721868e11e47";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -565,11 +585,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: lp iem (AU6HJ9TQWT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MacleanRH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b9956a7d-2519-4a10-b515-4422752b1602";
+				PROVISIONING_PROFILE = "7d2d17aa-b8a7-4218-aa7a-721868e11e47";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
