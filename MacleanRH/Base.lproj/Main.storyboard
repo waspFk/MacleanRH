@@ -439,7 +439,7 @@
                                             <outlet property="avatar" destination="EeY-kZ-nxq" id="00h-TC-aBi"/>
                                             <outlet property="firstName" destination="wnb-uO-oHU" id="Tht-vh-gBG"/>
                                             <outlet property="lastName" destination="9JW-S6-0Rr" id="9xG-NH-jzT"/>
-                                            <segue destination="6C9-Z3-uYl" kind="push" id="2jE-E8-wud"/>
+                                            <segue destination="6C9-Z3-uYl" kind="push" identifier="detailEmployee" id="2jE-E8-wud"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -684,15 +684,6 @@
                                             <action selector="getWebViewWithXing:" destination="6C9-Z3-uYl" eventType="touchUpInside" id="ozh-zw-s3O"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rQw-D6-sC3">
-                                        <rect key="frame" x="135" y="337" width="168" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <bool key="isElement" value="NO"/>
-                                        </accessibility>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="98D-0a-Stl">
                                         <rect key="frame" x="468" y="337" width="185" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -807,6 +798,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rQw-D6-sC3">
+                                        <rect key="frame" x="135" y="337" width="168" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -814,6 +814,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="eTx-sc-c6B"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="adresseEmployee" destination="Z5E-pA-lFL" id="WG4-7A-DYU"/>
+                        <outlet property="beginDateContrat" destination="Yae-BG-QOW" id="A2I-dm-2pV"/>
+                        <outlet property="contratEmployee" destination="uIh-cM-0x6" id="gmL-lW-63o"/>
+                        <outlet property="endDateContrat" destination="AA7-GB-GpG" id="0jL-xb-1NC"/>
+                        <outlet property="firstNameEmployee" destination="tLF-8s-LXj" id="53o-er-bEy"/>
+                        <outlet property="lastNameEmployee" destination="WQe-lf-9cM" id="6bv-pC-1zP"/>
+                        <outlet property="mailEmployee" destination="KJe-AF-i2N" id="NbK-qr-RLU"/>
+                        <outlet property="mobileEmployee" destination="98D-0a-Stl" id="UKb-5o-JYa"/>
+                        <outlet property="phoneEmployee" destination="rQw-D6-sC3" id="N0a-4i-T4z"/>
+                        <outlet property="photoEmployee" destination="nyT-wt-sqF" id="Y5T-LF-IGB"/>
+                        <outlet property="posteEmloyee" destination="oWX-Dg-udL" id="gln-7J-55n"/>
+                        <outlet property="secteurEmployee" destination="2hS-y9-EH9" id="hic-ls-XPo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ClZ-Rc-ICX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
