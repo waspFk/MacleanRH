@@ -15,18 +15,17 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
     var objCaptureVideoPreviewLayer:AVCaptureVideoPreviewLayer?
     var vwQRCode:UIView?
     
+    var isSanning:Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.isSanning = false
         
         
         self.configureVideoCapture()
         self.addVideoPreviewLayer()
         self.initializeQRView()
-        
-        println("test")
-        
     }
     
     func configureVideoCapture()
@@ -59,7 +58,6 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
         objCaptureVideoPreviewLayer?.frame = view.layer.bounds
         self.view.layer.addSublayer(objCaptureVideoPreviewLayer)
         objCaptureSession?.startRunning()
-        //self.view.bringSubviewToFront(libQrCode) --> important
     }
     
     func initializeQRView() {
@@ -74,20 +72,42 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)
     {
-        if metadataObjects == nil || metadataObjects.count == 0 {
+        if metadataObjects == nil || metadataObjects.count == 0 || isSanning == true{
             vwQRCode?.frame = CGRectZero
-            //libQrCode.text = "NO QRCode text detacted" --> important
             return
         }
         
         let objMetadataMachineReadableCodeObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        
+        var fullName = "First Last"
+        var fullNameArr = split(fullName) {$0 == ";"}
+        var firstName: String = fullNameArr[0]
+        var lastName: String? = fullNameArr.count > 1 ? fullNameArr[1] : nil
         
         if objMetadataMachineReadableCodeObject.type == AVMetadataObjectTypeQRCode {
             let objBarCode = objCaptureVideoPreviewLayer?.transformedMetadataObjectForMetadataObject(objMetadataMachineReadableCodeObject as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
             vwQRCode?.frame = objBarCode.bounds;
             
             if objMetadataMachineReadableCodeObject.stringValue != nil {
-                // libQrCode.text = objMetadataMachineReadableCodeObject.stringValue --> important
+                //libQRCodeValue.text = objMetadataMachineReadableCodeObject.stringValue
+                if let currentCandidate = CandidateManager.SharedManager.searchCandidateWithMail(objMetadataMachineReadableCodeObject.stringValue) {
+                    println(currentCandidate.lastName)
+                    
+         
+                    
+                    
+                    let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                    let viewController = storyBoard.instantiateViewControllerWithIdentifier("CandidateViewID") as! CandidateViewController
+                    
+                    println("Get view controller")
+                    viewController.candidateSeleted = currentCandidate
+                    println(viewController)
+                    
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                    println(self.navigationController)
+                    
+                    isSanning = true
+                }
             }
         }
     }
