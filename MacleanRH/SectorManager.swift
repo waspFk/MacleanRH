@@ -33,7 +33,7 @@ class SectorManager
     
     func createSector(libelle: String) -> Sector {
         
-        let entity = NSEntityDescription.entityForName("Recruitment", inManagedObjectContext: contextObject!)
+        let entity = NSEntityDescription.entityForName("Sector", inManagedObjectContext: contextObject!)
         
         let sector = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: contextObject)as! Sector
         
