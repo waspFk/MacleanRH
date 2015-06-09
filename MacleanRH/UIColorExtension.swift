@@ -13,7 +13,7 @@ extension UIColor {
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0
         var blue:  CGFloat = 0.0
-        var alpha: CGFloat = 1.0
+        var alpha: CGFloat = 0.4
         
         if rgba.hasPrefix("#") {
             let index   = advance(rgba.startIndex, 1)
