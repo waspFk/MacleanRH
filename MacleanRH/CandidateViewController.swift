@@ -9,7 +9,7 @@
 import UIKit
 
 class CandidateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverPresentationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
-    var candidate:Candidate!
+    var candidateSeleted:Candidate!
     var recruitment: Recruitment!
     var candidates:[Candidate]!
 
@@ -31,42 +31,13 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println("My candidate : \(candidate.lastName) \(candidate.firstName)")
+        self.imgImageCandidate.frame = CGRectMake(0, 0, 200, 200)
         
-        candidates = recruitment.getCandidatesArray()
-        
-        candidate.address = "Test address, 01000, Bourg"
-        candidate.tel = "0385323136"
-        candidate.mobile = "0615203698"
-        candidate.photo = UIImageJPEGRepresentation(UIImage(named: "noimage.png"), 160.0)
-        candidate.managedObjectContext?.save(nil)
-        
-        imgImageCandidate.frame = CGRectMake(0, 0, 200, 200)
-        let thumbnail = UIImage(data: (candidate.photo as NSData?)!)
-        imgImageCandidate.image = thumbnail
-    
-        libLastName.text = candidate.lastName
-        libFirstName.text = candidate.firstName
-        libMail.text = candidate.mail
-        
-        if let data = candidate.address {
-            libAdresse.text = data
-        }
-        
-        if let data = candidate.tel {
-            libTel.text = data
-        }
-        
-        if let data = candidate.mobile {
-            libMobile.text = data
-        }
-        
-
-        libPoste.text = recruitment.workLibelle
-        libSector.text = recruitment.sector.libelle
+        initRecruitment()
+        changeCandidateView(candidateSeleted)
     }
     
-    
+    // MARK: - UI Helper
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage
         image: UIImage!,
         editingInfo: [NSObject : AnyObject]!) {
@@ -77,6 +48,45 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
             photoData = UIImageJPEGRepresentation(image, 100)
     }
     
+    func initRecruitment(){
+        candidates = recruitment.getCandidatesArray()
+        
+        libPoste.text = recruitment.workLibelle
+        libSector.text = recruitment.sector.libelle
+    }
+    
+    func changeCandidateView(candidate: Candidate){
+        candidateSeleted = candidate
+        println("My candidate : \(candidate.lastName) \(candidate.firstName)")
+        
+        libLastName.text = candidate.lastName
+        libFirstName.text = candidate.firstName
+        libMail.text = candidate.mail
+        
+        if candidate.address == nil {
+            candidate.address = "Test address, 01000, Bourg"
+        }
+        libAdresse.text = candidate.address
+        
+        if candidate.tel == nil {
+            candidate.tel = "0385323136"
+        }
+        libTel.text = candidate.tel
+        
+        if candidate.mobile == nil {
+            candidate.mobile = "0615203698"
+        }
+        libMobile.text = candidate.mobile
+        
+        if let photo = candidate.photo {
+            let thumbnail = UIImage(data: (candidate.photo as NSData?)!)
+            imgImageCandidate.image = thumbnail
+        }
+        
+        CoreDataManager.SharedManager.saveContext()
+    }
+    
+    // MARK: - Action Link Social Network
     @IBAction func getWebViewWithXing(sender: AnyObject) {
         let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
         viewController.url = "https://www.xing.com/fr"
@@ -93,6 +103,23 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("WebViewController") as! WebViewController
         viewController.url = "https://www.linkedin.com/nhome/"
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    // MARK: - Action State Candidate
+    @IBAction func refuseCandidatureAction(sender: UIButton) {
+        println("Candidate : \(candidateSeleted.lastName) \(candidateSeleted.firstName) is not accepted")
+        
+        candidateSeleted.state_candidature = StateCandidatureManager.SharedManager.getState(.RefuseCantidature)
+        println("New state : \(candidateSeleted.state_candidature.libelle) \(candidateSeleted.state_candidature.color) ")
+        candidateSeleted.managedObjectContext?.save(nil)
+    }
+    
+    @IBAction func acceptCandidatureAction(sender: UIButton) {
+        println("Candidate : \(candidateSeleted.lastName) \(candidateSeleted.firstName) is accepted")
+        
+        candidateSeleted.state_candidature = StateCandidatureManager.SharedManager.getState(.ValidateCandidature)
+        println("New state : \(candidateSeleted.state_candidature.libelle) \(candidateSeleted.state_candidature.color) ")
+        candidateSeleted.managedObjectContext?.save(nil)
     }
     
     // MARK: - UITableViewDataSource
@@ -120,5 +147,11 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         
         return cell
     }
-
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let candidate = self.candidates[indexPath.row]
+        println("Candidate Selected : \(candidate.lastName) \(candidate.firstName)")
+        
+        changeCandidateView(candidate)
+    }
 }

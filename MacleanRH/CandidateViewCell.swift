@@ -17,9 +17,6 @@ class CandidateViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        self.avatar.image = UIImage(named: "noimage.png")
-        self.avatar.frame = CGRectMake(0, 0, 100, 100)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
