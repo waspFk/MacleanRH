@@ -20,17 +20,14 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         loadData()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+    
     // MARK: - Helper UI
     func loadData() {
-        candidates = CandidateManager.SharedManager.getAllCandidates(nil)
+        candidates = recruitment.getCandidatesArray()
         println("Count candidates = \(candidates.count)")
-        
-        /*if let candidateSet = recruitment.reruitment_candidate {
-            println("-- count : \(candidateSet.count)")
-            for candidate in candidateSet {
-                println(candidate.description)
-            }
-        }*/
     }
     
     
@@ -47,6 +44,13 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         cell.firstName.text  = candidate.firstName
         cell.lastName.text   = candidate.lastName
         
+        println("Color Candidate : \(candidate.state_candidature.color)")
+        
+        let color = UIColor(rgba: candidate.state_candidature.color)
+        println(println("Color UI : \(color.description)"))
+        
+        cell.backgroundColor = color
+        
         if let picture = candidate.photo {
             cell.avatar.image = UIImage(data: picture)
         }
@@ -60,7 +64,8 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
         if segue.identifier == "CandidateViewSegue" {
             if let destination = segue.destinationViewController as? CandidateViewController {
                 if let index = tableView.indexPathForSelectedRow()?.row {
-                    destination.candidate = candidates[index]
+                    destination.candidateSeleted = candidates[index]
+                    destination.recruitment = recruitment
                 }
             }
         }

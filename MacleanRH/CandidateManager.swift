@@ -126,6 +126,7 @@ class CandidateManager {
             candidate.firstName = firstname
             candidate.lastName = lastname
             candidate.mail = mail
+            candidate.state_candidature = StateCandidatureManager.SharedManager.getState(.WaittingValideCandidature)
             
             var error: NSError? = nil
             contextObject!.save(&error)

@@ -79,8 +79,8 @@ class TestViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         var recruitment: Recruitment
         
         println(" ---- Add Test ---- ")
-        RecruitmentManager.SharedManager.createRecruitment("Test recruitment 1",workLibelle: "Work test libellé",workDescription: "Work test description",date: NSDate())
-        RecruitmentManager.SharedManager.createRecruitment("Test recruitment 2",workLibelle: "Work test libellé",workDescription: "Work test description",date: NSDate())
+//        RecruitmentManager.SharedManager.createRecruitment("Test recruitment 1",workLibelle: "Work test libellé",workDescription: "Work test description",date: NSDate())
+//        RecruitmentManager.SharedManager.createRecruitment("Test recruitment 2",workLibelle: "Work test libellé",workDescription: "Work test description",date: NSDate())
         recruitments = RecruitmentManager.SharedManager.getAllRecruitments(nil)
         
         println(" ---- Display Test ---- ")
