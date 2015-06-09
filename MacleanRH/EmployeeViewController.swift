@@ -31,12 +31,7 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(employee.description)
-        
-        numSapEmployee.text = employee.numeroSAP
-        firstNameEmployee.text = employee.firstName
-        lastNameEmployee.text = employee.lastName
-        mailEmployee.text = employee.mail
+        changeEmployee()
         
     }
     
@@ -62,6 +57,14 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         employee = employees[indexPath.item]
+        changeEmployee()
+    }
+    
+    func changeEmployee() {
+        numSapEmployee.text = employee.numeroSAP
+        firstNameEmployee.text = employee.firstName
+        lastNameEmployee.text = employee.lastName
+        mailEmployee.text = employee.mail
     }
     
     @IBAction func getWebViewWithViadeo(sender: AnyObject) {

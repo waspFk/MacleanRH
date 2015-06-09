@@ -83,15 +83,27 @@ class HomePageController: UIViewController {
                 let typeContract = TypeContractManager.SharedManager.getTypeContract(TypeContractEnum.CDI)
                 println(typeContract.libelle)
                         
-                let candidate = CandidateManager.SharedManager.searchCandidateWithMail("m.aurel@gmail.com")
-                let contract1 = ContractManager.SharedManager.createContract("test Contract", salary: "5000", workLibelle: "Test Lib", typeContract: typeContract)
+                var candidate = CandidateManager.SharedManager.searchCandidateWithMail("m.aurel@gmail.com")
+                var contract1 = ContractManager.SharedManager.createContract("test Contract", salary: "5000", workLibelle: "Test Lib", typeContract: typeContract)
                         
                 contract1.candidate = candidate
                 contract1.managedObjectContext?.save(nil)
                 println(contract1.libelle)
                         
-                let employee = EmployeeManager.SharedManager.createEmployee("1523875635593347",lastname: candidate!.lastName, firstname: candidate!.firstName, mail: candidate!.mail,contract: contract1)
+                var employee = EmployeeManager.SharedManager.createEmployee("1523875635593347",lastname: candidate!.lastName, firstname: candidate!.firstName, mail: candidate!.mail,contract: contract1)
                 println(employee?.firstName)
+                        
+                        
+                candidate = CandidateManager.SharedManager.searchCandidateWithMail("c.seb@gmail.com")
+                contract1 = ContractManager.SharedManager.createContract("test 2 Contract 2", salary: "5000", workLibelle: "Test 2 Lib", typeContract: typeContract)
+                        
+                contract1.candidate = candidate
+                contract1.managedObjectContext?.save(nil)
+                println(contract1.libelle)
+                        
+                employee = EmployeeManager.SharedManager.createEmployee("1514975635593347",lastname: candidate!.lastName, firstname: candidate!.firstName, mail: candidate!.mail,contract: contract1)
+                println(employee?.firstName)
+       
                         
                 /*println("Contract : \(contract1.libelle)")
                 println("Employee : \(contract1.employee?.lastName)")*/
