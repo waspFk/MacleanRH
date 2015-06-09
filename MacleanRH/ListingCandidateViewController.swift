@@ -69,6 +69,7 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
             if let destination = segue.destinationViewController as? CandidateViewController {
                 if let index = tableView.indexPathForSelectedRow()?.row {
                     destination.candidate = candidates[index]
+                    destination.recruitment = recruitment
                 }
             }
         }

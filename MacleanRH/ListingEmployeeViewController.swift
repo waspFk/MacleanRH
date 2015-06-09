@@ -9,9 +9,14 @@
 import UIKit
 
 class ListingEmployeeViewController: UIViewController {
-
+    
+    var employees = [Employee]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        employees = EmployeeManager.SharedManager.getAllEmployees("numeroSAP")
     }
+    
 
 }
