@@ -21,7 +21,7 @@ class Candidate: NSManagedObject {
     @NSManaged var photo: NSData?
     @NSManaged var seniority: NSNumber?
     @NSManaged var tel: String?
-    @NSManaged var degrees: NSSet?
+    @NSManaged var degrees: NSSet
     @NSManaged var recruitments: NSSet
     @NSManaged var state_candidature: StateCandidature
 
@@ -44,12 +44,12 @@ extension Candidate {
         self.mutableSetValueForKey("recruitments").removeObject(recruitment)
     }
     
-    func getDegrees() -> [Degree] {
-        return self.degrees!.allObjects as! [Degree]
+    func getDegreesArray() -> [Degree] {
+        return self.degrees.allObjects as! [Degree]
     }
     
     func countDegrees() -> Int {
-        return self.degrees!.count
+        return self.degrees.count
     }
     
     func addDegree(degree:Degree){
