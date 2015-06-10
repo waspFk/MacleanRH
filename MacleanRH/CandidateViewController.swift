@@ -11,11 +11,14 @@ import AVFoundation
 import EventKit
 import MessageUI
 
-class CandidateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverPresentationControllerDelegate, UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate {
+class CandidateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverPresentationControllerDelegate, UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate,UISearchBarDelegate, UISearchDisplayDelegate  {
     var candidateSeleted:Candidate!
-    var recruitment: Recruitment!
+    var recruitment: Recruitment?
+    var recruitments = [Recruitment]()
     var candidates:[Candidate]!
-
+    var degrees = [Degree]()
+    var filtred = [Candidate]()
+    var searchActive : Bool = false
     
     @IBOutlet weak var libLastName: UITextField!
     @IBOutlet weak var libFirstName: UITextField!
@@ -23,10 +26,15 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var libAdresse: UITextField!
     @IBOutlet weak var libTel: UITextField!
     @IBOutlet weak var libMobile: UITextField!
-    @IBOutlet weak var libPoste: UITextField!
     @IBOutlet weak var imgImageCandidate: UIImageView!
-    @IBOutlet weak var libSector: UITextField!
     @IBOutlet weak var tableViewCandidate: UITableView!
+    @IBOutlet weak var listCandidateTableView: UITableView!
+    @IBOutlet weak var tableRecruitment: UITableView!
+    @IBOutlet weak var tableDegree: UITableView!
+    @IBOutlet weak var libDetailRecruitment: UITextView!
+    @IBOutlet weak var libDetailDegree: UITextView!
+    @IBOutlet weak var searchCandidateView: UISearchBar!
+    @IBOutlet weak var searchBarCandidate: UISearchBar!
     
     var photoData: NSData!
     
@@ -34,10 +42,12 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.imgImageCandidate.frame = CGRectMake(0, 0, 200, 200)
+        self.imgImageCandidate.frame = CGRectMake(0, 0, 150, 150)
         
         initRecruitment()
         changeCandidateView(candidateSeleted)
+        
+        filtred = []
     }
     
     // MARK: - UI Helper
@@ -52,10 +62,12 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
     }
     
     func initRecruitment(){
-        candidates = recruitment.getCandidatesArray()
         
-        libPoste.text = recruitment.workLibelle
-        libSector.text = recruitment.sector.libelle
+        if recruitment != nil
+        {
+            candidates = recruitment!.getCandidatesArray()
+        }
+        
     }
     
     func changeCandidateView(candidate: Candidate){
@@ -65,6 +77,12 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         libLastName.text = candidate.lastName
         libFirstName.text = candidate.firstName
         libMail.text = candidate.mail
+        
+        recruitments = candidate.getRecruitmentsArray()
+        degrees = candidate.getDegreesArray()
+        
+        tableDegree.reloadData()
+        tableRecruitment.reloadData()
         
         if candidate.address == nil {
             candidate.address = "Test address, 01000, Bourg"
@@ -125,48 +143,146 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         candidateSeleted.managedObjectContext?.save(nil)
         
         sendMailConfirm()
-        
-        
     }
     
     // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println(" --numberOfRowsInSection : \(candidates.count) ")
-        return candidates.count
+        
+        if(searchActive == true) {
+            return filtred.count
+        }else if (tableView == self.listCandidateTableView) {
+            return candidates.count
+            
+        } else if (tableView == self.tableRecruitment) {
+            return recruitments.count
+        }
+        else {
+            return degrees.count
+        }
+
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        println("CandidateViewCell")
         
-        let cell = tableViewCandidate.dequeueReusableCellWithIdentifier("CandidateCell") as! CandidateViewCell
-        let candidate = candidates[indexPath.row]
-        
-        println("Candidate : \(candidate.lastName)")
-        
-        cell.avatar.frame = CGRectMake(0, 0, 100, 82)
-        
-        cell.firstName.text  = candidate.firstName
-        cell.lastName.text   = candidate.lastName
-        
-        let color = UIColor(rgba: candidate.state_candidature.color)
-        
-        cell.backgroundColor = color
-
-        
-        if let picture = candidate.photo {
-            cell.avatar.image = UIImage(data: picture)
+            if(searchActive == true){
+            
+                let cell = tableViewCandidate.dequeueReusableCellWithIdentifier("CandidateCell") as! CandidateViewCell
+                let candidate = filtred[indexPath.row]
+                
+                println("Candidate : \(candidate.lastName)")
+                
+                cell.avatar.frame = CGRectMake(0, 0, 100, 82)
+                
+                cell.firstName.text  = candidate.firstName
+                cell.lastName.text   = candidate.lastName
+                
+                let color = UIColor(rgba: candidate.state_candidature.color)
+                
+                cell.backgroundColor = color
+                
+                
+                if let picture = candidate.photo {
+                    cell.avatar.image = UIImage(data: picture)
+                }
+                
+                return cell
+                
+            } else if (tableView == self.listCandidateTableView) {
+            
+            println("CandidateViewCell")
+            
+            let cell = tableViewCandidate.dequeueReusableCellWithIdentifier("CandidateCell") as! CandidateViewCell
+            let candidate = candidates[indexPath.row]
+            
+            println("Candidate : \(candidate.lastName)")
+            
+            cell.avatar.frame = CGRectMake(0, 0, 100, 82)
+            
+            cell.firstName.text  = candidate.firstName
+            cell.lastName.text   = candidate.lastName
+            
+            let color = UIColor(rgba: candidate.state_candidature.color)
+            
+            cell.backgroundColor = color
+            
+            
+            if let picture = candidate.photo {
+                cell.avatar.image = UIImage(data: picture)
+            }
+            
+            return cell
+            
+        } else if (tableView == self.tableRecruitment)  { // tableView == self.secondTableView
+            
+            
+            println("tableView Recruitment")
+            
+            let cell = tableRecruitment.dequeueReusableCellWithIdentifier("RecruitmentCell") as! UITableViewCell
+            let recruitmentCurrent = recruitments[indexPath.row]
+            
+            cell.textLabel?.text = recruitmentCurrent.workLibelle
+            
+            if recruitment != nil {
+                if recruitment?.titre == recruitmentCurrent.titre {
+                    let color = UIColorFromRGB(0xb3b3b3)
+                    
+                    cell.backgroundColor = color
+                    
+                    tableRecruitment.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: UITableViewScrollPosition.Middle)
+                    
+                    var detailFull = ""
+                    let recruitment = self.recruitments[indexPath.row]
+                    
+                    detailFull += "Titre : \(recruitment.titre) \n"
+                    detailFull += "Description : \(recruitment.workDescription!) \n"
+                    
+                    libDetailRecruitment.text = detailFull
+                }
+            }
+            
+            return cell
+        }
+        else {
+            println("tableView Degree")
+            
+            var cell:UITableViewCell = self.tableDegree.dequeueReusableCellWithIdentifier("DegreeCell") as! UITableViewCell
+            let degree = degrees[indexPath.row]
+            
+            cell.textLabel!.text = degree.libelle
+                      
+            return cell
         }
         
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        
-        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let candidate = self.candidates[indexPath.row]
-        println("Candidate Selected : \(candidate.lastName) \(candidate.firstName)")
         
-        changeCandidateView(candidate)
+        if (tableView == self.listCandidateTableView) {
+            let candidate = self.candidates[indexPath.row]
+            println("Candidate Selected : \(candidate.lastName) \(candidate.firstName)")
+            
+            changeCandidateView(candidate)
+        }
+        else if (tableView == self.tableRecruitment){
+            
+            var detailFull = ""
+            let recruitment = self.recruitments[indexPath.row]
+            
+            detailFull += "Titre : \(recruitment.titre) \n"
+            detailFull += "Description : \(recruitment.workDescription!) \n"
+            
+            libDetailRecruitment.text = detailFull
+        }
+        else
+        {
+            var detailFull = ""
+            let degree = self.degrees[indexPath.row]
+            
+            detailFull += "Date de l'obtention du diplôme : \(degree.date!) \n"
+            
+            libDetailDegree.text = detailFull
+        }
+
     }
     
     func sendMailConfirm(){
@@ -201,9 +317,51 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    @IBAction func clickQrCode(sender: AnyObject) {
+    /*@IBAction func clickQrCode(sender: AnyObject) {
         QRCodeViewController().configureVideoCapture()
         QRCodeViewController().addVideoPreviewLayer()
         QRCodeViewController().initializeQRView()
+    }*/
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filtred = candidates.filter({ (text) -> Bool in
+            let tmp: NSString = text.lastName
+            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return range.location != NSNotFound
+        })
+        if(filtred.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        self.listCandidateTableView.reloadData()
+    }
+    
+    
 }

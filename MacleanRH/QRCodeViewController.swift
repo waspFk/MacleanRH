@@ -79,36 +79,71 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
         
         let objMetadataMachineReadableCodeObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
-        var fullName = "First Last"
-        var fullNameArr = split(fullName) {$0 == ";"}
-        var firstName: String = fullNameArr[0]
-        var lastName: String? = fullNameArr.count > 1 ? fullNameArr[1] : nil
-        
         if objMetadataMachineReadableCodeObject.type == AVMetadataObjectTypeQRCode {
             let objBarCode = objCaptureVideoPreviewLayer?.transformedMetadataObjectForMetadataObject(objMetadataMachineReadableCodeObject as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
             vwQRCode?.frame = objBarCode.bounds;
             
-            if objMetadataMachineReadableCodeObject.stringValue != nil {
-                //libQRCodeValue.text = objMetadataMachineReadableCodeObject.stringValue
-                if let currentCandidate = CandidateManager.SharedManager.searchCandidateWithMail(objMetadataMachineReadableCodeObject.stringValue) {
-                    println(currentCandidate.lastName)
+            
+            if let qrValue = objMetadataMachineReadableCodeObject.stringValue {
+                
+                println("mon QR Code : \(qrValue)")
+                var fullQrCode = split(qrValue) {$0 == ","}
+                println(fullQrCode)
+                
+                for arg in fullQrCode {
                     
-         
+                    var data = split(arg) {$0 == ":"}
                     
+                    var type = data[0]
+                    var value = data[1]
                     
-                    let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                    let viewController = storyBoard.instantiateViewControllerWithIdentifier("CandidateViewID") as! CandidateViewController
+                    println("arg : type = \(type) -- value = \(value)")
                     
-                    println("Get view controller")
-                    viewController.candidateSeleted = currentCandidate
-                    println(viewController)
-                    
-                    self.navigationController?.pushViewController(viewController, animated: true)
-                    println(self.navigationController)
-                    
-                    isSanning = true
+                    if let data: AnyObject = getDataForType(type, value: value)
+                    {
+                        println(data)
+                    }
                 }
+                
+                /*let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                let viewController = storyBoard.instantiateViewControllerWithIdentifier("CandidateViewID") as! CandidateViewController
+                
+                println("Get view controller")
+                viewController.candidateSeleted = currentCandidate
+                viewController.recruitment =
+                println(viewController)
+                
+                self.navigationController?.pushViewController(viewController, animated: true)
+                println(self.navigationController)*/
+                
+                
+                isSanning = true
             }
         }
+    }
+    
+    func getDataForType(type: String, value:String) -> AnyObject?{
+        var data: AnyObject?
+        
+        switch type {
+        case "Candidate" :
+            println("--- Candidate -- value=\(value)")
+            data = CandidateManager.SharedManager.searchCandidateWithMail(value)
+            
+        case "Recruitment" :
+            println("--- Recruitment -- value=\(value)")
+            data = RecruitmentManager.SharedManager.searchRecruitment(value)
+            
+        case "Employee" :
+            println("--- Employee -- value=\(value)")
+            data = EmployeeManager.SharedManager.searchEmployeeWithMail(value)
+            
+        default :
+            data = nil
+        }
+        
+        println("--- DATA = \(data)")
+        
+        return data
     }
 }

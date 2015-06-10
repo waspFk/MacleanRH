@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class HomePageController: UIViewController {
     
@@ -15,6 +16,11 @@ class HomePageController: UIViewController {
         super.viewDidLoad()
         
         loadDataForApplication()
+        
+        if let data = RecruitmentManager.SharedManager.searchRecruitment("Recherche d\'un chef de chantier") {
+            println("---DATA = \(data.objectID)")
+        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,6 +48,14 @@ class HomePageController: UIViewController {
                     
                     println("Candidate 1 : \(c1.lastName) - \(c1.firstName) : Nombre de recruitments : \(c1.recruitments.count)")
                     c1.managedObjectContext?.save(nil)
+                    if let d1 = DegreeManager.SharedManager.createDegree("test degree 1", date: NSDate(), candidate: c1)
+                    {
+                        c1.addDegree(d1)
+                    }
+                    
+                    if let d2 = DegreeManager.SharedManager.createDegree("test degree 2", date: NSDate(), candidate: c1) {
+                        c1.addDegree(d2)
+                    }
                 }
                 
                 if let c2 = CandidateManager.SharedManager.createCandidate("M", firstname: "Cyril", mail: "cyril.meunier") {
@@ -50,6 +64,8 @@ class HomePageController: UIViewController {
                     println("Candidate 2 : \(c2.lastName) - \(c2.firstName) : Nombre de recruitments : \(c2.recruitments.count)")
                     c2.managedObjectContext?.save(nil)
                 }
+                        
+                
                 
                 
                 
@@ -84,6 +100,11 @@ class HomePageController: UIViewController {
                     println("Candidate 4 : \(c4.lastName) - \(c4.firstName) : Nombre de recruitments : \(c4.recruitments.count)")
                     c4.managedObjectContext?.save(nil)
                 }
+                        
+                        if let c5 = CandidateManager.SharedManager.searchCandidateWithMail("baptiste.thug_viennois@gmail.com") {
+                            c5.addRecruitment(r2)
+                            c5.managedObjectContext?.save(nil)
+                        }
                 
                 
                 
