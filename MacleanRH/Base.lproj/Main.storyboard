@@ -400,18 +400,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="22" sectionFooterHeight="22" id="grJ-TE-zc1">
-                                <rect key="frame" x="339" y="63" width="685" height="661"/>
+                                <rect key="frame" x="339" y="62" width="685" height="662"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="113" id="mY6-v0-3Jg" customClass="CandidateViewCell" customModule="MacleanRH" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="113" id="mY6-v0-3Jg" customClass="EmployeeViewCell" customModule="MacleanRH" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="685" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mY6-v0-3Jg" id="enP-yo-Duj">
                                             <rect key="frame" x="0.0" y="0.0" width="652" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gP7-TO-Tfq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage.png" id="gP7-TO-Tfq">
                                                     <rect key="frame" x="8" y="0.0" width="99" height="104"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -433,24 +433,17 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatar" destination="gP7-TO-Tfq" id="Pno-wD-QAd"/>
-                                            <outlet property="firstName" destination="XHb-hX-muW" id="85h-yQ-0YP"/>
-                                            <outlet property="lastName" destination="4BD-Vn-9eg" id="y0x-Td-1GK"/>
+                                            <outlet property="firstName" destination="XHb-hX-muW" id="Fq3-g0-bm5"/>
+                                            <outlet property="lastName" destination="4BD-Vn-9eg" id="nKB-zX-xZ0"/>
                                             <segue destination="6C9-Z3-uYl" kind="push" id="8Qz-FV-4dy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="eta-Bc-Cat" id="XPo-91-Jn3"/>
-                                    <outlet property="delegate" destination="eta-Bc-Cat" id="aXi-v3-s77"/>
+                                    <outlet property="dataSource" destination="ssc-zJ-67u" id="1gt-nQ-Rz0"/>
+                                    <outlet property="delegate" destination="ssc-zJ-67u" id="TDJ-s2-jTx"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liste des employés" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bBD-Fm-9b7">
-                                <rect key="frame" x="0.0" y="11" width="1024" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="485-3s-7tj">
                                 <rect key="frame" x="-5" y="152" width="344" height="572"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -556,6 +549,10 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="V3O-7W-bnd"/>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="searchEmployee" destination="olD-P6-GqC" id="Raw-0U-pxa"/>
+                        <outlet property="tableEmployees" destination="grJ-TE-zc1" id="Qhn-Gw-lYd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVu-WV-vBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

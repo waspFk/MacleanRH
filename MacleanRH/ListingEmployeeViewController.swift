@@ -20,6 +20,7 @@ class ListingEmployeeViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         employees = EmployeeManager.SharedManager.getAllEmployees(nil)
+        println(employees.count)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
