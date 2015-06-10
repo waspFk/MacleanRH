@@ -15,8 +15,6 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
     var candidateSeleted:Candidate!
     var recruitment: Recruitment!
     var candidates:[Candidate]!
-
-    @IBOutlet weak var typeContract: UISegmentedControl!
     
     @IBOutlet weak var libLastName: UITextField!
     @IBOutlet weak var libFirstName: UITextField!
@@ -24,7 +22,6 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var libAdresse: UITextField!
     @IBOutlet weak var libTel: UITextField!
     @IBOutlet weak var libMobile: UITextField!
-    @IBOutlet weak var libPoste: UITextField!
     @IBOutlet weak var imgImageCandidate: UIImageView!
     @IBOutlet weak var libSector: UITextField!
     @IBOutlet weak var tableViewCandidate: UITableView!
