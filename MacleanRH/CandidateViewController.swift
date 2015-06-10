@@ -85,6 +85,8 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         
         if let dataRecruitment = recruitment {
             candidates = dataRecruitment.getCandidatesArray()
+        } else {
+            candidates = [Candidate]()
         }
         
     }
@@ -177,14 +179,18 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         
         println("--numberOfRowsInSection -- CandidateViewController")
         if(searchActive == true) {
+            println("--SearchActive \(filtred.count)")
             return filtred.count
         }else if (tableView == self.tableViewCandidate) {
+            println("--CandidateTableView \(candidates.count)")
             return candidates.count
             
         } else if (tableView == self.tableViewRecruitment) {
+            println("--RecruitmentTableView \(recruitments.count)")
             return recruitments.count
         }
         else {
+            println("--DegreeTableView \(degrees.count)")
             return degrees.count
         }
 
@@ -310,16 +316,16 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         else if (tableView == self.tableViewRecruitment){
             
             var detailFull = ""
-            let recruitment = self.recruitments[indexPath.row]
+            recruitment = self.recruitments[indexPath.row]
             
-            detailFull += "Titre : \(recruitment.titre) \n"
-            detailFull += "Description : \(recruitment.workDescription!) \n"
+            detailFull += "Titre : \(recruitment!.titre) \n"
+            detailFull += "Description : \(recruitment!.workDescription!) \n"
             
             textAreaRecruitment.text = detailFull
             
             let formatter = NSDateFormatter()
             formatter.dateStyle = NSDateFormatterStyle.ShortStyle
-            textFieldDateRecruitment.text = formatter.stringFromDate(recruitment.date)
+            textFieldDateRecruitment.text = formatter.stringFromDate(recruitment!.date)
         }
         else
         {

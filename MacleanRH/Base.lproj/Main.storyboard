@@ -52,6 +52,9 @@
                                 <state key="normal" image="icon-scanner-btn-red.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="launchScanQrCode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mDu-We-vF6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FTg-nu-XxC">
                                 <rect key="frame" x="943" y="67" width="70" height="71"/>
@@ -561,7 +564,7 @@
         <!--Candidats-->
         <scene sceneID="js0-Nm-jUc">
             <objects>
-                <viewController title="Candidats" id="6C9-Z3-uYl" customClass="EmployeeViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeViewID" title="Candidats" id="6C9-Z3-uYl" customClass="EmployeeViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tlh-Iq-ZPu">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -859,8 +862,7 @@
         <!--Détails candidat-->
         <scene sceneID="Xk9-XY-fgU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X98-i5-6Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="UXo-T0-npt" customClass="CandidateViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CandidateViewID" id="UXo-T0-npt" customClass="CandidateViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k4m-aR-tOD">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1222,6 +1224,7 @@
                         <outlet property="textFieldTel" destination="Jp7-bf-FQ1" id="Y1V-YG-2i1"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X98-i5-6Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3880" y="1616"/>
         </scene>

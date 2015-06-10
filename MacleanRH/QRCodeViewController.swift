@@ -28,6 +28,10 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
         self.initializeQRView()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.isSanning = false
+    }
+    
     func configureVideoCapture()
     {
         let objCaptureDevice = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
@@ -85,6 +89,7 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
             
             
             if let qrValue = objMetadataMachineReadableCodeObject.stringValue {
+                let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                 
                 println("mon QR Code : \(qrValue)")
                 var fullQrCode = split(qrValue) {$0 == ","}
@@ -99,51 +104,32 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
                     
                     println("arg : type = \(type) -- value = \(value)")
                     
-                    if let data: AnyObject = getDataForType(type, value: value)
-                    {
-                        println(data)
+                    
+                    
+                    switch type {
+                    case "Candidate" :
+                        println("--- Candidate -- value=\(value)")
+                        if let data = CandidateManager.SharedManager.searchCandidateWithMail(value) {
+                            let viewController = storyBoard.instantiateViewControllerWithIdentifier("CandidateViewID") as! CandidateViewController
+                            viewController.candidateSeleted = data
+                            
+                            self.navigationController?.pushViewController(viewController, animated: true)
+                            self.isSanning = false
+                        }
+                        
+                    case "Employee" :
+                        println("--- Employee -- value=\(value)")
+                        if let data = EmployeeManager.SharedManager.searchEmployeeWithMail(value) {
+                            let viewController = storyBoard.instantiateViewControllerWithIdentifier("EmployeeViewID") as! EmployeeViewController
+                        }
+                        
+                    default :
+                        println("No manage")
                     }
                 }
-                
-                /*let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                let viewController = storyBoard.instantiateViewControllerWithIdentifier("CandidateViewID") as! CandidateViewController
-                
-                println("Get view controller")
-                viewController.candidateSeleted = currentCandidate
-                viewController.recruitment =
-                println(viewController)
-                
-                self.navigationController?.pushViewController(viewController, animated: true)
-                println(self.navigationController)*/
-                
                 
                 isSanning = true
             }
         }
-    }
-    
-    func getDataForType(type: String, value:String) -> AnyObject?{
-        var data: AnyObject?
-        
-        switch type {
-        case "Candidate" :
-            println("--- Candidate -- value=\(value)")
-            data = CandidateManager.SharedManager.searchCandidateWithMail(value)
-            
-        case "Recruitment" :
-            println("--- Recruitment -- value=\(value)")
-            data = RecruitmentManager.SharedManager.searchRecruitment(value)
-            
-        case "Employee" :
-            println("--- Employee -- value=\(value)")
-            data = EmployeeManager.SharedManager.searchEmployeeWithMail(value)
-            
-        default :
-            data = nil
-        }
-        
-        println("--- DATA = \(data)")
-        
-        return data
     }
 }

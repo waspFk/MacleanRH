@@ -134,6 +134,12 @@ class HomePageController: UIViewController {
   
     }
     
+    
+    @IBAction func launchScanQrCode(sender: UIButton) {
+        let qRCodeViewController = QRCodeViewController()
+        self.navigationController?.pushViewController(qRCodeViewController, animated: true)
+    }
+    
     @IBAction func displayCalendar(sender: UIButton) {
         UIApplication.sharedApplication().openURL(NSURL(string: "calshow://")!)
     }
