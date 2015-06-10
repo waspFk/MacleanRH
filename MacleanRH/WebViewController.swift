@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 iem. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class WebViewController: UIViewController, UIWebViewDelegate {
@@ -16,8 +15,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let request = NSURLRequest(URL: NSURL(string: url!)!)
-        let request = NSURLRequest(URL: NSURL(fileURLWithPath: url!)!)
+        let request = NSURLRequest(URL: NSURL(string: url!)!)
         webView.loadRequest(request)
     }
     

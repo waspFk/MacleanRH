@@ -56,6 +56,7 @@
 		B887BFB31B219C6A002D0D8B /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB11B219C6A002D0D8B /* Sector.swift */; };
 		B887BFB51B219D46002D0D8B /* ListingEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */; };
 		B887BFB71B219DA5002D0D8B /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */; };
+		B8BC160B1B27339B008DB575 /* ContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC160A1B27339B008DB575 /* ContractViewController.swift */; };
 		B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */; };
 		B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */; };
 		B8F6C7B71B26F4A3000AB3CE /* EmployeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F6C7B31B26F4A3000AB3CE /* EmployeeViewCell.swift */; };
@@ -128,6 +129,7 @@
 		B887BFB11B219C6A002D0D8B /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 		B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingEmployeeViewController.swift; sourceTree = "<group>"; };
 		B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		B8BC160A1B27339B008DB575 /* ContractViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractViewController.swift; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
 		B8F6C7B31B26F4A3000AB3CE /* EmployeeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewCell.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */,
 				B887BFB61B219DA5002D0D8B /* EmployeeViewController.swift */,
 				B82CC5B41B259EF900641299 /* WebViewController.swift */,
+				B8BC160A1B27339B008DB575 /* ContractViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				B887BFB71B219DA5002D0D8B /* EmployeeViewController.swift in Sources */,
 				B83DBA431B1F50CB0092D63A /* TypeContract.swift in Sources */,
 				B8F6C7B71B26F4A3000AB3CE /* EmployeeViewCell.swift in Sources */,
+				B8BC160B1B27339B008DB575 /* ContractViewController.swift in Sources */,
 				B80B4C081B207E470064B52D /* CandidateViewCell.swift in Sources */,
 				B83DBA211B1F263F0092D63A /* StateCandidatureManager.swift in Sources */,
 				B83DBA451B1F50CB0092D63A /* Recruitment.swift in Sources */,
