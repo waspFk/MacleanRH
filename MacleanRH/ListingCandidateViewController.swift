@@ -61,6 +61,7 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        println("prepareForSegue")
         if segue.identifier == "CandidateViewSegue" {
             if let destination = segue.destinationViewController as? CandidateViewController {
                 if let index = tableView.indexPathForSelectedRow()?.row {

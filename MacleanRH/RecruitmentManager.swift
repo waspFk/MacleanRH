@@ -33,24 +33,28 @@ class RecruitmentManager
     
     func createRecruitment(titre: String, workLibelle: String, workDescription: String,date: NSDate, sector: Sector) -> Recruitment? {
         
-        let entity = NSEntityDescription.entityForName("Recruitment", inManagedObjectContext: contextObject!)
-        
-        let recruitmentReturn = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: contextObject)as! Recruitment
-        
-        recruitmentReturn.titre = titre
-        recruitmentReturn.workLibelle = workLibelle
-        recruitmentReturn.workDescription = workDescription
-        recruitmentReturn.date = date
-        recruitmentReturn.sector = sector
-        
-        var error: NSError? = nil
-        contextObject!.save(&error)
-        
-        if error != nil {
-            println("RecruitmentManager -- Could not save context : \(error)")
+        if searchRecruitment(titre) == nil {
+            let entity = NSEntityDescription.entityForName("Recruitment", inManagedObjectContext: contextObject!)
+            
+            let recruitmentReturn = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: contextObject)as! Recruitment
+            
+            recruitmentReturn.titre = titre
+            recruitmentReturn.workLibelle = workLibelle
+            recruitmentReturn.workDescription = workDescription
+            recruitmentReturn.date = date
+            recruitmentReturn.sector = sector
+            
+            var error: NSError? = nil
+            contextObject!.save(&error)
+            
+            if error != nil {
+                println("RecruitmentManager -- Could not save context : \(error)")
+            }
+            
+            return recruitmentReturn
         }
         
-        return recruitmentReturn
+        return nil
     }
     
     func fetchRecruitment(predicate : NSPredicate) -> Recruitment? {

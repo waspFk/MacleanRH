@@ -118,7 +118,7 @@ class CandidateManager {
         return candidates
     }
     
-    func createCandidate(lastname: String, firstname: String, mail: String) -> Candidate? {
+    func createCandidate(lastname: String, firstname: String, mail: String, birthday: NSDate) -> Candidate? {
         if searchCandidateWithMail(mail) == nil {
             let entity = NSEntityDescription.entityForName("Candidate", inManagedObjectContext: contextObject!)
             
@@ -127,6 +127,7 @@ class CandidateManager {
             candidate.lastName = lastname
             candidate.mail = mail
             candidate.state_candidature = StateCandidatureManager.SharedManager.getState(.WaittingValideCandidature)
+            candidate.birthday = birthday
             
             var error: NSError? = nil
             contextObject!.save(&error)
