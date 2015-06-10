@@ -68,7 +68,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BDa-9j-5JV" kind="modal" modalTransitionStyle="coverVertical" id="z9J-ub-ke6"/>
+                                    <segue destination="BDa-9j-5JV" kind="push" id="z9J-ub-ke6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -239,7 +239,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="bv9-oo-pta"/>
+                    <navigationItem key="navigationItem" title="Annonces" id="bv9-oo-pta"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
