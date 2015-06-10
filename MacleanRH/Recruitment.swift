@@ -17,6 +17,7 @@ class Recruitment: NSManagedObject {
     @NSManaged var workLibelle: String
     @NSManaged var candidates: NSSet
     @NSManaged var sector: Sector
+    @NSManaged var typeContract: TypeContract?
 
 }
 

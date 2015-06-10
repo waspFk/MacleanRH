@@ -12,7 +12,7 @@ import CoreData
 class Candidate: NSManagedObject {
 
     @NSManaged var address: String?
-    @NSManaged var birthday: NSDate?
+    @NSManaged var birthday: NSDate
     @NSManaged var cadre: NSNumber?
     @NSManaged var firstName: String
     @NSManaged var lastName: String
