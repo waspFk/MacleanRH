@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C34E81AE7A5FBC7A73B3661 /* Pods_MacleanRH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB7BCF2083BD1EB0C6572AE /* Pods_MacleanRH.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B80B4C041B2077C40064B52D /* CandidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C011B2077C40064B52D /* CandidateManager.swift */; };
 		B80B4C051B2077C40064B52D /* DegreeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C021B2077C40064B52D /* DegreeManager.swift */; };
 		B80B4C061B2077C40064B52D /* EmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C031B2077C40064B52D /* EmployeeManager.swift */; };
 		B80B4C081B207E470064B52D /* CandidateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C071B207E470064B52D /* CandidateViewCell.swift */; };
-		B80B4C0D1B20A05F0064B52D /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C091B20A05F0064B52D /* Calendar.png */; };
-		B80B4C0E1B20A05F0064B52D /* Dossier1.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0A1B20A05F0064B52D /* Dossier1.png */; };
 		B80B4C0F1B20A05F0064B52D /* Macleanrh.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0B1B20A05F0064B52D /* Macleanrh.png */; };
-		B80B4C101B20A05F0064B52D /* Recru.png in Resources */ = {isa = PBXBuildFile; fileRef = B80B4C0C1B20A05F0064B52D /* Recru.png */; };
 		B80B4C121B20A6C90064B52D /* RecruitmentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C111B20A6C90064B52D /* RecruitmentViewCell.swift */; };
 		B80B4C141B20A8740064B52D /* ListingRecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */; };
 		B80B4C181B2197990064B52D /* CandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B4C151B2197990064B52D /* CandidateViewController.swift */; };
@@ -40,17 +36,6 @@
 		B870E8021B1DD52D00CA2C84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B870E8011B1DD52D00CA2C84 /* Images.xcassets */; };
 		B870E8051B1DD52D00CA2C84 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B870E8031B1DD52D00CA2C84 /* LaunchScreen.xib */; };
 		B870E8111B1DD52D00CA2C84 /* MacleanRHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870E8101B1DD52D00CA2C84 /* MacleanRHTests.swift */; };
-		B887BFA41B219BB8002D0D8B /* btnCal.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF981B219BB8002D0D8B /* btnCal.png */; };
-		B887BFA51B219BB8002D0D8B /* btndoss.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF991B219BB8002D0D8B /* btndoss.png */; };
-		B887BFA61B219BB8002D0D8B /* btndoss2.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF9A1B219BB8002D0D8B /* btndoss2.png */; };
-		B887BFA71B219BB8002D0D8B /* btndoss3.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF9B1B219BB8002D0D8B /* btndoss3.png */; };
-		B887BFA81B219BB8002D0D8B /* btndoss4.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF9C1B219BB8002D0D8B /* btndoss4.png */; };
-		B887BFA91B219BB8002D0D8B /* BtnRecru.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF9D1B219BB8002D0D8B /* BtnRecru.png */; };
-		B887BFAA1B219BB8002D0D8B /* BtnRecru1.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF9E1B219BB8002D0D8B /* BtnRecru1.png */; };
-		B887BFAB1B219BB8002D0D8B /* BtnRecru2.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BF9F1B219BB8002D0D8B /* BtnRecru2.png */; };
-		B887BFAD1B219BB8002D0D8B /* Recrutementmini.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BFA11B219BB8002D0D8B /* Recrutementmini.png */; };
-		B887BFAE1B219BB8002D0D8B /* Recrutmini.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BFA21B219BB8002D0D8B /* Recrutmini.png */; };
-		B887BFAF1B219BB8002D0D8B /* Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = B887BFA31B219BB8002D0D8B /* Stars.png */; };
 		B887BFB21B219C6A002D0D8B /* Dating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB01B219C6A002D0D8B /* Dating.swift */; };
 		B887BFB31B219C6A002D0D8B /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB11B219C6A002D0D8B /* Sector.swift */; };
 		B887BFB51B219D46002D0D8B /* ListingEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */; };
@@ -62,7 +47,18 @@
 		B889B2EF1B25E72800CD5C57 /* EmployeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889B2EE1B25E72800CD5C57 /* EmployeeViewCell.swift */; };
 		B8D43D001B206FF300ED6DC9 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */; };
 		B8D43D021B20705900ED6DC9 /* ListingCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */; };
-		BC31EC6787C5590F31B07255 /* Pods_MacleanRHTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD692D06B79C5F23DBB3A3D6 /* Pods_MacleanRHTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B8F436DC1B26DA51001F809F /* xing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8F436DB1B26DA51001F809F /* xing.jpg */; };
+		B8F436DE1B26DA56001F809F /* picto_viadeo.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436DD1B26DA56001F809F /* picto_viadeo.png */; };
+		B8F436E01B26DA5B001F809F /* linkedin-in-button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8F436DF1B26DA5B001F809F /* linkedin-in-button.jpg */; };
+		B8F436F61B2733B1001F809F /* Avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436F51B2733B1001F809F /* Avatar.png */; };
+		B8F436FA1B283134001F809F /* icon-calendar-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436F91B283134001F809F /* icon-calendar-onglet-white.png */; };
+		B8F437021B283161001F809F /* icon-folder-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436FC1B283161001F809F /* icon-folder-onglet-white.png */; };
+		B8F437041B283161001F809F /* icon-recrutement-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436FE1B283161001F809F /* icon-recrutement-onglet-white.png */; };
+		B8F437061B283161001F809F /* icon-scanner-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F437001B283161001F809F /* icon-scanner-onglet-white.png */; };
+		B8F4370B1B28363C001F809F /* icon-calendar-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F437071B28363C001F809F /* icon-calendar-btn-red.png */; };
+		B8F4370C1B28363C001F809F /* icon-folder-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F437081B28363C001F809F /* icon-folder-btn-red.png */; };
+		B8F4370D1B28363C001F809F /* icon-recrutement-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F437091B28363C001F809F /* icon-recrutement-btn-red.png */; };
+		B8F4370E1B28363C001F809F /* icon-scanner-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4370A1B28363C001F809F /* icon-scanner-btn-red.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,19 +72,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		196D889E71698BE5DC5B417D /* Pods-MacleanRH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacleanRH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacleanRH/Pods-MacleanRH.debug.xcconfig"; sourceTree = "<group>"; };
-		5E9A68A67BFBE54025ABA4FE /* Pods-MacleanRH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacleanRH.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacleanRH/Pods-MacleanRH.release.xcconfig"; sourceTree = "<group>"; };
-		7667D1EC16CD7C6AA4F98054 /* Pods-MacleanRHTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacleanRHTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacleanRHTests/Pods-MacleanRHTests.release.xcconfig"; sourceTree = "<group>"; };
-		7BB7BCF2083BD1EB0C6572AE /* Pods_MacleanRH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacleanRH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B32111BA3885E8BCD1E38A7C /* Pods-MacleanRHTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacleanRHTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacleanRHTests/Pods-MacleanRHTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B80B4C011B2077C40064B52D /* CandidateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateManager.swift; sourceTree = "<group>"; };
 		B80B4C021B2077C40064B52D /* DegreeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeManager.swift; sourceTree = "<group>"; };
 		B80B4C031B2077C40064B52D /* EmployeeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeManager.swift; sourceTree = "<group>"; };
 		B80B4C071B207E470064B52D /* CandidateViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateViewCell.swift; sourceTree = "<group>"; };
-		B80B4C091B20A05F0064B52D /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
-		B80B4C0A1B20A05F0064B52D /* Dossier1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dossier1.png; sourceTree = "<group>"; };
 		B80B4C0B1B20A05F0064B52D /* Macleanrh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Macleanrh.png; sourceTree = "<group>"; };
-		B80B4C0C1B20A05F0064B52D /* Recru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Recru.png; sourceTree = "<group>"; };
 		B80B4C111B20A6C90064B52D /* RecruitmentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecruitmentViewCell.swift; sourceTree = "<group>"; };
 		B80B4C131B20A8740064B52D /* ListingRecruitmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingRecruitmentViewController.swift; sourceTree = "<group>"; };
 		B80B4C151B2197990064B52D /* CandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateViewController.swift; sourceTree = "<group>"; };
@@ -117,17 +105,6 @@
 		B870E80A1B1DD52D00CA2C84 /* MacleanRHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacleanRHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B870E80F1B1DD52D00CA2C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B870E8101B1DD52D00CA2C84 /* MacleanRHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacleanRHTests.swift; sourceTree = "<group>"; };
-		B887BF981B219BB8002D0D8B /* btnCal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnCal.png; sourceTree = "<group>"; };
-		B887BF991B219BB8002D0D8B /* btndoss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btndoss.png; sourceTree = "<group>"; };
-		B887BF9A1B219BB8002D0D8B /* btndoss2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btndoss2.png; sourceTree = "<group>"; };
-		B887BF9B1B219BB8002D0D8B /* btndoss3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btndoss3.png; sourceTree = "<group>"; };
-		B887BF9C1B219BB8002D0D8B /* btndoss4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btndoss4.png; sourceTree = "<group>"; };
-		B887BF9D1B219BB8002D0D8B /* BtnRecru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnRecru.png; sourceTree = "<group>"; };
-		B887BF9E1B219BB8002D0D8B /* BtnRecru1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnRecru1.png; sourceTree = "<group>"; };
-		B887BF9F1B219BB8002D0D8B /* BtnRecru2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnRecru2.png; sourceTree = "<group>"; };
-		B887BFA11B219BB8002D0D8B /* Recrutementmini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Recrutementmini.png; sourceTree = "<group>"; };
-		B887BFA21B219BB8002D0D8B /* Recrutmini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Recrutmini.png; sourceTree = "<group>"; };
-		B887BFA31B219BB8002D0D8B /* Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stars.png; sourceTree = "<group>"; };
 		B887BFB01B219C6A002D0D8B /* Dating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dating.swift; sourceTree = "<group>"; };
 		B887BFB11B219C6A002D0D8B /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 		B887BFB41B219D46002D0D8B /* ListingEmployeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingEmployeeViewController.swift; sourceTree = "<group>"; };
@@ -139,7 +116,18 @@
 		B889B2EE1B25E72800CD5C57 /* EmployeeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewCell.swift; sourceTree = "<group>"; };
 		B8D43CFF1B206FF300ED6DC9 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		B8D43D011B20705900ED6DC9 /* ListingCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCandidateViewController.swift; sourceTree = "<group>"; };
-		BD692D06B79C5F23DBB3A3D6 /* Pods_MacleanRHTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacleanRHTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F436DB1B26DA51001F809F /* xing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xing.jpg; sourceTree = "<group>"; };
+		B8F436DD1B26DA56001F809F /* picto_viadeo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picto_viadeo.png; sourceTree = "<group>"; };
+		B8F436DF1B26DA5B001F809F /* linkedin-in-button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "linkedin-in-button.jpg"; sourceTree = "<group>"; };
+		B8F436F51B2733B1001F809F /* Avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar.png; sourceTree = "<group>"; };
+		B8F436F91B283134001F809F /* icon-calendar-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-calendar-onglet-white.png"; sourceTree = "<group>"; };
+		B8F436FC1B283161001F809F /* icon-folder-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-folder-onglet-white.png"; sourceTree = "<group>"; };
+		B8F436FE1B283161001F809F /* icon-recrutement-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-recrutement-onglet-white.png"; sourceTree = "<group>"; };
+		B8F437001B283161001F809F /* icon-scanner-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-scanner-onglet-white.png"; sourceTree = "<group>"; };
+		B8F437071B28363C001F809F /* icon-calendar-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-calendar-btn-red.png"; sourceTree = "<group>"; };
+		B8F437081B28363C001F809F /* icon-folder-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-folder-btn-red.png"; sourceTree = "<group>"; };
+		B8F437091B28363C001F809F /* icon-recrutement-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-recrutement-btn-red.png"; sourceTree = "<group>"; };
+		B8F4370A1B28363C001F809F /* icon-scanner-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-scanner-btn-red.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C34E81AE7A5FBC7A73B3661 /* Pods_MacleanRH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,33 +142,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC31EC6787C5590F31B07255 /* Pods_MacleanRHTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E2124E2A685765AA3906C8E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				196D889E71698BE5DC5B417D /* Pods-MacleanRH.debug.xcconfig */,
-				5E9A68A67BFBE54025ABA4FE /* Pods-MacleanRH.release.xcconfig */,
-				B32111BA3885E8BCD1E38A7C /* Pods-MacleanRHTests.debug.xcconfig */,
-				7667D1EC16CD7C6AA4F98054 /* Pods-MacleanRHTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		673EB135AF1247D77CFCFBAE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7BB7BCF2083BD1EB0C6572AE /* Pods_MacleanRH.framework */,
-				BD692D06B79C5F23DBB3A3D6 /* Pods_MacleanRHTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B83C91E41B1F327000879EE5 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,8 +214,6 @@
 				B870E7F71B1DD52D00CA2C84 /* MacleanRH */,
 				B870E80D1B1DD52D00CA2C84 /* MacleanRHTests */,
 				B870E7F61B1DD52D00CA2C84 /* Products */,
-				3E2124E2A685765AA3906C8E /* Pods */,
-				673EB135AF1247D77CFCFBAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,22 +246,20 @@
 		B870E7F81B1DD52D00CA2C84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8F437071B28363C001F809F /* icon-calendar-btn-red.png */,
+				B8F437081B28363C001F809F /* icon-folder-btn-red.png */,
+				B8F437091B28363C001F809F /* icon-recrutement-btn-red.png */,
+				B8F4370A1B28363C001F809F /* icon-scanner-btn-red.png */,
+				B8F436FC1B283161001F809F /* icon-folder-onglet-white.png */,
+				B8F436FE1B283161001F809F /* icon-recrutement-onglet-white.png */,
+				B8F437001B283161001F809F /* icon-scanner-onglet-white.png */,
+				B8F436F91B283134001F809F /* icon-calendar-onglet-white.png */,
 				B889B2E41B258DD300CD5C57 /* noimage.png */,
-				B887BF981B219BB8002D0D8B /* btnCal.png */,
-				B887BF991B219BB8002D0D8B /* btndoss.png */,
-				B887BF9A1B219BB8002D0D8B /* btndoss2.png */,
-				B887BF9B1B219BB8002D0D8B /* btndoss3.png */,
-				B887BF9C1B219BB8002D0D8B /* btndoss4.png */,
-				B887BF9D1B219BB8002D0D8B /* BtnRecru.png */,
-				B887BF9E1B219BB8002D0D8B /* BtnRecru1.png */,
-				B887BF9F1B219BB8002D0D8B /* BtnRecru2.png */,
-				B887BFA11B219BB8002D0D8B /* Recrutementmini.png */,
-				B887BFA21B219BB8002D0D8B /* Recrutmini.png */,
-				B887BFA31B219BB8002D0D8B /* Stars.png */,
-				B80B4C091B20A05F0064B52D /* Calendar.png */,
-				B80B4C0A1B20A05F0064B52D /* Dossier1.png */,
+				B8F436F51B2733B1001F809F /* Avatar.png */,
+				B8F436DB1B26DA51001F809F /* xing.jpg */,
+				B8F436DD1B26DA56001F809F /* picto_viadeo.png */,
+				B8F436DF1B26DA5B001F809F /* linkedin-in-button.jpg */,
 				B80B4C0B1B20A05F0064B52D /* Macleanrh.png */,
-				B80B4C0C1B20A05F0064B52D /* Recru.png */,
 				B870E7F91B1DD52D00CA2C84 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -327,12 +289,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B870E8141B1DD52D00CA2C84 /* Build configuration list for PBXNativeTarget "MacleanRH" */;
 			buildPhases = (
-				E2BD8E019652DB43447E4B4D /* Check Pods Manifest.lock */,
 				B870E7F11B1DD52D00CA2C84 /* Sources */,
 				B870E7F21B1DD52D00CA2C84 /* Frameworks */,
 				B870E7F31B1DD52D00CA2C84 /* Resources */,
-				67A3D1E8B4C17E2F4C75CB39 /* Embed Pods Frameworks */,
-				6709BA6CDF18EFBC8E4D8C8B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,12 +306,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B870E8171B1DD52D00CA2C84 /* Build configuration list for PBXNativeTarget "MacleanRHTests" */;
 			buildPhases = (
-				CB9DE5CD27F87C358900BA72 /* Check Pods Manifest.lock */,
 				B870E8061B1DD52D00CA2C84 /* Sources */,
 				B870E8071B1DD52D00CA2C84 /* Frameworks */,
 				B870E8081B1DD52D00CA2C84 /* Resources */,
-				F078F8DC97E0F82BA8E7FC2A /* Embed Pods Frameworks */,
-				1C904AC60A94412B3E079AA3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -407,25 +363,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B887BFAA1B219BB8002D0D8B /* BtnRecru1.png in Resources */,
-				B887BFA61B219BB8002D0D8B /* btndoss2.png in Resources */,
+				B8F436DE1B26DA56001F809F /* picto_viadeo.png in Resources */,
+				B8F4370B1B28363C001F809F /* icon-calendar-btn-red.png in Resources */,
 				B870E8001B1DD52D00CA2C84 /* Main.storyboard in Resources */,
-				B887BFAD1B219BB8002D0D8B /* Recrutementmini.png in Resources */,
-				B887BFA41B219BB8002D0D8B /* btnCal.png in Resources */,
-				B887BFA51B219BB8002D0D8B /* btndoss.png in Resources */,
-				B887BFA91B219BB8002D0D8B /* BtnRecru.png in Resources */,
-				B80B4C0E1B20A05F0064B52D /* Dossier1.png in Resources */,
-				B80B4C0D1B20A05F0064B52D /* Calendar.png in Resources */,
+				B8F4370C1B28363C001F809F /* icon-folder-btn-red.png in Resources */,
+				B8F436E01B26DA5B001F809F /* linkedin-in-button.jpg in Resources */,
+				B8F437061B283161001F809F /* icon-scanner-onglet-white.png in Resources */,
+				B8F436FA1B283134001F809F /* icon-calendar-onglet-white.png in Resources */,
+				B8F436DC1B26DA51001F809F /* xing.jpg in Resources */,
+				B8F437041B283161001F809F /* icon-recrutement-onglet-white.png in Resources */,
 				B889B2E51B258DD300CD5C57 /* noimage.png in Resources */,
-				B887BFA71B219BB8002D0D8B /* btndoss3.png in Resources */,
-				B80B4C101B20A05F0064B52D /* Recru.png in Resources */,
-				B887BFA81B219BB8002D0D8B /* btndoss4.png in Resources */,
 				B80B4C0F1B20A05F0064B52D /* Macleanrh.png in Resources */,
-				B887BFAF1B219BB8002D0D8B /* Stars.png in Resources */,
 				B870E8051B1DD52D00CA2C84 /* LaunchScreen.xib in Resources */,
-				B887BFAE1B219BB8002D0D8B /* Recrutmini.png in Resources */,
+				B8F4370E1B28363C001F809F /* icon-scanner-btn-red.png in Resources */,
+				B8F4370D1B28363C001F809F /* icon-recrutement-btn-red.png in Resources */,
+				B8F437021B283161001F809F /* icon-folder-onglet-white.png in Resources */,
+				B8F436F61B2733B1001F809F /* Avatar.png in Resources */,
 				B870E8021B1DD52D00CA2C84 /* Images.xcassets in Resources */,
-				B887BFAB1B219BB8002D0D8B /* BtnRecru2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,99 +391,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1C904AC60A94412B3E079AA3 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacleanRHTests/Pods-MacleanRHTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6709BA6CDF18EFBC8E4D8C8B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacleanRH/Pods-MacleanRH-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67A3D1E8B4C17E2F4C75CB39 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacleanRH/Pods-MacleanRH-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB9DE5CD27F87C358900BA72 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E2BD8E019652DB43447E4B4D /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F078F8DC97E0F82BA8E7FC2A /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacleanRHTests/Pods-MacleanRHTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B870E7F11B1DD52D00CA2C84 /* Sources */ = {
@@ -694,7 +555,6 @@
 		};
 		B870E8151B1DD52D00CA2C84 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 196D889E71698BE5DC5B417D /* Pods-MacleanRH.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: lp iem (AU6HJ9TQWT)";
@@ -710,7 +570,6 @@
 		};
 		B870E8161B1DD52D00CA2C84 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E9A68A67BFBE54025ABA4FE /* Pods-MacleanRH.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: lp iem (AU6HJ9TQWT)";
@@ -726,7 +585,6 @@
 		};
 		B870E8181B1DD52D00CA2C84 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B32111BA3885E8BCD1E38A7C /* Pods-MacleanRHTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -746,7 +604,6 @@
 		};
 		B870E8191B1DD52D00CA2C84 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7667D1EC16CD7C6AA4F98054 /* Pods-MacleanRHTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
