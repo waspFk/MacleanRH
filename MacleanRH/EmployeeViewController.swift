@@ -12,8 +12,12 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
     
     var employee : Employee!
     var employees : [Employee]!
+    var employeesFilter: [Employee]? = [Employee]()
+    
+    var resultSearchController = UISearchController()
     
     @IBOutlet weak var tableEmployees: UITableView!
+    
     @IBOutlet weak var numSapEmployee: UITextField!
     @IBOutlet weak var photoEmployee: UIImageView!
     @IBOutlet weak var lastNameEmployee: UITextField!
@@ -33,6 +37,8 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
         
         changeEmployee()
         
+        self.tableEmployees.reloadData()
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,14 +48,32 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = self.tableEmployees.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! EmployeeViewCell
+        /*
+        if self.resultSearchController.active && employeesFilter?.count > 0{
+            
+            println(employeesFilter?.count)
+            
+            let employeeF:[Employee]! = employeesFilter
+            let employe = employeeF[indexPath.row]
+            
+            cell.lastName.text = employe.lastName
+            cell.firstName.text = employe.firstName
+            
+            if let picture = employe.photo {
+                cell.avatar.image = UIImage(data: picture)
+            }
+            
+        } else {
+        */
+            let employee = employees[indexPath.row]
         
-        let employee = employees[indexPath.row]
+            cell.lastName.text = employee.lastName
+            cell.firstName.text = employee.firstName
+            
+            if let picture = employee.photo {
+                cell.avatar.image = UIImage(data: picture)
+       //     }
         
-        cell.lastName.text = employee.lastName
-        cell.firstName.text = employee.firstName
-        
-        if let picture = employee.photo {
-            cell.avatar.image = UIImage(data: picture)
         }
         
         return cell
@@ -59,6 +83,20 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
         employee = employees[indexPath.item]
         changeEmployee()
     }
+    /*
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        println("on est dans searh bar textdidChange")
+        
+        let employe: [Employee]? = EmployeeManager.SharedManager.searchEmployeesWithFirstName(searchText)
+        
+        if employe != nil{
+            println("on passe par la ")
+            employeesFilter = employe!
+            
+        }
+    }
+    */
     
     func changeEmployee() {
         numSapEmployee.text = employee.numeroSAP

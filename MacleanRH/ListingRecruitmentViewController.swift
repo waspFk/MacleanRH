@@ -10,6 +10,8 @@ import UIKit
 
 class ListingRecruitmentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var recruitments:[Recruitment]!
+    var filterTitle = 0
+    var filterDate = 0
     
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
@@ -43,6 +45,30 @@ class ListingRecruitmentViewController: UIViewController, UITableViewDelegate, U
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
+    }
+    
+    @IBAction func SortListByDate(sender: AnyObject) { // should probably be called sort and not filter
+        
+        if(self.filterDate == 0){
+            self.recruitments.sort({ $0.date.compare($1.date) == NSComparisonResult.OrderedAscending })
+            self.filterDate = 1
+        }else{
+            self.recruitments.sort({ $0.date.compare($1.date) == NSComparisonResult.OrderedDescending })
+            self.filterDate = 0
+        }
+        self.tableView.reloadData(); // notify the table view the data has changed
+        
+    }
+    
+    @IBAction func SortListByTitre(sender: AnyObject) {
+        if(self.filterTitle == 0){
+            self.recruitments.sort(){ $0.titre < $1.titre }
+            self.filterTitle = 1
+        }else{
+            self.recruitments.sort() { $0.titre > $1.titre }
+            self.filterTitle = 0
+        }
+        self.tableView.reloadData(); // notify the table view the data has changed
     }
     
     // MARK: - Navigation

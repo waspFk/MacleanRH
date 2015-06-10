@@ -13,9 +13,13 @@ class ListingEmployeeViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBOutlet weak var tableEmployees: UITableView!
     @IBOutlet weak var searchEmployee: UISearchBar!
+    @IBOutlet weak var typeContract: UISegmentedControl!
+    var filterLastName = 0
+    var filterFirstName = 0
+    
     
     var employeeManager = EmployeeManager.SharedManager
-    var employees = [Employee]()
+    var employees : [Employee] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +46,44 @@ class ListingEmployeeViewController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
+    @IBAction func SortListByLastName(sender: AnyObject) {
+        if(self.filterLastName == 0){
+            self.employees.sort(){ $0.lastName < $1.lastName }
+            self.filterLastName = 1
+        }else{
+            self.employees.sort() { $0.lastName > $1.lastName }
+            self.filterLastName = 0
+        }
+        self.tableEmployees.reloadData(); // notify the table view the data has changed
+    }
+    
+    @IBAction func SortListByFirstName(sender: AnyObject) {
+        if(self.filterFirstName == 0){
+            self.employees.sort(){ $0.firstName < $1.firstName }
+            self.filterFirstName = 1
+        }else{
+            self.employees.sort() { $0.firstName > $1.firstName }
+            self.filterFirstName = 0
+        }
+        self.tableEmployees.reloadData(); // notify the table view the data has changed
+    }
+    /*
+    @IBAction func SortListByContrat(sender: UISegmentedControl) {
+        switch typeContract.selectedSegmentIndex
+        {
+        case 0:
+            employees = employeeManager.getAllEmployees(nil)
+        case 1:
+            employees = employeeManager.getAllEmployees("CDI")
+        case 1:
+            employees = employeeManager.getAllEmployees("CDD")
+        default:
+            break; 
+        }
+        
+        self.tableEmployees.reloadData(); // notify the table view the data has changed
+    }
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "detailEmployee" {
             if let destination = segue.destinationViewController as? EmployeeViewController {
