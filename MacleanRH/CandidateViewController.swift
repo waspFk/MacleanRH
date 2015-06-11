@@ -308,7 +308,13 @@ class CandidateViewController: UIViewController, UINavigationControllerDelegate,
         
         println("--didSelectRowAtIndexPath -- CandidateViewController")
         if (tableView == self.tableViewCandidate) {
-            let candidate = self.candidates[indexPath.row]
+            var candidate:Candidate!
+            if searchActive == true {
+                candidate = self.filtred[indexPath.row]
+            } else {
+                candidate = self.candidates[indexPath.row]
+            }
+            
             println("Candidate Selected : \(candidate.lastName) \(candidate.firstName)")
             
             changeCandidateView(candidate)

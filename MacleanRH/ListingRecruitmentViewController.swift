@@ -85,7 +85,6 @@ class ListingRecruitmentViewController: UIViewController, UITableViewDelegate, U
         recruitments = RecruitmentManager.SharedManager.getAllRecruitments(nil)
     }
     
-    
     // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(searchBarActive  == true){
@@ -115,11 +114,15 @@ class ListingRecruitmentViewController: UIViewController, UITableViewDelegate, U
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "RecruitmentSegue" {
-            let destinationListingCandidat = segue.destinationViewController as! ListingCandidateViewController
-            
-            let indexPath  = self.tableView.indexPathForSelectedRow()!
-            let recruitment = recruitments[indexPath.row]
-            destinationListingCandidat.recruitment = recruitment
+            if let destinationListingCandidat = segue.destinationViewController as? ListingCandidateViewController {
+                if let index = tableView.indexPathForSelectedRow()?.row {
+                    if(searchBarActive  == true){
+                        destinationListingCandidat.recruitment = filteredTableRecuitment[index]
+                    } else {
+                        destinationListingCandidat.recruitment = recruitments[index]
+                    }
+                }
+            }
         }
     }
 }
