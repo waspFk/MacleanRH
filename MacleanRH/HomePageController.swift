@@ -123,7 +123,7 @@ class HomePageController: UIViewController {
                     println("Recruitment 2 : \(r2.workLibelle) : Nombre de candidats : \(r2.candidates.count) Secteur : \(r2.sector.libelle)")
                     r2.managedObjectContext?.save(nil)
                     
-                    let typeContract = TypeContractManager.SharedManager.getTypeContract(TypeContractEnum.CDI)
+                    /*let typeContract = TypeContractManager.SharedManager.getTypeContract(TypeContractEnum.CDI)
                     println(typeContract.libelle)
                     
                     let candidate = CandidateManager.SharedManager.searchCandidateWithMail("m.aurel@gmail.com")
@@ -183,7 +183,7 @@ class HomePageController: UIViewController {
                     
                     employee2?.managedObjectContext?.save(nil)
                     
-                    println(employee2?.addressLocalisation)
+                    println(employee2?.addressLocalisation)*/
                     
                     /*println("Contract : \(contract1.libelle)")
                     println("Employee : \(contract1.employee?.lastName)")*/
