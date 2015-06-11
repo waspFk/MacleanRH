@@ -23,13 +23,12 @@ class ContractViewController: UIViewController, UIWebViewDelegate, MFMailCompose
     }
     
     @IBAction func validateContract(sender: AnyObject) {
-        
-        candidateToEmployee()
         sendMailConfirm()
     }
     
     @IBAction func cancelContract(sender: AnyObject) {
-        
+        self.navigationController?.popViewControllerAnimated(true)
+        deleteContract()
     }
     
     func sendMailConfirm(){
@@ -45,6 +44,8 @@ class ContractViewController: UIViewController, UIWebViewDelegate, MFMailCompose
         
         if MFMailComposeViewController.canSendMail() {
             self.presentViewController(mailComposerVC, animated: true, completion: nil)
+            candidateToEmployee()
+            deleteContract()
         } else {
             let sendMailErrorAlert = UIAlertView(title: "Envoi impossible", message: "Votre périphérique ne peut envoyer de mail. Merci de vérifier votre configuration et de réessayer l'envoi.", delegate: self, cancelButtonTitle: "OK")
             sendMailErrorAlert.show()
@@ -80,7 +81,11 @@ class ContractViewController: UIViewController, UIWebViewDelegate, MFMailCompose
             
             employee!.managedObjectContext?.save(nil)
         }
-  
-
+    }
+    
+    func deleteContract() {
+        var error = NSErrorPointer()
+        var fileManager = NSFileManager()
+        fileManager.removeItemAtPath(url!, error: error)
     }
 }

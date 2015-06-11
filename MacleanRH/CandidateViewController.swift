@@ -377,7 +377,7 @@ class CandidateViewController: RootViewController, UITableViewDelegate, UITableV
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
         let date = NSDate()
-        let str = "contract-\(date)-\(candidateSeleted.firstName)_\(candidateSeleted.lastName)-\(random()).pdf"
+        let str = "contract-\(date)-\(candidateSeleted.firstName)_\(candidateSeleted.lastName).pdf"
         let path = documentsDirectory.stringByAppendingPathComponent(str)
         var html: String?
         
@@ -418,7 +418,7 @@ class CandidateViewController: RootViewController, UITableViewDelegate, UITableV
         viewController.url = path
         viewController.name = str
         viewController.candidate = candidateSeleted
-        self.navigationController?.pushViewController(viewController, animated: true)
+        self.presentViewController(viewController, animated: true, completion: nil)
     }
     
     func removeCandidateFromEmployee() -> [Candidate] {
