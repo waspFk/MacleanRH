@@ -31,6 +31,15 @@
 		B83DBA4F1B2036890092D63A /* TypeContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA4E1B2036890092D63A /* TypeContractManager.swift */; };
 		B85E64771B29B5FE00658DB8 /* false.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E64751B29B5FE00658DB8 /* false.png */; };
 		B85E64781B29B5FE00658DB8 /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E64761B29B5FE00658DB8 /* true.png */; };
+		B85E64811B29C6EE00658DB8 /* recrutement-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E64791B29C6EE00658DB8 /* recrutement-onglet-white.png */; };
+		B85E64821B29C6EE00658DB8 /* recrutement-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E647A1B29C6EE00658DB8 /* recrutement-btn-red.png */; };
+		B85E64831B29C6EE00658DB8 /* folder-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E647B1B29C6EE00658DB8 /* folder-onglet-white.png */; };
+		B85E64841B29C6EE00658DB8 /* folder-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E647C1B29C6EE00658DB8 /* folder-btn-red.png */; };
+		B85E64851B29C6EE00658DB8 /* calendar-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E647D1B29C6EE00658DB8 /* calendar-onglet-white.png */; };
+		B85E64861B29C6EE00658DB8 /* calendar-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E647E1B29C6EE00658DB8 /* calendar-btn-red.png */; };
+		B85E64871B29C6EE00658DB8 /* scanner-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E647F1B29C6EE00658DB8 /* scanner-btn-red.png */; };
+		B85E64881B29C6EE00658DB8 /* scanner-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E64801B29C6EE00658DB8 /* scanner-onglet-white.png */; };
+		B85E648A1B29D8B200658DB8 /* icon-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E64891B29D8B200658DB8 /* icon-calendar.png */; };
 		B86713411B26E7EA001D2302 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86713401B26E7EA001D2302 /* UIColorExtension.swift */; };
 		B87017011B286A94008B1E52 /* ContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87017001B286A94008B1E52 /* ContractViewController.swift */; };
 		B87017031B298CD1008B1E52 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87017021B298CD1008B1E52 /* RootViewController.swift */; };
@@ -55,14 +64,6 @@
 		B8F436DE1B26DA56001F809F /* picto_viadeo.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436DD1B26DA56001F809F /* picto_viadeo.png */; };
 		B8F436E01B26DA5B001F809F /* linkedin-in-button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8F436DF1B26DA5B001F809F /* linkedin-in-button.jpg */; };
 		B8F436F61B2733B1001F809F /* Avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436F51B2733B1001F809F /* Avatar.png */; };
-		B8F436FA1B283134001F809F /* icon-calendar-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436F91B283134001F809F /* icon-calendar-onglet-white.png */; };
-		B8F437021B283161001F809F /* icon-folder-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436FC1B283161001F809F /* icon-folder-onglet-white.png */; };
-		B8F437041B283161001F809F /* icon-recrutement-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F436FE1B283161001F809F /* icon-recrutement-onglet-white.png */; };
-		B8F437061B283161001F809F /* icon-scanner-onglet-white.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F437001B283161001F809F /* icon-scanner-onglet-white.png */; };
-		B8F4370B1B28363C001F809F /* icon-calendar-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F437071B28363C001F809F /* icon-calendar-btn-red.png */; };
-		B8F4370C1B28363C001F809F /* icon-folder-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F437081B28363C001F809F /* icon-folder-btn-red.png */; };
-		B8F4370D1B28363C001F809F /* icon-recrutement-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F437091B28363C001F809F /* icon-recrutement-btn-red.png */; };
-		B8F4370E1B28363C001F809F /* icon-scanner-btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4370A1B28363C001F809F /* icon-scanner-btn-red.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,15 @@
 		B83DBA4E1B2036890092D63A /* TypeContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeContractManager.swift; sourceTree = "<group>"; };
 		B85E64751B29B5FE00658DB8 /* false.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = false.png; sourceTree = "<group>"; };
 		B85E64761B29B5FE00658DB8 /* true.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true.png; sourceTree = "<group>"; };
+		B85E64791B29C6EE00658DB8 /* recrutement-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recrutement-onglet-white.png"; sourceTree = "<group>"; };
+		B85E647A1B29C6EE00658DB8 /* recrutement-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recrutement-btn-red.png"; sourceTree = "<group>"; };
+		B85E647B1B29C6EE00658DB8 /* folder-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder-onglet-white.png"; sourceTree = "<group>"; };
+		B85E647C1B29C6EE00658DB8 /* folder-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder-btn-red.png"; sourceTree = "<group>"; };
+		B85E647D1B29C6EE00658DB8 /* calendar-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-onglet-white.png"; sourceTree = "<group>"; };
+		B85E647E1B29C6EE00658DB8 /* calendar-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-btn-red.png"; sourceTree = "<group>"; };
+		B85E647F1B29C6EE00658DB8 /* scanner-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanner-btn-red.png"; sourceTree = "<group>"; };
+		B85E64801B29C6EE00658DB8 /* scanner-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanner-onglet-white.png"; sourceTree = "<group>"; };
+		B85E64891B29D8B200658DB8 /* icon-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-calendar.png"; sourceTree = "<group>"; };
 		B86713401B26E7EA001D2302 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B87017001B286A94008B1E52 /* ContractViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractViewController.swift; sourceTree = "<group>"; };
 		B87017021B298CD1008B1E52 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -128,14 +138,6 @@
 		B8F436DD1B26DA56001F809F /* picto_viadeo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picto_viadeo.png; sourceTree = "<group>"; };
 		B8F436DF1B26DA5B001F809F /* linkedin-in-button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "linkedin-in-button.jpg"; sourceTree = "<group>"; };
 		B8F436F51B2733B1001F809F /* Avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avatar.png; sourceTree = "<group>"; };
-		B8F436F91B283134001F809F /* icon-calendar-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-calendar-onglet-white.png"; sourceTree = "<group>"; };
-		B8F436FC1B283161001F809F /* icon-folder-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-folder-onglet-white.png"; sourceTree = "<group>"; };
-		B8F436FE1B283161001F809F /* icon-recrutement-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-recrutement-onglet-white.png"; sourceTree = "<group>"; };
-		B8F437001B283161001F809F /* icon-scanner-onglet-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-scanner-onglet-white.png"; sourceTree = "<group>"; };
-		B8F437071B28363C001F809F /* icon-calendar-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-calendar-btn-red.png"; sourceTree = "<group>"; };
-		B8F437081B28363C001F809F /* icon-folder-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-folder-btn-red.png"; sourceTree = "<group>"; };
-		B8F437091B28363C001F809F /* icon-recrutement-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-recrutement-btn-red.png"; sourceTree = "<group>"; };
-		B8F4370A1B28363C001F809F /* icon-scanner-btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-scanner-btn-red.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,14 +260,15 @@
 		B870E7F81B1DD52D00CA2C84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B8F437071B28363C001F809F /* icon-calendar-btn-red.png */,
-				B8F437081B28363C001F809F /* icon-folder-btn-red.png */,
-				B8F437091B28363C001F809F /* icon-recrutement-btn-red.png */,
-				B8F4370A1B28363C001F809F /* icon-scanner-btn-red.png */,
-				B8F436FC1B283161001F809F /* icon-folder-onglet-white.png */,
-				B8F436FE1B283161001F809F /* icon-recrutement-onglet-white.png */,
-				B8F437001B283161001F809F /* icon-scanner-onglet-white.png */,
-				B8F436F91B283134001F809F /* icon-calendar-onglet-white.png */,
+				B85E64891B29D8B200658DB8 /* icon-calendar.png */,
+				B85E64791B29C6EE00658DB8 /* recrutement-onglet-white.png */,
+				B85E647A1B29C6EE00658DB8 /* recrutement-btn-red.png */,
+				B85E647B1B29C6EE00658DB8 /* folder-onglet-white.png */,
+				B85E647C1B29C6EE00658DB8 /* folder-btn-red.png */,
+				B85E647D1B29C6EE00658DB8 /* calendar-onglet-white.png */,
+				B85E647E1B29C6EE00658DB8 /* calendar-btn-red.png */,
+				B85E647F1B29C6EE00658DB8 /* scanner-btn-red.png */,
+				B85E64801B29C6EE00658DB8 /* scanner-onglet-white.png */,
 				B889B2E41B258DD300CD5C57 /* noimage.png */,
 				B8F436F51B2733B1001F809F /* Avatar.png */,
 				B8F436DB1B26DA51001F809F /* xing.jpg */,
@@ -376,22 +379,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F436DE1B26DA56001F809F /* picto_viadeo.png in Resources */,
-				B8F4370B1B28363C001F809F /* icon-calendar-btn-red.png in Resources */,
 				B870E8001B1DD52D00CA2C84 /* Main.storyboard in Resources */,
 				B85E64771B29B5FE00658DB8 /* false.png in Resources */,
-				B8F4370C1B28363C001F809F /* icon-folder-btn-red.png in Resources */,
+				B85E64881B29C6EE00658DB8 /* scanner-onglet-white.png in Resources */,
 				B8F436E01B26DA5B001F809F /* linkedin-in-button.jpg in Resources */,
-				B8F437061B283161001F809F /* icon-scanner-onglet-white.png in Resources */,
-				B8F436FA1B283134001F809F /* icon-calendar-onglet-white.png in Resources */,
 				B8F436DC1B26DA51001F809F /* xing.jpg in Resources */,
-				B8F437041B283161001F809F /* icon-recrutement-onglet-white.png in Resources */,
+				B85E64811B29C6EE00658DB8 /* recrutement-onglet-white.png in Resources */,
+				B85E64831B29C6EE00658DB8 /* folder-onglet-white.png in Resources */,
+				B85E64841B29C6EE00658DB8 /* folder-btn-red.png in Resources */,
 				B889B2E51B258DD300CD5C57 /* noimage.png in Resources */,
 				B80B4C0F1B20A05F0064B52D /* Macleanrh.png in Resources */,
+				B85E64861B29C6EE00658DB8 /* calendar-btn-red.png in Resources */,
+				B85E648A1B29D8B200658DB8 /* icon-calendar.png in Resources */,
+				B85E64851B29C6EE00658DB8 /* calendar-onglet-white.png in Resources */,
+				B85E64821B29C6EE00658DB8 /* recrutement-btn-red.png in Resources */,
 				B85E64781B29B5FE00658DB8 /* true.png in Resources */,
 				B870E8051B1DD52D00CA2C84 /* LaunchScreen.xib in Resources */,
-				B8F4370E1B28363C001F809F /* icon-scanner-btn-red.png in Resources */,
-				B8F4370D1B28363C001F809F /* icon-recrutement-btn-red.png in Resources */,
-				B8F437021B283161001F809F /* icon-folder-onglet-white.png in Resources */,
+				B85E64871B29C6EE00658DB8 /* scanner-btn-red.png in Resources */,
 				B8F436F61B2733B1001F809F /* Avatar.png in Resources */,
 				B870E8021B1DD52D00CA2C84 /* Images.xcassets in Resources */,
 			);
