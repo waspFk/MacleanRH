@@ -23,6 +23,8 @@ class ContractViewController: UIViewController, UIWebViewDelegate, MFMailCompose
     }
     
     @IBAction func validateContract(sender: AnyObject) {
+        
+        candidateToEmployee()
         sendMailConfirm()
     }
     
@@ -51,5 +53,34 @@ class ContractViewController: UIViewController, UIWebViewDelegate, MFMailCompose
     
     func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
         controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func candidateToEmployee()
+    {
+        var verif: Bool = false
+        var contracts = ContractManager.SharedManager.getAllContracts(nil)
+        var i: Int = 0
+        var contract: Contract?
+        
+        while (i < contracts.count && verif == false) {
+            
+            if (contracts[i].candidate == candidate) {
+                contract = contracts[i]
+            }
+            
+            i+=1
+        }
+
+        if (contract != nil)
+        {
+            let employee = EmployeeManager.SharedManager.createEmployee("1523875635593347",lastname: candidate!.lastName, firstname: candidate!.firstName, mail: candidate!.mail,contract: contract!)
+            employee!.addressLocalisation = candidate?.address
+            employee!.tel = candidate?.tel
+            employee!.mobile = candidate?.mobile
+            
+            employee!.managedObjectContext?.save(nil)
+        }
+  
+
     }
 }

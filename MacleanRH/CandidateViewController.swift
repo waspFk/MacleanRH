@@ -89,6 +89,7 @@ class CandidateViewController: RootViewController, UITableViewDelegate, UITableV
         
         if let dataRecruitment = recruitmentSelected {
             candidates = dataRecruitment.getCandidatesArray()
+            candidates = removeCandidateFromEmployee()
         } else {
             candidates = [Candidate]()
         }
@@ -217,6 +218,26 @@ class CandidateViewController: RootViewController, UITableViewDelegate, UITableV
 //        candidateSeleted.state_candidature = StateCandidatureManager.SharedManager.getState(.ValidateCandidature)
 //        println("New state : \(candidateSeleted.state_candidature.libelle) \(candidateSeleted.state_candidature.color) ")
 //        candidateSeleted.managedObjectContext?.save(nil)
+        println(segmentedTypeContrat.selectedSegmentIndex.description)
+        var typeContract: TypeContract?
+        switch segmentedTypeContrat.selectedSegmentIndex {
+        case 0:
+            typeContract = TypeContractManager.SharedManager.getTypeContract(TypeContractEnum.CDD)
+        case 1:
+            typeContract = TypeContractManager.SharedManager.getTypeContract(TypeContractEnum.CDI)
+        default :
+            println("none")
+            
+        }
+        
+        if typeContract != nil {
+            let contract = ContractManager.SharedManager.createContract("\(candidateSeleted.lastName) -- \(recruitmentSelected?.workLibelle)", salary: "5000", workLibelle: recruitmentSelected!.workLibelle, typeContract: typeContract!)
+            
+            contract.candidate = candidateSeleted
+            contract.dateStart = NSDate()
+            contract.managedObjectContext?.save(nil)
+        }
+
         
         generatePDF()
     }
@@ -398,5 +419,18 @@ class CandidateViewController: RootViewController, UITableViewDelegate, UITableV
         viewController.name = str
         viewController.candidate = candidateSeleted
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func removeCandidateFromEmployee() -> [Candidate] {
+        var tmpCandidates = [Candidate]()
+        
+        for candidate in candidates {
+            if (EmployeeManager.SharedManager.searchEmployeeWithMail(candidate.mail) == nil)
+            {
+                tmpCandidates.append(candidate)
+            }
+        }
+        
+        return tmpCandidates
     }
 }
