@@ -39,11 +39,6 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     // MARK: - SearchBar
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        println(" --searchBarTextDidBeginEditing")
-        searchBarActive = true
-    }
-    
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         println(" --searchBarTextDidEndEditing")
         searchBarActive = false;
@@ -151,7 +146,7 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
                         destination.candidateSeleted = candidates[index]
                     }
                     
-                    destination.recruitment = recruitment
+                    destination.recruitmentSelected = recruitment
                 }
             }
         }
