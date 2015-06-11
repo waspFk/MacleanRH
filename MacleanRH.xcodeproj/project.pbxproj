@@ -29,6 +29,8 @@
 		B83DBA491B1F50CB0092D63A /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA481B1F50CB0092D63A /* Employee.swift */; };
 		B83DBA4B1B1F50CB0092D63A /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA4A1B1F50CB0092D63A /* Degree.swift */; };
 		B83DBA4F1B2036890092D63A /* TypeContractManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DBA4E1B2036890092D63A /* TypeContractManager.swift */; };
+		B85E64771B29B5FE00658DB8 /* false.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E64751B29B5FE00658DB8 /* false.png */; };
+		B85E64781B29B5FE00658DB8 /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E64761B29B5FE00658DB8 /* true.png */; };
 		B86713411B26E7EA001D2302 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86713401B26E7EA001D2302 /* UIColorExtension.swift */; };
 		B87017011B286A94008B1E52 /* ContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87017001B286A94008B1E52 /* ContractViewController.swift */; };
 		B87017031B298CD1008B1E52 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87017021B298CD1008B1E52 /* RootViewController.swift */; };
@@ -96,6 +98,8 @@
 		B83DBA481B1F50CB0092D63A /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		B83DBA4A1B1F50CB0092D63A /* Degree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		B83DBA4E1B2036890092D63A /* TypeContractManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeContractManager.swift; sourceTree = "<group>"; };
+		B85E64751B29B5FE00658DB8 /* false.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = false.png; sourceTree = "<group>"; };
+		B85E64761B29B5FE00658DB8 /* true.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true.png; sourceTree = "<group>"; };
 		B86713401B26E7EA001D2302 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B87017001B286A94008B1E52 /* ContractViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractViewController.swift; sourceTree = "<group>"; };
 		B87017021B298CD1008B1E52 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 		B870E7F71B1DD52D00CA2C84 /* MacleanRH */ = {
 			isa = PBXGroup;
 			children = (
+				B85E64751B29B5FE00658DB8 /* false.png */,
+				B85E64761B29B5FE00658DB8 /* true.png */,
 				B83C91E71B1F329600879EE5 /* Utils */,
 				B83C91E61B1F328700879EE5 /* View */,
 				B83C91E51B1F327D00879EE5 /* Model */,
@@ -372,6 +378,7 @@
 				B8F436DE1B26DA56001F809F /* picto_viadeo.png in Resources */,
 				B8F4370B1B28363C001F809F /* icon-calendar-btn-red.png in Resources */,
 				B870E8001B1DD52D00CA2C84 /* Main.storyboard in Resources */,
+				B85E64771B29B5FE00658DB8 /* false.png in Resources */,
 				B8F4370C1B28363C001F809F /* icon-folder-btn-red.png in Resources */,
 				B8F436E01B26DA5B001F809F /* linkedin-in-button.jpg in Resources */,
 				B8F437061B283161001F809F /* icon-scanner-onglet-white.png in Resources */,
@@ -380,6 +387,7 @@
 				B8F437041B283161001F809F /* icon-recrutement-onglet-white.png in Resources */,
 				B889B2E51B258DD300CD5C57 /* noimage.png in Resources */,
 				B80B4C0F1B20A05F0064B52D /* Macleanrh.png in Resources */,
+				B85E64781B29B5FE00658DB8 /* true.png in Resources */,
 				B870E8051B1DD52D00CA2C84 /* LaunchScreen.xib in Resources */,
 				B8F4370E1B28363C001F809F /* icon-scanner-btn-red.png in Resources */,
 				B8F4370D1B28363C001F809F /* icon-recrutement-btn-red.png in Resources */,
