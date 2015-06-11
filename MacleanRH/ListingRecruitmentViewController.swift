@@ -12,7 +12,7 @@ class ListingRecruitmentViewController: UIViewController, UITableViewDelegate, U
     var recruitments:[Recruitment]!
     var filteredTableRecuitment:[Recruitment]!
     var searchBarActive :Bool!
-    
+    var searchActive : Bool = false
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
@@ -125,4 +125,5 @@ class ListingRecruitmentViewController: UIViewController, UITableViewDelegate, U
             }
         }
     }
-}
+    
+    }

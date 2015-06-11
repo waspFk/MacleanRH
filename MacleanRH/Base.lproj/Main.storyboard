@@ -425,6 +425,9 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="barTintColor" red="0.68235294120000001" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ssc-zJ-67u" id="8NE-Mq-kbA"/>
+                                        </connections>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" red="0.89877643340000002" green="0.92150944739999996" blue="0.93957149620000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -579,6 +582,9 @@
                                             </state>
                                         </button>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="navRecruitment:" destination="6C9-Z3-uYl" id="rQC-WQ-Eht"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="PkG-cV-d5y"/>
                                     <barButtonItem style="plain" id="Vhj-wr-cHq">

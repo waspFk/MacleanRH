@@ -138,10 +138,6 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        searchActive = true;
-    }
-    
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         searchActive = false;
     }
@@ -155,6 +151,9 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        searchActive = true
+        
             filteredTableEmployee = employees.filter({ (text) -> Bool in
             let tmpLastName: NSString = text.lastName
             let filterLastname = tmpLastName.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
@@ -164,12 +163,17 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
             
             return (filterLastname.location != NSNotFound) || (filterFirstName.location != NSNotFound)
         })
-        if(filteredTableEmployee.count == 0){
-            searchActive = false;
-        } else {
+        if(filteredTableEmployee.count > 0){
             searchActive = true;
+        } else {
+            searchActive = false;
         }
         self.tableViewEmployee.reloadData()
+    }
+    
+    
+    @IBAction func navRecruitment(sender: AnyObject) {
+        println("test")
     }
 
     
