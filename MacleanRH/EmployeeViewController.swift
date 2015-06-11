@@ -23,6 +23,7 @@ class EmployeeViewController: RootViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var textFieldTel: UITextField!
     @IBOutlet weak var textFieldGSM: UITextField!
     @IBOutlet weak var textFieldPoste: UITextField!
+    @IBOutlet weak var textFieldBirthday: UITextField!
     
     @IBOutlet weak var labelDetailPoste: UILabel!
     
@@ -56,6 +57,9 @@ class EmployeeViewController: RootViewController, UITableViewDelegate, UITableVi
     }
     
     func loadData(){
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        
         textFieldName.text = employee.lastName
         textFieldFirstName.text = employee.firstName
         textFieldMail.text = employee.mail
@@ -64,8 +68,11 @@ class EmployeeViewController: RootViewController, UITableViewDelegate, UITableVi
         textFieldGSM.text = employee.mobile
         textFieldPoste.text = employee.contract.workLibelle
         
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+ 
+        textFieldBirthday.text = formatter.stringFromDate(employee.birthDay!)
+        
+        
+       
         labelDetailPoste.text = "Embauché le \(formatter.stringFromDate(employee.contract.dateStart!)) en \(employee.contract.typeContract!.libelle)"
         
         employees = EmployeeManager.SharedManager.getAllEmployees(nil)

@@ -165,7 +165,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecruitmentCell" rowHeight="112" id="zaw-dK-U1v" customClass="RecruitmentViewCell" customModule="MacleanRH" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="86" width="673" height="112"/>
+                                        <rect key="frame" x="0.0" y="22" width="673" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zaw-dK-U1v" id="h3d-ag-ocQ">
                                             <rect key="frame" x="0.0" y="0.0" width="640" height="111"/>
@@ -783,6 +783,7 @@
                         <outlet property="tableViewDegree" destination="Po2-WZ-saC" id="o9l-in-yxN"/>
                         <outlet property="tableViewEmployee" destination="DXw-aT-4ls" id="vDg-sF-Gab"/>
                         <outlet property="textFieldAddress" destination="Z5E-pA-lFL" id="wpi-rJ-zov"/>
+                        <outlet property="textFieldBirthday" destination="e8C-mW-iEM" id="IQU-ou-cgI"/>
                         <outlet property="textFieldFirstName" destination="tLF-8s-LXj" id="Vyp-fL-vcD"/>
                         <outlet property="textFieldGSM" destination="98D-0a-Stl" id="A9Z-MB-4wd"/>
                         <outlet property="textFieldMail" destination="KJe-AF-i2N" id="63P-wU-Zd2"/>

@@ -77,6 +77,7 @@ class ContractViewController: UIViewController, UIWebViewDelegate, MFMailCompose
             employee!.addressLocalisation = candidate?.address
             employee!.tel = candidate?.tel
             employee!.mobile = candidate?.mobile
+            employee!.birthDay = candidate?.birthday
             
             employee!.managedObjectContext?.save(nil)
         }
