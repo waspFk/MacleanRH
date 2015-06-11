@@ -92,6 +92,7 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
     // MARK: - Helper UI
     func loadData() {
         candidates = recruitment.getCandidatesArray()
+        candidates = removeCandidateFromEmployee()
         println("Count candidates = \(candidates.count)")
     }
     
@@ -150,5 +151,18 @@ class ListingCandidateViewController: UIViewController, UITableViewDelegate, UIT
                 }
             }
         }
+    }
+    
+    func removeCandidateFromEmployee() -> [Candidate] {
+        var tmpCandidates = [Candidate]()
+        
+        for candidate in candidates {
+            if (EmployeeManager.SharedManager.searchEmployeeWithMail(candidate.mail) == nil)
+            {
+                tmpCandidates.append(candidate)
+            }
+        }
+        
+        return tmpCandidates
     }
 }
