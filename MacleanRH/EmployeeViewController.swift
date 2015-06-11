@@ -130,6 +130,11 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
        
+        if (tableView == tableViewEmployee) {
+            employee = self.employees[indexPath.row]
+            loadData()
+            tableViewDegree.reloadData()
+        }
         
     }
     
@@ -150,8 +155,7 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filteredTableEmployee = employees.filter({ (text) -> Bool in
+            filteredTableEmployee = employees.filter({ (text) -> Bool in
             let tmpLastName: NSString = text.lastName
             let filterLastname = tmpLastName.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             

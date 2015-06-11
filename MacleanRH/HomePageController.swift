@@ -159,18 +159,18 @@ class HomePageController: UIViewController {
                     let candidate2 = CandidateManager.SharedManager.searchCandidateWithMail("baptiste.thug_viennois@gmail.com")
                     
                     if candidate2!.address == nil {
-                        candidate2!.address = "Test address, 01000, Bourg"
+                        candidate2!.address = "Test address 2, 01000, Pont de Veyle"
                     }
                     
                     if candidate2!.tel == nil {
-                        candidate2!.tel = "0385323136"
+                        candidate2!.tel = "0385369214"
                     }
                     
                     if candidate2!.mobile == nil {
-                        candidate2!.mobile = "0615203698"
+                        candidate2!.mobile = "0315742367"
                     }
                     
-                    let contract2 = ContractManager.SharedManager.createContract("test Contract", salary: "5000", workLibelle: "Chef de chantier", typeContract: typeContract)
+                    let contract2 = ContractManager.SharedManager.createContract("test Contract 2", salary: "5000", workLibelle: "Chef de chantier", typeContract: typeContract)
                     
                     contract2.candidate = candidate
                     contract2.dateStart = NSDate()
