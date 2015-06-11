@@ -9,7 +9,7 @@
 import CoreData
 import UIKit
 
-class ListingEmployeeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
+class ListingEmployeeViewController: RootViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
     
     @IBOutlet weak var tableEmployees: UITableView!
     @IBOutlet weak var searchEmployee: UISearchBar!

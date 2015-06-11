@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListingCandidateViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class ListingCandidateViewController: RootViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     var candidates:[Candidate]!
     var recruitment:Recruitment!
     

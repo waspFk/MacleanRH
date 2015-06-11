@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="LZ4-z1-G44">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="LZ4-z1-G44">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Macleanrh.png" id="TiE-OS-v79">
-                                <rect key="frame" x="0.0" y="67" width="1024" height="701"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="h0L-Gk-73u">
@@ -38,14 +38,6 @@
                                     <action selector="displayCalendar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kGX-1C-8t3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9b8-gP-IST">
-                                <rect key="frame" x="915" y="20" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Account">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2EZ-ss-tdA">
                                 <rect key="frame" x="759" y="417" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,13 +47,6 @@
                                 <connections>
                                     <action selector="launchScanQrCode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mDu-We-vF6"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FTg-nu-XxC">
-                                <rect key="frame" x="943" y="67" width="70" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Avatar.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="IQR-kK-w41">
                                 <rect key="frame" x="88" y="422" width="170" height="153"/>
@@ -73,6 +58,14 @@
                                 <connections>
                                     <segue destination="BDa-9j-5JV" kind="push" id="z9J-ub-ke6"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FTg-nu-XxC">
+                                <rect key="frame" x="954" y="20" width="70" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <state key="normal" image="Avatar.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -88,7 +81,7 @@
         <!--Postes-->
         <scene sceneID="6MT-OE-PSA">
             <objects>
-                <viewController title="Postes" id="BDa-9j-5JV" customClass="ListingRecruitmentViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecruitmentListViewID" title="Postes" id="BDa-9j-5JV" customClass="ListingRecruitmentViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="86N-Ao-kcJ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,6 +108,9 @@
                                             <state key="normal" image="icon-folder-onglet-white.png">
                                                 <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchEmployee:" destination="BDa-9j-5JV" eventType="touchUpInside" id="UCx-gA-zFB"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
@@ -126,6 +122,9 @@
                                             <state key="normal" image="icon-calendar-onglet-white.png">
                                                 <color key="titleShadowColor" red="0.99215686270000003" green="0.2599811152" blue="0.088979128140000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchCalendar:" destination="BDa-9j-5JV" eventType="touchUpInside" id="IVv-h2-Doa"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
@@ -319,6 +318,9 @@
                                             <state key="normal" image="icon-recrutement-onglet-white.png">
                                                 <color key="titleColor" red="0.93324545120000002" green="0.96034715349999999" blue="0.98924794819999995" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchRecrutment:" destination="eta-Bc-Cat" eventType="touchUpInside" id="4Bi-f7-Mjc"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
@@ -330,6 +332,9 @@
                                             <state key="normal" image="icon-folder-onglet-white.png">
                                                 <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchEmployee:" destination="eta-Bc-Cat" eventType="touchUpInside" id="AHh-AE-lxd"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
@@ -341,6 +346,9 @@
                                             <state key="normal" image="icon-calendar-onglet-white.png">
                                                 <color key="titleShadowColor" red="0.99215686270000003" green="0.2599811152" blue="0.088979128140000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchCalendar:" destination="eta-Bc-Cat" eventType="touchUpInside" id="oL6-6I-F2u"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
@@ -366,7 +374,7 @@
         <!--Employés-->
         <scene sceneID="Bbq-hp-ESJ">
             <objects>
-                <viewController title="Employés" id="ssc-zJ-67u" customClass="ListingEmployeeViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeListViewID" title="Employés" id="ssc-zJ-67u" customClass="ListingEmployeeViewController" customModule="MacleanRH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Swi-eH-K5W">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,6 +465,9 @@
                                             <state key="normal" image="icon-recrutement-onglet-white.png">
                                                 <color key="titleColor" red="0.93324545120000002" green="0.96034715349999999" blue="0.98924794819999995" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchRecrutment:" destination="ssc-zJ-67u" eventType="touchUpInside" id="NdN-EA-Aap"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
@@ -479,6 +490,9 @@
                                             <state key="normal" image="icon-calendar-onglet-white.png">
                                                 <color key="titleShadowColor" red="0.99215686270000003" green="0.2599811152" blue="0.088979128140000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchCalendar:" destination="ssc-zJ-67u" eventType="touchUpInside" id="IGw-78-udS"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
@@ -580,6 +594,9 @@
                                             <state key="normal" image="icon-recrutement-onglet-white.png">
                                                 <color key="titleColor" red="0.93324545120000002" green="0.96034715349999999" blue="0.98924794819999995" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchRecrutment:" destination="6C9-Z3-uYl" eventType="touchUpInside" id="Qnq-Zb-QUq"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -594,6 +611,9 @@
                                             <state key="normal" image="icon-folder-onglet-white.png">
                                                 <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchEmployee:" destination="6C9-Z3-uYl" eventType="touchUpInside" id="nX9-W5-4fw"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
@@ -605,6 +625,9 @@
                                             <state key="normal" image="icon-calendar-onglet-white.png">
                                                 <color key="titleShadowColor" red="0.99215686270000003" green="0.2599811152" blue="0.088979128140000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="launchCalendar:" destination="6C9-Z3-uYl" eventType="touchUpInside" id="a4F-pB-4lY"/>
+                                            </connections>
                                         </button>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </barButtonItem>
@@ -821,45 +844,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dfO-tL-xfM">
-                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" id="RIz-Jx-dK3">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="jZ5-5c-HtI">
-                                            <rect key="frame" x="20" y="3" width="160" height="38"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="icon-recrutement-onglet-white.png">
-                                                <color key="titleColor" red="0.93324545120000002" green="0.96034715349999999" blue="0.98924794819999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="L7s-jC-oGx"/>
-                                    <barButtonItem style="plain" id="k1L-5T-ESe">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="IwS-tq-JhW">
-                                            <rect key="frame" x="180" y="6" width="125" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="icon-folder-onglet-white.png">
-                                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5aA-XT-AzY"/>
-                                    <barButtonItem image="icon-calendar-onglet-white.png" style="plain" id="mJG-ft-i2h">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ODi-tc-OT4">
-                                            <rect key="frame" x="315" y="6" width="130" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="icon-calendar-onglet-white.png">
-                                                <color key="titleShadowColor" red="0.99215686270000003" green="0.2599811152" blue="0.088979128140000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" red="0.69008443809999997" green="0.0" blue="0.012794161070000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="7DK-fP-at0">
                                 <rect key="frame" x="301" y="56" width="755" height="606"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1109,6 +1093,54 @@
                                     <outlet property="delegate" destination="UXo-T0-npt" id="Gj2-bj-qwe"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dfO-tL-xfM">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" id="RIz-Jx-dK3">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="jZ5-5c-HtI">
+                                            <rect key="frame" x="20" y="3" width="160" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="icon-recrutement-onglet-white.png">
+                                                <color key="titleColor" red="0.93324545120000002" green="0.96034715349999999" blue="0.98924794819999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="launchRecrutment:" destination="UXo-T0-npt" eventType="touchUpInside" id="LyU-A6-WQN"/>
+                                            </connections>
+                                        </button>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="L7s-jC-oGx"/>
+                                    <barButtonItem style="plain" id="k1L-5T-ESe">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="IwS-tq-JhW">
+                                            <rect key="frame" x="180" y="6" width="125" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="icon-folder-onglet-white.png">
+                                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="launchEmployee:" destination="UXo-T0-npt" eventType="touchUpInside" id="BRj-NB-huW"/>
+                                            </connections>
+                                        </button>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5aA-XT-AzY"/>
+                                    <barButtonItem image="icon-calendar-onglet-white.png" style="plain" id="mJG-ft-i2h">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ODi-tc-OT4">
+                                            <rect key="frame" x="315" y="6" width="130" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="icon-calendar-onglet-white.png">
+                                                <color key="titleShadowColor" red="0.99215686270000003" green="0.2599811152" blue="0.088979128140000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="launchCalendar:" destination="UXo-T0-npt" eventType="touchUpInside" id="vnb-sb-chu"/>
+                                            </connections>
+                                        </button>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.69008443809999997" green="0.0" blue="0.012794161070000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

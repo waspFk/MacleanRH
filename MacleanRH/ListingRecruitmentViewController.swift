@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListingRecruitmentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class ListingRecruitmentViewController: RootViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     var recruitments:[Recruitment]!
     var filteredTableRecuitment:[Recruitment]!
     var searchBarActive :Bool!

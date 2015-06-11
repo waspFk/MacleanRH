@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmployeeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class EmployeeViewController: RootViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var employee: Employee!
     var employees: [Employee]!
