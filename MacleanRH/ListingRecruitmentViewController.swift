@@ -32,10 +32,6 @@ class ListingRecruitmentViewController: UIViewController, UITableViewDelegate, U
     
     
     // MARK: - SearchBar
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        println(" --searchBarTextDidBeginEditing")
-        searchBarActive = true
-    }
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         println(" --searchBarTextDidEndEditing")

@@ -29,7 +29,13 @@ class Candidate: NSManagedObject {
 
 extension Candidate {
     func getRecruitmentsArray() -> [Recruitment] {
-        return self.recruitments.allObjects as! [Recruitment]
+        var recruitmentArray = [Recruitment]()
+        
+        if let result = self.recruitments.allObjects as? [Recruitment] {
+            recruitmentArray = result
+        }
+        
+        return recruitmentArray
     }
     
     func countRecruitments() -> Int {
@@ -45,7 +51,13 @@ extension Candidate {
     }
     
     func getDegreesArray() -> [Degree] {
-        return self.degrees.allObjects as! [Degree]
+        var degreesArray = [Degree]()
+        
+        if let result = self.degrees.allObjects as? [Degree] {
+            degreesArray = result
+        }
+        
+        return degreesArray
     }
     
     func countDegrees() -> Int {
