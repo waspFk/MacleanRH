@@ -121,6 +121,12 @@ class QRCodeViewController: UIViewController,AVCaptureMetadataOutputObjectsDeleg
                         println("--- Employee -- value=\(value)")
                         if let data = EmployeeManager.SharedManager.searchEmployeeWithMail(value) {
                             let viewController = storyBoard.instantiateViewControllerWithIdentifier("EmployeeViewID") as! EmployeeViewController
+                            
+                            println(data.contract.candidate?.firstName)
+                            viewController.employee = data
+                            
+                            self.navigationController?.pushViewController(viewController, animated: true)
+                            self.isSanning = false
                         }
                         
                     default :

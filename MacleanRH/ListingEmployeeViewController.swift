@@ -42,4 +42,15 @@ class ListingEmployeeViewController: UIViewController, UITableViewDelegate, UITa
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "EmployeeViewSegue" {
+            if let destination = segue.destinationViewController as? EmployeeViewController {
+                if let index = tableEmployees.indexPathForSelectedRow()?.row {
+                    destination.employee = employees[index]
+                }
+            }
+        }
+    }
+
 }

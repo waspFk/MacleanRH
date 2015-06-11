@@ -15,6 +15,13 @@ class HomePageController: UIViewController {
         super.viewDidLoad()
         
         loadDataForApplication()
+        
+        let employees = EmployeeManager.SharedManager.getAllEmployees(nil)
+        
+        for e in employees {
+            println("\(e.lastName) -- \(e.mail)")
+        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -94,6 +101,16 @@ class HomePageController: UIViewController {
                     if let c4 = CandidateManager.SharedManager.createCandidate("M", firstname: "Aurelien", mail: "m.aurel@gmail.com",birthday: date!) {
                         c4.addRecruitment(r2)
                         
+                        if let d1 = DegreeManager.SharedManager.createDegree("test degree 1", date: NSDate(), candidate: c4)
+                        {
+                            c4.addDegree(d1)
+                        }
+                        
+                        if let d2 = DegreeManager.SharedManager.createDegree("test degree 2", date: NSDate(), candidate: c4) {
+                            c4.addDegree(d2)
+                        }
+                        
+                        
                         println("Candidate 4 : \(c4.lastName) - \(c4.firstName) : Nombre de recruitments : \(c4.recruitments.count)")
                         c4.managedObjectContext?.save(nil)
                     }
@@ -110,14 +127,63 @@ class HomePageController: UIViewController {
                     println(typeContract.libelle)
                     
                     let candidate = CandidateManager.SharedManager.searchCandidateWithMail("m.aurel@gmail.com")
-                    let contract1 = ContractManager.SharedManager.createContract("test Contract", salary: "5000", workLibelle: "Test Lib", typeContract: typeContract)
+                    
+                    if candidate!.address == nil {
+                        candidate!.address = "Test address, 01000, Bourg"
+                    }
+                    
+                    if candidate!.tel == nil {
+                        candidate!.tel = "0385323136"
+                    }
+                    
+                    if candidate!.mobile == nil {
+                        candidate!.mobile = "0615203698"
+                    }
+
+                    
+                    let contract1 = ContractManager.SharedManager.createContract("test Contract", salary: "5000", workLibelle: "Chef de chantier", typeContract: typeContract)
                     
                     contract1.candidate = candidate
+                    contract1.dateStart = NSDate()
                     contract1.managedObjectContext?.save(nil)
                     println(contract1.libelle)
                     
                     let employee = EmployeeManager.SharedManager.createEmployee("1523875635593347",lastname: candidate!.lastName, firstname: candidate!.firstName, mail: candidate!.mail,contract: contract1)
-                    println(employee?.firstName)
+                    employee?.addressLocalisation = candidate?.address
+                    employee?.tel = candidate?.tel
+                    employee?.mobile = candidate?.mobile
+                    
+                    employee?.managedObjectContext?.save(nil)
+                    
+                    
+                    let candidate2 = CandidateManager.SharedManager.searchCandidateWithMail("baptiste.thug_viennois@gmail.com")
+                    
+                    if candidate2!.address == nil {
+                        candidate2!.address = "Test address, 01000, Bourg"
+                    }
+                    
+                    if candidate2!.tel == nil {
+                        candidate2!.tel = "0385323136"
+                    }
+                    
+                    if candidate2!.mobile == nil {
+                        candidate2!.mobile = "0615203698"
+                    }
+                    
+                    let contract2 = ContractManager.SharedManager.createContract("test Contract", salary: "5000", workLibelle: "Chef de chantier", typeContract: typeContract)
+                    
+                    contract2.candidate = candidate
+                    contract2.dateStart = NSDate()
+                    contract2.managedObjectContext?.save(nil)
+                    
+                    let employee2 = EmployeeManager.SharedManager.createEmployee("1523875635593347",lastname: candidate2!.lastName, firstname: candidate2!.firstName, mail: candidate2!.mail,contract: contract2)
+                    employee2?.addressLocalisation = candidate2?.address
+                    employee2?.tel = candidate2?.tel
+                    employee2?.mobile = candidate2?.mobile
+                    
+                    employee2?.managedObjectContext?.save(nil)
+                    
+                    println(employee2?.addressLocalisation)
                     
                     /*println("Contract : \(contract1.libelle)")
                     println("Employee : \(contract1.employee?.lastName)")*/
