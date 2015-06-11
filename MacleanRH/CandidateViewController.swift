@@ -11,7 +11,7 @@ import AVFoundation
 import EventKit
 import MessageUI
 
-class CandidateViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate, UISearchBarDelegate  {
+class CandidateViewController: RootViewController, UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate, UISearchBarDelegate  {
     // MARK: - Injected variable
     var candidateSeleted:Candidate!
     var recruitmentSelected: Recruitment?
@@ -324,9 +324,9 @@ class CandidateViewController: UIViewController, UITableViewDelegate, UITableVie
             
             if let recruitment = recruitmentSelected {
                 if recruitment.titre == recruitmentCurrent.titre {
-                    cell.backgroundColor = UIColor(rgba: "#cdcdcd")
+                    cell.backgroundColor = UIColor(rgba: "#E82C0C")
                     
-                    tableViewRecruitment.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: UITableViewScrollPosition.Middle)
+                    //tableViewRecruitment.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: UITableViewScrollPosition.Middle)
                     changeRecruitmentSelected(self.recruitmentsCandidate[indexPath.row])
                 }
             }
