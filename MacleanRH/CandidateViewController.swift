@@ -215,9 +215,7 @@ class CandidateViewController: RootViewController, UITableViewDelegate, UITableV
     @IBAction func acceptCandidatureAction(sender: UIButton) {
         println("Candidate : \(candidateSeleted.lastName) \(candidateSeleted.firstName) is accepted")
         
-//        candidateSeleted.state_candidature = StateCandidatureManager.SharedManager.getState(.ValidateCandidature)
-//        println("New state : \(candidateSeleted.state_candidature.libelle) \(candidateSeleted.state_candidature.color) ")
-//        candidateSeleted.managedObjectContext?.save(nil)
+
         println(segmentedTypeContrat.selectedSegmentIndex.description)
         var typeContract: TypeContract?
         switch segmentedTypeContrat.selectedSegmentIndex {

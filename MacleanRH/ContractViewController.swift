@@ -80,7 +80,11 @@ class ContractViewController: UIViewController, UIWebViewDelegate, MFMailCompose
             employee!.birthDay = candidate?.birthday
             
             employee!.managedObjectContext?.save(nil)
+            
+            candidate.state_candidature = StateCandidatureManager.SharedManager.getState(.ValidateCandidature)
+            candidate.managedObjectContext?.save(nil)
         }
+        
   
 
     }
